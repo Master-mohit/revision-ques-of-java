@@ -1,7 +1,10 @@
 
-public class ques1 {
+import java.util.Scanner;
+
+
      // 1 - Sum of two integers
      public static void main(String[] args) {
+ 
     //     int a = 10;
     //     int b = 10;
     //     System.out.println("sum = " +(a + b));
@@ -236,8 +239,222 @@ public class ques1 {
     // else {
     //     System.out.println("consonent");
     // }
+
+    // 23- Accept an integer and Print hello world n times
+    // System.out.println("kitni baar");
+    // int n = sc.nextInt();
+    //  for(int i =0; i<n; i++){
+    //      System.out.println("Hello world");
+    //  }
+
+       // 24- Print natural number up to n. 
+    //    int n = sc.nextInt();
+    //    for(int i =0; i<=n; i++){
+    //        System.out.println(i);
+
+    // 225- Reverse for loop. Print n to 1.
+	// 	Scanner sc = new Scanner(System.in);
+	// 	int n = sc.nextInt();
+	// 	for(int i=n; i>=1; i--){
+	// 	    System.out.println(i);
+	// 	}
+		// }
+          // 26- Take a number as input and print its table
+    //   5 * 1 = 5
+    //   5 * 2 = 10 ... up to 10 terms
+    // System.out.println("which table uh want..");
+    // int n = sc.nextInt();
+    // for(int i=1; i<=10; i++){
+    //     System.out.println(n + "*" + i + "=" + n*i);
+    // }
+
+    //  27- Sum up to n terms.
+//     System.out.println("number ??");
+//     int sum = 0;
+//     int n = sc.nextInt();
+//     for(int i =0; i<=n; i++){
+//          sum = sum + i;
+//     }
+//    System.out.println(sum);
+
+  //   28- Factor of a number
+//   System.out.println("choose any number");
+//   int n = sc.nextInt();
+//   for(int i=1; i<=n; i++){
+//       if(n % i == 0){
+//            System.out.println(i);
+//       }
+     
+//   }
+
+    //   28- Factorial of a number
+    // int fact = 1;
+    //  System.out.println("choose any number...");
+    //  int n = sc.nextInt();
+    //  for(int i=1; i<=n; i++){
+    //   fact = fact * i;
+    //  System.out.println(fact);
+
+    // 29- Print the sum of all even & odd numbers in a range seperately.
+//   System.out.println("choose any number");
+//   int evensum = 0;
+//   int oddsum = 0;
+//   int n = sc.nextInt();
+//   for(int i=0; i<=n; i++){
+//       if(i % 2 == 0){
+//            evensum = evensum + i;   
+//       }
+//       else {
+//            oddsum = oddsum + i;
+//       }
+//   }
+//  System.out.println(evensum);
+//  System.out.println(oddsum);
+
+// 31- Print the sum of all factors of a number, 50 -> 1 + 2 + 5 + 10 + 25 = 43
+int sum = 0;
+// System.out.println("choose any number");
+// int n = sc.nextInt();
+// for(int i=1; i<n; i++){
+//     if(n % i == 0){
+//         sum = sum + i;
+//     }
+// }
+// System.out.println(sum);
+
+// 32- Check if the number is Prime or not.
+// int count = 0;
+// System.out.println("choose any number");
+// int n = sc.nextInt();
+// for(int i= 1; i<=n; i++){
+//     if(n % i == 0){
+//         count++;
+// }
+//   }
+//          if (count == 2){
+//     System.out.println("this is prime number");
+// }
+// else {
+//    System.out.println("this is not prime number");
+// }
+
+   //     33- Write a program to take two inputs a, b & find the value of a  raised to the power of b. 
+    // 	Ex - a = 2, b = 5
+    // 	OP - 2^5 = 32
+//      System.out.println("choose a ");
+//      int a = sc.nextInt();
+//         System.out.println("choose b");
+//       int b = sc.nextInt();
+//      int sum = (int) Math.pow(a, b);
+//    System.out.println(a + "^" + b + " = " + sum);
+ 
+// 34- Seprate each digit of a number and print it on the new line ex - 123 
+// 	OP
+// 		3
+// 		2
+// 		1
+    //   System.out.println("choose any more 2 digit ");
+    //    int n = sc.nextInt();
+    //      while(n > 0){
+    //    int ans = n % 10;
+    //   System.out.println(ans);
+    //     n = n / 10;
+    // }
+
+    // 35- Sum of digits of a number, 936 = 18
+//    System.out.println("choose any digit");
+//    int n = sc.nextInt();
+//    int sum = 0;
+//    while(n > 0){
+//        int ans = n % 10;
+//           sum = sum + ans;
+//        n = n / 10;
+//    }
+//    System.out.println(sum);
+
+    // 36- Accept a number and print its reverse
+//      System.out.println("choose any more 2 digit");
+//      int n = sc.nextInt();
+//      while(n > 0){
+//     int ans = n % 10;
+//     System.out.print(ans);
+//     n = n / 10;
+// } 
+
+// 37- Accept a number and check if it is a pallindromic number (If number and its reverse are equal)
+//       Ex - 12321 - Rerverse - 12321
+// System.out.println("choose number");
+// int rev = 0;
+// int n = sc.nextInt();
+// int totl = n;
+// while(n > 0){
+//     int ans = n % 10;
+//   rev = rev * 10 + ans;
+//     n = n / 10;
+// }
+// if(rev == totl){
+//     System.out.println("its pallindrome");
+// }
+// else {
+//     System.out.println("its not pallindrome");
+// }
+
+// 38- Accept a number and check if it is a strong number or not (Sum of factorial of each digit)
+//       Ex- 145 = 1! + 4! + 5! = 145
+// int rev = 0;
+       
+// int sum = 0;
+//  System.out.println("choose the number");
+//  int n = sc.nextInt();
+//  int ndijit = n;
+//  while(n > 0){
+//      int ans = n % 10;
+//      int fact = 1;
+//      for(int i =1; i<=ans; i++){
+//          fact = fact * i;
+//      }
+//       sum = sum + fact;
+//              n = n / 10;
+//  }
+//  if(sum == ndijit){
+//      System.out.println("its strong number");
+//  }
+//  else {
+//      System.out.println("its not strong number");
+//  }
+
+//   40- perfect number 6 is a perfect number.
+// System.out.println("choose any number");
+// int sum = 0;
+// int n = sc.nextInt();
+// int digitn = n;
+// for(int i=1; i<n; i++){
+//     if(n % i == 0){
+//         sum = sum + i;
+//     }
+// }
+// if(sum == digitn){
+//     System.out.println("perfect number");
+// }
+// else {
+//     System.out.println("not perfect number");
+// }
+
+ //  41-  Fibonacci Series 0, 1, 1, 2, 3, 5, 8, 13, 21 ...
+//  System.out.println("any number");
+//  int n = sc.nextInt();
+//  int a = 0; 
+//  int b = 1;
+//  for(int i=2; i<=n; i++){
+//       int c = a + b;
+//        System.out.println(c);
+//  a = b;
+//  b = c;
+//  }
+
+       }
           }
-         }
+    
          
 
       

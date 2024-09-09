@@ -452,6 +452,22 @@ int sum = 0;
 //  b = c;
 //  }
 
+//46- Right Triangle - Star
+// 	*
+// 	* *
+// 	* * *
+// 	* * * *
+// 	* * * * *
+
+// System.out.println("which keyword uh have to print");
+// int n = sc.nextInt();
+// for(int i=1; i<=n; i++){
+//     for(int j=1; j<=i; j++){
+//         System.out.print("* ");
+//     }
+//     System.out.println();
+// }
+
        }
           }
     

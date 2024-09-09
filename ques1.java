@@ -678,7 +678,24 @@ int sum = 0;
 //     System.out.println();
 // }
 
-         
+// *     *
+//  *   *
+//   * *
+//    *
+//   * *
+//  *   *
+// *     *
+// int n = 5;  // Size of the pattern     
+// for (int i = 0; i < n; i++) {  // Loop for rows
+//     for (int j = 0; j < n; j++) {  // Loop for columns
+//         if (j == i || j == n - i - 1) {
+//             System.out.print("*");  // Print '*' for the diagonals
+//         } else {
+//             System.out.print(" ");  // Print space for non-diagonal positions
+//         }
+//     }
+//     System.out.println();  // Move to the next line after each row
+// }   
 
       
 

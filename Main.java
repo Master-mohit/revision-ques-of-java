@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -697,5 +698,144 @@ int sum = 0;
 //     System.out.println();  // Move to the next line after each row
 // }   
 
-      
+//........................ Array Question...........//////////////////
+
+
+
+     //........................ REVERSE ELEMENT OF ARRAY...........//////////////////
+    //  int start = 0;
+    //  int end = arr.length-1;
+     
+    //  while(start < end ){
+    //    int temp = arr[start];
+    //    arr[start] = arr[end];
+    //    arr[end] = temp;
+    //     start++;
+    //      end--;
+    //      System.out.println(Arrays.toString(arr));
+
+    //........................ SORTED ELEMENT OF ARRAY...........//////////////////
+    //  for(int i=0; i<arr.length; i++){
+    //     for(int j=i+1; j<arr.length; j++){
+    //       if(arr[i] > arr[j]){
+    //         int temp = arr[i];
+    //         arr[i] = arr[j];
+    //         arr[j] = temp;
+    //       }
+    //     }
+    //   }
+    //   System.out.println(Arrays.toString(arr));
+
+   //........ MAXIMUM ELEMENT OF ARRAY....
+//    int arr[] = {43,80,76,34,7,2};
+//    int largest = arr[0];
+//    for(int i=1; i<arr.length; i++){
+//      if(arr[i] > largest){
+//        largest = arr[i];
+//      }
+//    }
+//    System.out.println(largest);
+
+  // .. SECOND MAXIMUM ELEMENT OF ARRAY.....
+      // Assending order means chote se bda..
+    //   int arr[] = {43,65,34,87,44,84};
+    //    for (int i = 0; i < arr.length; i++) {
+    //         for (int j = i + 1; j < arr.length; j++) {
+    //             if (arr[j] < arr[i]) {
+    //                 int temp = arr[i];
+    //                 arr[i] = arr[j];
+    //                 arr[j] = temp;
+    //             }
+    //         }
+    //     }
+    //     System.out.println(arr[arr.length-2]);
+
+
+          // .. SECOND MAXIMUM ELEMENT OF ARRAY.....
+      // decending order means chote se bda..
+    //   int arr[] = {43,65,34,87,44,84};
+    //   for (int i = 0; i < arr.length; i++) {
+    //        for (int j = i + 1; j < arr.length; j++) {
+    //            if (arr[j] > arr[i]) {
+    //                int temp = arr[i];
+    //                arr[i] = arr[j];
+    //                arr[j] = temp;
+    //            }
+    //        }
+    //    }
+    //    System.out.println(arr[1]);
+
+     // ........... MINIMUM ELEMENT OF ARRAY........
+    //  int arr[] = {43,65,34,87,44,84,10,13};
+    //  int min = arr[0];
+    //  for(int i=0; i<arr.length; i++){
+    //    if(arr[i] < min){
+    //      min = arr[i];
+    //    }
+    //  }
+    //  System.out.println(min);
+
+        // .................RIGHT ROTATION ELEMENT OF ARRAY......
+        // int arr[] = {43,65,34,87,44};
+        // int lastelement = arr[arr.length-1];
+        // for(int i=arr.length-1; i>0; i--){
+        //   arr[i] = arr[i-1];
+        // }
+        // arr[0] = lastelement;
+        // System.out.println(Arrays.toString(arr));
+
+
+        // Input size of array
+        // System.out.println("Kitne element honge:");
+        // int n = sc.nextInt();
+        // int arr[] = new int[n];
+        
+        // Input elements of the array
+        // System.out.println("Array ke elements input karein:");
+        // for(int j = 0; j < n; j++) {
+        //     arr[j] = sc.nextInt();
+        }
+        
+        // Right rotation of the array
+        // int lastelement = arr[n - 1];
+        // for(int i = n - 1; i > 0; i--) {
+        //     arr[i] = arr[i - 1];
+        // }
+        // arr[0] = lastelement;
+        
+        // Print the rotated array
+        // System.out.println("Rotated array:");
+        // for(int i = 0; i < n; i++) {
+        //     System.out.print(arr[i] + " ");
+
+             
+        // .............LEFT ROTATION OF ELEMENT.........
+    //   int arr[] = {2,4,3,5,10,1};
+    //   for(int i=0; i<arr.length; i++){
+    //     System.out.println(Arrays.toString(arr));
+    //   }
+    //   int first = arr[0];
+    //   for(int i=1; i<arr.length; i++){
+    //     arr[i-1] = arr[i];
+    //   }
+    //    arr[arr.length-1] = first;
+    //    System.out.println(Arrays.toString(arr));
+        // }
+
+       // ...................MISSING OF ELEMENT.........
+    //    int arr[] = {3,2,5};
+    //    HashSet<Integer> set = new HashSet<>();
+    //    int max = 0;
+    //    for(int chacha :arr){
+    //      set.add(chacha);
+    //      if(chacha > max){
+    //        max = chacha;
+    //      }
+    //    }
+    //    for(int i=0; i<=max; i++){
+    //      if(!set.contains(i)){
+    //        System.out.println(i);
+    //      }
+    //    }
+     }
 

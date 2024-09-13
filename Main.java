@@ -700,7 +700,32 @@ int sum = 0;
 
 //........................ Array Question...........//////////////////
 
+//  sum of all the items of the arrayion.....
+// int sum = 0;
+// int arr[] = {1,2,3,4,5,6};
+// for(int i=0; i<arr.length; i++){
+//     sum = sum + arr[i];  
+// }
+// System.out.println(sum);
 
+
+     //  print Odd and Even Numbers from an Array.....
+//      int arr[] = {1,2,3,4,5,6};
+//      System.out.println("ODD NUMBER");
+//      for(int i=0; i<arr.length; i++){
+//        if(arr[i] % 2 != 0){
+//          System.out.println(arr[i]);
+//        }
+//      }
+//      System.out.println();
+     
+//      System.out.println("EVEN NUMBER");
+//      for(int i=0; i<arr.length; i++){
+//        if(arr[i] % 2 == 0){
+//          System.out.println(arr[i]);
+//        }
+//      }
+//  }
 
      //........................ REVERSE ELEMENT OF ARRAY...........//////////////////
     //  int start = 0;
@@ -837,5 +862,119 @@ int sum = 0;
     //        System.out.println(i);
     //      }
     //    }
+
+//     int arr[] =  {1,2,2,3,4,4,5,6,7,7,7,8};
+//     // ............REMOVE DUPLICATE ELEMENT FROM SORTED ARRAYS...........
+//     int temp[] = new int [arr.length];
+//     int j = 0;
+//     for(int i=0; i<arr.length-1; i++){
+//       if(arr[i] != arr[i+1]){
+//         temp[j] = arr[i];
+//         j++;
+//       }
+//     }
+//     temp[j] = arr[arr.length-1];
+//     j++;
+//   for(int i=0; i<j; i++){
+//     System.out.println(temp[i]);
+//   }
+
+ // ............REMOVE DUPLICATE ELEMENT FROM SORTED ARRAYS WITHOUT TEMP...........
+//  int arr[] =  {1,2,2,3,4,4,5,6,7,7,7,8};
+//  int j = 0;
+// for(int i=0; i<arr.length-1; i++){
+//   if(arr[i] != arr[i+1]){
+//     arr[j] = arr[i];
+//     j++;
+//   }
+// }
+// arr[j] = arr[arr.length-1];
+// j++;
+// for(int i=0; i<j; i++){
+//  System.out.println(arr[i]);
+// }
+
+
+  // ...............REMOVE DUPLICATE ELEMENT FROM UNSORTED ARRAYS...........
+//   int arr[] = {2,4,4,3,5,5,2,1};
+//   HashSet<Integer> set = new HashSet<>();
+  
+//   for(int num: arr){
+//     set.add(num);
+//   }
+//   for(int element : set){
+//     System.out.println(element);
+//   }
+
+ // .................REMOVE DUPLICATE ELEMENT FROM SORTED ARRAYS...........
+//  int arr[] = {1,2,2,3,4,4,5,8,8,8};
+//  HashSet<Integer> set = new HashSet<>();
+ 
+//  for(int num: arr){
+//    set.add(num);
+//  }
+//  for(int element : set){
+//    System.out.println(element);
+//  }
+
+ // ............ DUPLICATE ELEMENT FROM SORTED ARRAYS...........
+//  int arr[] =  {1,2,2,3,6,7,4,4,5,6,7,7,7,8,18};
+//  int temp[] = new int [arr.length];
+//   int j = 0;
+// for(int i=0; i<arr.length-1; i++){
+//   if(arr[i] == arr[i+1]){
+//    // temp[j] = arr[i];
+//    if(j == 0 || temp[j-1] != arr[i]){
+//      temp[j] = arr[i];
+
+//     j++;
+//   }
+//   }
+//   }
+// for(int i =0; i<j; i++){
+//   System.out.println(temp[i]);
+// }
+
+ // ..........Program to copy all elements of one array into another array.............
+    
+//  int arr1 [] = {1,2,6,4,5};
+//  int arr2[]  = new int[arr1.length];
+//  for(int i=0; i<arr1.length; i++){
+//    arr2[i] = arr1[i];
+//  }
+//  for(int i=0; i<arr1.length; i++){
+//    System.out.println(arr1[i]);
+//  }
+//  System.out.println();
+ 
+//  for(int i=0; i<arr2.length; i++){
+//    System.out.println(arr2[i]);
+//  }
+
+     // .............Program to find the frequency of each element in the array..........
+    //  int arr[] = {1, 2, 2, 3, 4, 4, 4, 5, 5, 6,4};
+    //  HashMap<Integer, Integer> fm = new HashMap<>();
+
+    //  for (int num : arr) {
+    //      fm.put(num, fm.getOrDefault(num, 0) + 1);
+    //  }
+
+    //  for (Integer key : fm.keySet()) {
+    //      System.out.println("Element: " + key + ", Frequency: " + fm.get(key));
+    //  }
+
+     // .......Program to print the elements of an array present on even position...
+    //  int arr[] = {1,2,3,4,5,6};
+    //  for(int i=0; i<arr.length; i=i+2){
+    //    System.out.println(arr[i]);
+    //  }
+    
+      // .......Program to print the elements of an array present on odd position...
+    //  int arr[] = {1,2,3,4,5,6};
+    //  for(int i=1; i<arr.length; i=i+2){
+    //    System.out.println(arr[i]);
+    //  }
+
+
      }
 

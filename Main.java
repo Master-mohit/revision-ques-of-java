@@ -975,6 +975,104 @@ int sum = 0;
     //    System.out.println(arr[i]);
     //  }
 
+      // ..............Write a Java program to separate zeros from non-zeros............... 
+    // in an integer array?
+    // [12, 7, 8, 3, 0, 0, 0]
+    // int arr[] = {12, 0, 7, 0, 8, 0, 3};
+    // int index = 0;
+    // for(int i=0; i<arr.length; i++){
+    //   if(arr[i] != 0){
+    //     arr[index] = arr[i];
+    //     index++;
+    //   }
+    // }
+    // while(index < arr.length){
+    //   arr[index] = 0;
+    //   index++;
+    // }
+    // System.out.println(Arrays.toString(arr));
 
+
+     // Write a Java program to separate zeros from non-zeros 
+    // in an integer array?
+    // [12, 7, 8, 3, 0, 0, 0]
+//     int arr[] = {12, 0, 7, 0, 8, 0, 3};
+//         int temp[] = new int [arr.length];
+//     int index = 0;
+    
+//      for(int i=0; i<arr.length; i++){
+//       if(arr[i] == 0){
+//         temp[index] = arr[i];
+//         index++;
+//       }
+//     }
+//   for(int i=0; i<arr.length; i++){
+//     if(arr[i] != 0){
+//       temp[index] = arr[i];
+//       index++;
+//     }
+//   }
+   
+//     System.out.println(Arrays.toString(temp));
+
+   //.............Write a Java program to find the intersection................... 
+    // of two arrays?
+//     int[] arr1 = {1, 2, 3, 4, 5}; //set
+//     int[] arr2 = {3, 4, 5, 6, 7};  //element
+   
+//  HashSet<Integer> set = new HashSet<>();
+   
+//    for(int num : arr1){
+//      set.add(num);
+//    }
+   
+//    List<Integer> inersection = new ArrayList<>();
+//    for(int element: arr2){
+//      if(set.contains(element)){
+//        inersection.add(element);
+//      }
+//    }
+//   System.out.println(inersection);
+
+
+ // ........Write a Java program to find all pairs of........... 
+  //....................... elements in an integer.......................
+  //................... array whose sum is equal to a given number?............
+   
+//   int[] arr= {2, 4, 3, 1, 5, 6, 8};
+//   int target = 7;
+
+// for(int i=0; i<arr.length; i++){
+//   for(int j = i+1; j<arr.length; j++){
+//     if(arr[i] + arr[j] == target){
+//       System.out.println(arr[i] + " , " + arr[j] + " " );
+//     }
+//   }
+// }
+
+ // ............Write a Java program to check the equality of two arrays?..............
+   
+//  int[] arr1 = {2, 5, 1, 7, 4};
+//  int[] arr2 = {2, 5, 1, 7, 4};
+ 
+//  if(arr1.length != arr2.length){
+//    System.out.println("eual ni h");
+//  }
+
+//  boolean yesOrnot = true;
+//  for(int i=0; i<arr1.length; i++){
+//    if(arr1[i] != arr2[i]){
+//      yesOrnot = false;
+//      break;
+//    }
+//  }
+//  if(yesOrnot){
+//    System.out.println("euqal h");
+//  }
+//  else {
+//    System.out.println("ni h");
+//  }
+
+  
      }
 

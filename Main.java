@@ -1073,6 +1073,181 @@ int sum = 0;
 //    System.out.println("ni h");
 //  }
 
+// ..............Find the occurrence of an integer in the array...................
+// int[] arr = {1, 2, 3, 4, 2, 4, 2, 5,4};
+// int count = 0;
+// System.out.println("take an any number");
+//   int n = sc.nextInt();
+//   for(int i=0; i<arr.length; i++){
+//       if(arr[i] == n){
+//             count++;
+//       }
+//   }
+//   System.out.println(count);
+
+// .......................program to put all negative..................
+// .......................numbers before positive numbers..........
+// int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+// int j = 0;
+// for(int i=0; i<arr.length; i++){
+//     if(arr[i] < 0){
+//        int temp = arr[i];
+//        arr[i] = arr[j];
+//        arr[j] = temp;
+//        j++;
+//     }
+// }
+// for(int i=0; i<arr.length; i++){
+//     System.out.print(arr[i] + " ");
+// }
+
+  //..................Subarray with given Sum...................
+  // int[] arr = {1, 2, 3, 7, 5};
+  // int sum = 12;
+  // int current = 0;
+  // int start = 0;
+  // for(int i=0; i<arr.length; i++){
+  //    current = current + arr[i];
+ 
+  // while(current > sum && start <= i){
+  //     current = current - arr[start];
+  //     start++;
+  // }
+  // if(current == sum){
+  //    System.out.println("Subarray found from index " + (start+1) + " to " + (i + 1));
+  // }
+  // }
+
+     //...............Maximum Consecutive Ones.................
+    //  int arr[] = {1, 1, 0,1, 1, 1, 1};
+    //  //   Output: 3
+    // int count = 0;
+    // int maxcount = 0;
+    
+    // for(int i=0; i<arr.length; i++){
+    //     if(arr[i] == 1){
+    //         count++;
+    //     }
+    //     else {
+    //         maxcount = Math.max(maxcount, count);
+    //         count = 0;
+    //     }
+    //      maxcount = Math.max(maxcount, count);
+    // }
+    // System.out.println(maxcount);
+
+    //.......Find the number that appears once, and other numbers twice.
+    // int arr[] = {4,2,1,2,1};
+    //     //   Output: 2
+    //    int result = 0;
+    //    for(int i=0; i<arr.length; i++){
+    //        result = result^arr[i];
+    //    }
+    //    System.out.println(result);
   
+
+    // ..........Longest subarray with given sum K(positives)..........
+  //         int[] arr = {1, 2, 3, 4, 5}; // Input array
+  //         int K = 9; // Desired sum
+  
+  //         int start = 0; // Start of the window
+  //         int currSum = 0; // Current sum of the window
+  //         int maxLength = 0; // Length of the longest subarray
+  
+  //         // Iterate through the array with the 'end' pointer
+  //         for (int end = 0; end < arr.length; end++) {
+  //             // Add the current element to the current sum
+  //             currSum += arr[end];
+  
+  //             // Shrink the window from the start if the current sum exceeds K
+  //             while (currSum > K && start <= end) {
+  //                 currSum -= arr[start];
+  //                 start++;
+  //             }
+  
+  //             // Check if the current sum equals K and update maxLength
+  //             if (currSum == K) {
+  //                 maxLength = Math.max(maxLength, end - start + 1);
+  //             }
+  //         }
+  
+  //         System.out.println("Length of the longest subarray with sum " + K + " is: " + maxLength);
+  //     }
+  // }
+
+
+  // 		................................ 2 sum ..................
+//  int arr[] = {2, 7, 11, 15};
+//  int target = 9;
+//  for(int i=0; i<arr.length; i++){
+//      for(int j=i+1; j<arr.length; j++){
+//          if(arr[i] + arr[j] == target){
+//                System.out.println(+ i + " " + j + " ");
+//          }
+//      }
+//  }
+  
+
+
+//..................... Sort an array of 0's 1's and 2'....................
+// int[] arr = {2, 0, 2, 1, 1, 0}; 
+// int count0 = 0;
+// int count1 = 0;
+// int count2 = 0;
+// for(int i=0; i<arr.length; i++){
+//     if(arr[i] == 0){
+//         count0++; //    2
+//     }
+//     else if(arr[i] == 1){
+//         count1++;   //  2
+//     }
+//     else {
+//         count2++;   //  2
+//     }
+// }
+//   int index = 0;
+// while(count0 > 0){
+//     arr[index] = 0;
+//     index++;
+//     count0--;
+// }
+// while(count1 > 0){
+//     arr[index] = 1;
+//     index++;
+//     count1--;
+// }
+// while(count2 > 0){
+//     arr[index] = 2;
+//     index++;
+//     count2--;
+// }
+// System.out.println(Arrays.toString(arr));
+
+
+//.................... Majority Element (>n/2 times).....................
+// int[] arr = {2, 2, 1, 1, 1, 1, 1, 2, 2}; 
+// int count = 0;
+// int candidate = -1; //take no which is not present giving array
+//  for(int i=0; i<arr.length; i++){
+//      if(count == 0){
+//          candidate = arr[i];
+//      }
+//      if(arr[i] == candidate){
+//          count++;
+//      }
+//      else {
+//          count--;
+//      }
+//  }
+//  count = 0;
+//  for(int i=0; i<arr.length; i++){
+//      if(arr[i] == candidate){
+//          count++;
+//      }
+//  }
+ 
+//  if(count > arr.length/2){
+//      System.out.println("MAjority element = " + candidate);
+//  }
      }
 

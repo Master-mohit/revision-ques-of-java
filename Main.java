@@ -1175,8 +1175,8 @@ int sum = 0;
   //     }
   // }
 
-
-  // 		................................ 2 sum ..................
+            // ...............MEDIUM QUESTION?.....................
+  // 		................................ 2 sum ...........................
 //  int arr[] = {2, 7, 11, 15};
 //  int target = 9;
 //  for(int i=0; i<arr.length; i++){
@@ -1249,5 +1249,56 @@ int sum = 0;
 //  if(count > arr.length/2){
 //      System.out.println("MAjority element = " + candidate);
 //  }
-     }
+    //  }
 
+
+    //.....................Count subarrays with given sum....................
+		// int arr[] = {1,2,3};
+		// int target = 3;
+		// int count = 0;
+		
+		// for(int i=0; i<arr.length; i++){
+		//     	int sum = 0;
+		//     for(int j =i; j<arr.length; j++){
+		//         sum = sum + arr[j];
+		//         if(sum == target){
+		//             count++;
+		//         }
+		//     }
+		// }
+		// System.out.println(count);
+
+
+     //....................Longest Consecutive Sequence..................
+		// int arr[] = {1,2,100,4,300,5}; 
+		// int maxlength = 1;
+		// int currlength = 1;
+		
+	  //   Arrays.sort(arr);
+		// for(int i=1; i<arr.length; i++){
+		//     if(arr[i] == arr[i-1] + 1){
+		//         currlength++;
+		//     }
+		//     else{
+		//         currlength = 1;
+		//     }
+		    
+		//     maxlength = Math.max(maxlength, currlength);
+		// }
+		// maxlength = Math.max(maxlength, currlength);
+		// System.out.println(maxlength);
+
+
+    //..................Leaders in an Array problem...................
+		// int arr[] = {16, 17, 4, 3, 5, 2}; 
+		// int n = arr.length;
+	  //   int leader = arr[n-1];
+	    
+	  //           System.out.println(leader);
+	            
+    //     for(int i = n-2; i >= 0; i--){
+    //         if(arr[i] > leader){
+    //             System.out.println(arr[i]);
+    //             leader = arr[i];
+    //         }
+    //     }

@@ -1295,10 +1295,59 @@ int sum = 0;
 	  //   int leader = arr[n-1];
 	    
 	  //           System.out.println(leader);
-	            
+	          
     //     for(int i = n-2; i >= 0; i--){
     //         if(arr[i] > leader){
     //             System.out.println(arr[i]);
     //             leader = arr[i];
     //         }
     //     }
+
+
+  //.........Rearrange the array in alternating positive and
+  //....................negative items.................
+  // int arr[] = {-4, -17, 4, 3, 5, -2 ,10}; 
+  // List<Integer> positive = new ArrayList<>();
+  //   List<Integer> negative = new ArrayList<>();
+  //   for(int num: arr){
+  //      if(num >= 0){
+  //          positive.add(num);
+  //      }
+  //      else {
+  //          negative.add(num);
+  //      }
+  //   }
+  //   int posiveidx =0;
+  //   int negaidx =0;
+  //   int i=0;
+    
+  //   while(posiveidx < positive.size() && negaidx < negative.size()){
+  //       if(i % 2 == 0){
+  //           arr[i] = positive.get(posiveidx);
+  //           posiveidx++;
+  //       }
+  //       else {
+  //          arr[i] = negative.get(negaidx);
+  //          negaidx++;
+  //       }
+  //       i++;
+  //   }
+  //   for(int num: arr){
+  //       System.out.print(num + " ");
+  //   }
+
+
+  		
+//   .....................Stock Buy And Sells..................
+// int arr[] = {7, 1, 5, 3, 6, 4}; 
+// int maxprofit = 0;
+// int minfar = arr[0]; // 5
+
+// for(int i=0; i<arr.length; i++){
+    
+//     minfar = Math.min(minfar, arr[i]);
+//       int profit = arr[i] - minfar;
+//       maxprofit = Math.max(maxprofit, profit);
+// }
+
+// System.out.println(maxprofit);

@@ -1351,3 +1351,51 @@ int sum = 0;
 // }
 
 // System.out.println(maxprofit);
+
+
+	   //...................... sum of upper and lower triangles...........
+    //  int n =3;
+    //  int mat[][] = {{6, 5, 3},
+    //              {1, 2, 5},
+    //              {7, 9, 7}};
+                 
+                 
+    //               // lower sum fo tringlee....
+    //              int lower_sum =0;
+    //              for(int i=0; i<n; i++){
+    //                  for(int j=0; j<=i; j++){
+    //                     lower_sum = lower_sum + mat[i][j];
+    //                  }
+    //              }
+    //              System.out.println(lower_sum);
+                 
+    //             // upper sum fo tringlee....
+    //          int upper_sum =0;
+    //          for(int i=0; i<n; i++){
+    //              for(int j=n-1; j>=i; j--){
+    //                  upper_sum = upper_sum + mat[i][j];
+    //              }
+    //          }
+    //          System.out.println(upper_sum);
+
+
+      //...................... find transpose matrinx.................
+		// int n =4;
+    // int mat[][] = {{1, 1, 1, 1},
+    //              {2, 2, 2, 2},
+    //              {3, 3, 3, 3},
+    //                {4, 4, 4, 4}};
+                
+    //    for(int i=0; i<4; i++){
+    //        for(int j =0; j<=i; j++){
+    //            int temp = mat[i][j];
+    //            mat[i][j] = mat[j][i];
+    //            mat[j][i] = temp;
+    //        }
+    //    }         
+    //   for(int i=0; i<n; i++){
+    //       for(int j=0; j<n; j++){
+    //           System.out.print(mat[i][j] + " ");
+    //       }
+    //       System.out.println();
+    //   } 

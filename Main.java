@@ -1575,3 +1575,34 @@ int sum = 0;
 
 
 // System.out.println(result);
+
+
+// import java.util.ArrayList;
+// import java.util.List;
+// public class Main
+// {
+    //....................  pascel trinanglee....................
+// 	public static void main(String[] args) {
+//        List<List<Integer>> result = new ArrayList<>();
+//        int n =5;
+//        for(int i=0; i<n; i++){
+           
+//        List<Integer> row = new ArrayList<>();
+       
+//        for(int j=0; j<=i; j++){
+//            if(j == 0 || j == i){
+//                row.add(1);
+//            }
+//            else {
+//                row.add(result.get(i-1).get(j-1) + result.get(i-1).get(j));
+//            }
+//        }
+//        result.add(row);
+//        }
+       
+//       for (List<Integer> row : result) {
+//             System.out.println(row); 
+//         }
+// 	}
+	
+// }

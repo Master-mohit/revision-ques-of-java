@@ -1606,3 +1606,19 @@ int sum = 0;
 // 	}
 	
 // }
+
+
+  // ...................missing numberr...................
+// 	HashMap<Integer, Integer> hs = new HashMap<>();
+// 	  int count = 0;
+// 	int arr[] = {0, 1, 2 , 4};
+// 	int sum =0;
+// 	int n = arr.length;
+// 	int totl = n * (n + 1) / 2;
+// 	for(int num: arr){
+// 	    sum = sum + num;
+// 	}
+// 	int ans = totl - sum;
+// 	System.out.println(ans);
+// 	}
+// }

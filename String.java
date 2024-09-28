@@ -55,5 +55,146 @@ public class String {
     //     }
     // }
    
+
+    //....................find non repeated char...........
+    // String str = "Mohhtot";
+    // HashMap<Character, Integer> hs = new HashMap<>();
+    
+    // for(char chacha: str.toCharArray()){
+    //     hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
+    // }
+ 
+    //  for(char key: hs.keySet()){
+    //      if(hs.get(key) == 1){
+    //          System.out.println(key+ " ");
+    //      }
+    //  }
+  
+
+    //................................count each char..........................
+    // String str = "apple";
+    // HashMap<Character, Integer> hs = new HashMap<>();
+    // for(char chacha: str.toCharArray()){
+    //     hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
+    // }
+    // for(char key: hs.keySet()){
+    //     System.out.print(key + ": " + hs.get(key)+ " ");
+    // }
+
+
+    //........................ First Non-Repeating Character..................
+//     String str = "aabbcc";
+//     HashMap<Character, Integer> hs = new HashMap<>();
+//  for(char chacha: str.toCharArray()){
+//      hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
+//  }
+//  for(char key: str.toCharArray()){
+//      if(hs.get(key) == 1){
+//          System.out.println(key);
+//          return;
+//      }
+//  }
+//  System.out.println(-1);
+
+
+//.................................Compress a String.........................
+// HashMap<Character, Integer> hs = new HashMap<>();
+// String str = "aaabbccdee";
+
+// for(char chacha: str.toCharArray()){
+//    hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
+// }
+
+// for(char key: hs.keySet()){
+//    System.out.print(key + "" + hs.get(key));
+// }
+
+//..........................Unique Characters return true........................
+// HashMap<Character, Integer> hs = new HashMap<>();
+// String str = "abcde";
+// boolean isunique = true;
+
+// for(char chacha: str.toCharArray()){
+//   hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
+// }
+// for(char key: hs.keySet()){
+//   if(hs.get(key) > 1){
+//      isunique = false;
+//      break;
+//   }
+  
+// }
+// if(isunique){
+// System.out.println(true);
+// }
+// else {
+// System.out.println(false);
+// }
+
+
+//.............. Find All Substrings of a String....................
+// HashMap<Character, Integer> hs = new HashMap<>();
+// String str = "abc";
+// for(int i=0; i<str.length(); i++){
+//     for(int j=i+1; j<= str.length(); j++){
+//         System.out.println(str.substring(i, j));
+//     }
+// }
+
+//........................ rotations of a String............................
+// HashMap<Character, Integer> hs = new HashMap<>();
+// String s1 = "abcd";
+// String mama = s1.substring(2) + s1.substring(0,2);    
+// System.out.println(mama);
+
+
+//.......................Logest commom prefix ..........................
+    
+// String[] str = {"flower", "flow", "flight"};
+         
+// if(str == null){
+//     System.out.println("");
+//     return;
+// }
+//   Arrays.sort(str);
+//   int index = 0;
+//  String s1 = str[0];
+//  String s2 = str[str.length-1];
+  
+//   while(index < s1.length()){
+//       if(s1.charAt(index) == s2.charAt(index)){
+//           index++;
+//       }
+//       else {
+//           break;
+//       }
+//   }
+//    System.out.println(s1.substring(0, index));
+
+
+
+// Output: Vowels: 3, Consonants: 7
+//....................Count Vowels and Consonants ......................
+// HashMap<Character, Integer> hs = new HashMap<>();
+// String str = "hello world";
+
+// for(char chacha: str.toCharArray()){
+//     if(chacha == ' '){
+//         continue;
+//     }
+//     hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
+// }
+
+// int vowel = 0;
+// int consonent = 0;
+// for(char key: hs.keySet()){
+//    if("AEIOUaeiou".indexOf(key) != -1){
+//        vowel = vowel + hs.get(key);
+//    }
+//    else{
+//       consonent = consonent + hs.get(key);
+//    }
+// }
+// System.out.println("vowel" + " " + vowel+ " " + "and consonent" + " " + consonent);
     }
 }

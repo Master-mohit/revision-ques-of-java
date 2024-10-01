@@ -184,7 +184,6 @@ public class String {
 //     }
 //     hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
 // }
-
 // int vowel = 0;
 // int consonent = 0;
 // for(char key: hs.keySet()){
@@ -196,5 +195,81 @@ public class String {
 //    }
 // }
 // System.out.println("vowel" + " " + vowel+ " " + "and consonent" + " " + consonent);
+
+
+
+//..............................REMOVE OUTERMOST PARENTHIS..........................
+// String str = "(()())(())";
+// int count = 0;
+// StringBuilder sb = new StringBuilder();
+
+// for(char chacha: str.toCharArray()){
+
+//  if(chacha == '('){
+//      if(count > 0){
+//         sb.append(chacha);
+//      }
+//      count++;
+//  }
+//  else if(chacha == ')'){
+//        count--;
+//      if(count > 0){
+//         sb.append(chacha);
+//      }
+   
+//  }
+// }
+
+ // .........................Largest Odd Number in String.....................
+//  String str = "35427";
+//  int update = -1;
+// for(int i=0; i<str.length(); i++){
+// char ch = str.charAt(i);
+// if((ch - '0') % 2 != 0){
+// update = i;
+// }
+
+// }
+// if(update != -1){
+// System.out.println(str.substring(0, update + 1));
+// }
+// else {
+// System.out.println(" ");
+// }
+
+
+
+
+  // ............isomorphic String..................
+  String s1 = "egg";
+  String s2 = "add";
+  
+
+  boolean result = isIsomorphic(s1, s2);
+  System.out.println(result);  
+}
+
+public static boolean isIsomorphic(String s1, String s2) {
+  if (s1.length() != s2.length()) {
+      return false;
+  }
+  int[] map1 = new int[256]; 
+  int[] map2 = new int[256];
+  
+  for (int i = 0; i < s1.length(); i++) {
+      char ch1 = s1.charAt(i);
+      char ch2 = s2.charAt(i);
+      
+      if (map1[ch1] == 0 && map2[ch2] == 0) {
+          map1[ch1] = ch2;
+          map2[ch2] = ch1;
+      } 
+    
+      else if (map1[ch1] != ch2 || map2[ch2] != ch1) {
+          return false;
+      }
+  }
+  
+  return true;
     }
 }

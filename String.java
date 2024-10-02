@@ -241,35 +241,180 @@ public class String {
 
 
   // ............isomorphic String..................
-  String s1 = "egg";
-  String s2 = "add";
+//   String s1 = "egg";
+//   String s2 = "add";
   
 
-  boolean result = isIsomorphic(s1, s2);
-  System.out.println(result);  
-}
+//   boolean result = isIsomorphic(s1, s2);
+//   System.out.println(result);  
+// }
 
-public static boolean isIsomorphic(String s1, String s2) {
-  if (s1.length() != s2.length()) {
-      return false;
-  }
-  int[] map1 = new int[256]; 
-  int[] map2 = new int[256];
+// public static boolean isIsomorphic(String s1, String s2) {
+//   if (s1.length() != s2.length()) {
+//       return false;
+//   }
+//   int[] map1 = new int[256]; 
+//   int[] map2 = new int[256];
   
-  for (int i = 0; i < s1.length(); i++) {
-      char ch1 = s1.charAt(i);
-      char ch2 = s2.charAt(i);
+//   for (int i = 0; i < s1.length(); i++) {
+//       char ch1 = s1.charAt(i);
+//       char ch2 = s2.charAt(i);
       
-      if (map1[ch1] == 0 && map2[ch2] == 0) {
-          map1[ch1] = ch2;
-          map2[ch2] = ch1;
-      } 
+//       if (map1[ch1] == 0 && map2[ch2] == 0) {
+//           map1[ch1] = ch2;
+//           map2[ch2] = ch1;
+//       } 
     
-      else if (map1[ch1] != ch2 || map2[ch2] != ch1) {
-          return false;
-      }
-  }
+//       else if (map1[ch1] != ch2 || map2[ch2] != ch1) {
+//           return false;
+//       }
+//   }
   
-  return true;
+//   return true;
+
+
+
+
+//    // .......................isomorphic String....................
+//    String s1 = "egg";
+//    String s2 = "add";
+   
+//    int [] map1 = new int[256];
+//    int [] map2 = new int[256];
+   
+//    if(s1.length() != s2.length()){
+//           System.out.println("ni h bhai");
+//           return;
+//    }
+//    boolean isisomorphic = true;
+   
+//    for(int i=0; i<s1.length(); i++){
+//        char ch1 = s1.charAt(i);
+//        char ch2 = s2.charAt(i);
+       
+//        if(map1[ch1] == 0 && map2[ch2] == 0){
+//            map1[ch1] = ch2;
+//            map2[ch2] = ch1;
+         
+//        }
+//        else if(map1[ch1] != ch2 || map2[ch2] != ch1){
+//         isisomorphic = false;
+//          break;
+//        }
+       
+       
+//    }
+//    if(isisomorphic){
+//        System.out.println("hai bhai");
+//    }
+  
+//   else {
+//       System.out.println("ni hhhhhh");
+//   }
+
+
+
+ // ......................Rotate String......................
+//  String s1 = "abcde";
+//  String s2 = "cdeab";
+ 
+//  if(s1.length() != s2.length()){
+//       System.out.println("ni h");
+//       return;
+//  }
+// String ans = s1 + s2;
+
+// if(ans.contains(s2)){
+//     System.out.println("hai");
+// }
+// else {
+//    System.out.println("ni   hh");
+// }
+
+
+
+ // ....................Sort Characters By Frequency..............
+//  String s1 = "abc";
+        
+//  int n = s1.length();
+//  int ans = (n * (n+1))/2;
+ 
+//  System.out.println(ans);
+
+
+ // .....................SORT Character BY FREQUENCY..................
+ String str = "tree";
+ HashMap<Character, Integer> hs = new HashMap<>();
+ for(char chacha: str.toCharArray()){
+     hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
+ }
+ 
+ List<Character> list = new ArrayList<>(hs.keySet());
+ list.sort((a, b) -> hs.get(b) - hs.get(a));
+ 
+ StringBuilder result = new StringBuilder();
+ for(char ans: list){
+     int mama = hs.get(ans);
+     for(int i=0; i<mama; i++){
+            result.append(ans);
+     }
+  
+ }
+ System.out.println(result.toString());
+
+
+ // .........................Maximum Nesting Depth of the Parentheses..................
+ String str =  "(1+(2*3)+((8)/4))+1";
+ int count = 0;
+ int maxcount = 0;
+ 
+ for(char chacha: str.toCharArray()){
+     if(chacha == '('){
+         count++;
+         maxcount = Math.max(maxcount, count);
+     }
+     else if(chacha == ')'){
+         count--;
+     }
+ }
+ System.out.println(maxcount);
+
+
+
+//    ...........................Roman to Integer.........................
+int count = 0;
+for (int i = 0; i < s.length(); i++) {
+    char ch = s.charAt(i);
+
+    // Add the value of the current Roman numeral
+    if (ch == 'I') {
+        count += 1;
+    } else if (ch == 'V') {
+        count += 5;
+    } else if (ch == 'X') {
+        count += 10;
+    } else if (ch == 'L') {
+        count += 50;
+    } else if (ch == 'C') {
+        count += 100;
+    } else if (ch == 'D') {
+        count += 500;
+    } else if (ch == 'M') {
+        count += 1000;
+    }
+
+   
+    if (i + 1 < s.length()) { 
+        char nextChar = s.charAt(i + 1);
+        if (ch == 'I' && (nextChar == 'V' || nextChar == 'X')) {
+            count -= 2; 
+        } else if (ch == 'X' && (nextChar == 'L' || nextChar == 'C')) {
+            count -= 20;
+        } else if (ch == 'C' && (nextChar == 'D' || nextChar == 'M')) {
+            count -= 200; 
+        }
+    }
+}
+return count;
     }
 }

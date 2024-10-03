@@ -343,78 +343,181 @@ public class String {
 
 
  // .....................SORT Character BY FREQUENCY..................
- String str = "tree";
- HashMap<Character, Integer> hs = new HashMap<>();
- for(char chacha: str.toCharArray()){
-     hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
- }
+//  String str = "tree";
+//  HashMap<Character, Integer> hs = new HashMap<>();
+//  for(char chacha: str.toCharArray()){
+//      hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
+//  }
  
- List<Character> list = new ArrayList<>(hs.keySet());
- list.sort((a, b) -> hs.get(b) - hs.get(a));
+//  List<Character> list = new ArrayList<>(hs.keySet());
+//  list.sort((a, b) -> hs.get(b) - hs.get(a));
  
- StringBuilder result = new StringBuilder();
- for(char ans: list){
-     int mama = hs.get(ans);
-     for(int i=0; i<mama; i++){
-            result.append(ans);
-     }
+//  StringBuilder result = new StringBuilder();
+//  for(char ans: list){
+//      int mama = hs.get(ans);
+//      for(int i=0; i<mama; i++){
+//             result.append(ans);
+//      }
   
- }
- System.out.println(result.toString());
+//  }
+//  System.out.println(result.toString());
 
 
- // .........................Maximum Nesting Depth of the Parentheses..................
- String str =  "(1+(2*3)+((8)/4))+1";
- int count = 0;
- int maxcount = 0;
+//  // .........................Maximum Nesting Depth of the Parentheses..................
+//  String str =  "(1+(2*3)+((8)/4))+1";
+//  int count = 0;
+//  int maxcount = 0;
  
- for(char chacha: str.toCharArray()){
-     if(chacha == '('){
-         count++;
-         maxcount = Math.max(maxcount, count);
-     }
-     else if(chacha == ')'){
-         count--;
-     }
- }
- System.out.println(maxcount);
+//  for(char chacha: str.toCharArray()){
+//      if(chacha == '('){
+//          count++;
+//          maxcount = Math.max(maxcount, count);
+//      }
+//      else if(chacha == ')'){
+//          count--;
+//      }
+//  }
+//  System.out.println(maxcount);
 
 
 
-//    ...........................Roman to Integer.........................
-int count = 0;
-for (int i = 0; i < s.length(); i++) {
-    char ch = s.charAt(i);
+// //    ...........................Roman to Integer.........................
+// int count = 0;
+// for (int i = 0; i < s.length(); i++) {
+//     char ch = s.charAt(i);
 
-    // Add the value of the current Roman numeral
-    if (ch == 'I') {
-        count += 1;
-    } else if (ch == 'V') {
-        count += 5;
-    } else if (ch == 'X') {
-        count += 10;
-    } else if (ch == 'L') {
-        count += 50;
-    } else if (ch == 'C') {
-        count += 100;
-    } else if (ch == 'D') {
-        count += 500;
-    } else if (ch == 'M') {
-        count += 1000;
-    }
+//     // Add the value of the current Roman numeral
+//     if (ch == 'I') {
+//         count += 1;
+//     } else if (ch == 'V') {
+//         count += 5;
+//     } else if (ch == 'X') {
+//         count += 10;
+//     } else if (ch == 'L') {
+//         count += 50;
+//     } else if (ch == 'C') {
+//         count += 100;
+//     } else if (ch == 'D') {
+//         count += 500;
+//     } else if (ch == 'M') {
+//         count += 1000;
+//     }
 
    
-    if (i + 1 < s.length()) { 
-        char nextChar = s.charAt(i + 1);
-        if (ch == 'I' && (nextChar == 'V' || nextChar == 'X')) {
-            count -= 2; 
-        } else if (ch == 'X' && (nextChar == 'L' || nextChar == 'C')) {
-            count -= 20;
-        } else if (ch == 'C' && (nextChar == 'D' || nextChar == 'M')) {
-            count -= 200; 
-        }
-    }
+//     if (i + 1 < s.length()) { 
+//         char nextChar = s.charAt(i + 1);
+//         if (ch == 'I' && (nextChar == 'V' || nextChar == 'X')) {
+//             count -= 2; 
+//         } else if (ch == 'X' && (nextChar == 'L' || nextChar == 'C')) {
+//             count -= 20;
+//         } else if (ch == 'C' && (nextChar == 'D' || nextChar == 'M')) {
+//             count -= 200; 
+//         }
+//     }
+// }
+// return count;
+
+
+
+// ..................String to Integer (atoi)................
+String str = " -1337c0d3";
+          
+if(str == null || str.length() == 0){
+    System.out.println(0);
+    return ;
 }
-return count;
+
+str = str.trim();
+
+if(str.length() == 0){
+     System.out.println(0);
+    return ;
+}
+  int i =0; // traverse..
+  int sign = 1; // lets assume positive..
+  int result = 0; // store the final result..
+
+  if(str.charAt(i) == '-' || str.charAt(i) == '+'){
+      sign = (str.charAt(i) == '-') ? -1 : 1;
+      i++;
+  }
+
+while(i < str.length() && Character.isDigit(str.charAt(i))){
+      int digit = str.charAt(i) - '0'; //String to number..converter
+      
+      if(result > (Integer.MAX_VALUE - digit) / 10){
+       System.out.println((sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE);
+       return;
+}
+
+
+  result = result * 10 + digit;
+ i++;
+  
+}
+  System.out.println(result * sign);
+
+
+  //..................Longest Palindromic Substring..........   
+  String str = "cbbd";
+  if(str == null || str.length() == 0){
+ System.out.println(0);
+ return;
+}
+        String ans ="";
+ for(int i=0; i<str.length(); i++){
+     for(int j=i+1; j<str.length(); j++){
+      String temp = str.substring(i, j);
+          
+          
+          
+         int left =0;
+         int right = temp.length()-1;
+         while(left < right){
+             if(temp.charAt(left) != temp.charAt(right)){
+                  break;
+                
+             } 
+             left++;
+             right--;
+         }
+         if(left >= right && temp.length() > ans.length()){
+             ans = temp;
+         }
+     }
+     
+ }
+ System.out.println(ans);
+
+ //  ..................Sum of Beauty of All Substrings.............
+              String str = "aabcbaa";
+              int totl =0;
+           
+              for(int i=0; i<str.length(); i++){
+                  for(int j=i+1; j<=str.length(); j++){
+                   String temp = str.substring(i, j);
+                   
+                    HashMap<Character, Integer> hs = new HashMap<>();
+                    
+                   for(char chacha: temp.toCharArray()){
+                       hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
+                       
+                   }
+                   
+                      int maxfreq = Integer.MIN_VALUE;
+                      int minfreq = Integer.MAX_VALUE;
+                      
+                       for(int val: hs.values()){
+                         maxfreq = Math.max(maxfreq, val);
+                         minfreq = Math.min(minfreq, val);
+                     }
+                   
+                     totl += (maxfreq - minfreq);
+                      
+                      
+                   
+                  }
+              }
+              System.out.println(totl);
     }
 }

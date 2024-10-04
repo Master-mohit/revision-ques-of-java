@@ -523,35 +523,83 @@ public class String {
 
 
       // .......................Reverse Words in a String......................
-            String input = "Hello world this is a test";
-            String[] words = input.split(" ");
-            StringBuilder sb = new StringBuilder();
-            for(int i = words.length-1; i>=0; i--){
-                sb.append(words[i]);
-                if(i != 0){
-                    sb.append(" ");
-                }
-            }
-        System.out.println(sb);
+        //     String input = "Hello world this is a test";
+        //     String[] words = input.split(" ");
+        //     StringBuilder sb = new StringBuilder();
+        //     for(int i = words.length-1; i>=0; i--){
+        //         sb.append(words[i]);
+        //         if(i != 0){
+        //             sb.append(" ");
+        //         }
+        //     }
+        // System.out.println(sb);
 
-        // ....................Minimum Add to Make Parentheses Valid.................
-        String str = "())";
-        int open = 0;
-        int close = 0;
-        for(char ch: str.toCharArray()){
-            if(ch == '('){
-               open++;
+        // // ....................Minimum Add to Make Parentheses Valid.................
+        // String str = "())";
+        // int open = 0;
+        // int close = 0;
+        // for(char ch: str.toCharArray()){
+        //     if(ch == '('){
+        //        open++;
+        //     }
+        //     else if(ch == ')'){
+        //         if(open > 0){
+        //             open--;
+        //         }
+        //         else {
+        //             close++;
+        //         }
+        //     }
+        // }
+        // int result = open + close;
+        // System.out.println(result);
+
+
+        //  ........................Count and say....................................
+        int n = 3;
+        String result = "1";
+        for(int j=0; j<n; j++){
+               int count = 1;
+        StringBuilder sb = new StringBuilder();
+        for(int i=1; i<result.length(); i++){
+            if(result.charAt(i) == result.charAt(i-1)){
+                count++;
             }
-            else if(ch == ')'){
-                if(open > 0){
-                    open--;
-                }
-                else {
-                    close++;
-                }
+            else {
+                sb.append(count).append(result.charAt(i-1));
+                count = 1;
             }
         }
-        int result = open + close;
+        sb.append(count).append(result.charAt(result.length()-1));
+           result = sb.toString();
+        }
         System.out.println(result);
+
+
+        // .....................Repeated String Match..................
+        String s1 = "abc";
+        String s2 = "cabca";
+        
+        int count = 0;
+      StringBuilder sb = new StringBuilder();
+      while(sb.length() < s2.length()){
+          sb.append(s1);
+          count++;
+      }
+      if(sb.toString().contains(s2)){
+         System.out.println(count);
+         return;
+      }
+      sb.append(s1);
+      count++;
+      
+      if(sb.toString().contains(s2)){
+         System.out.println(count);
+         return;
+      }
+      else {
+          System.out.println(-1);
+      }
+      
     }
 }

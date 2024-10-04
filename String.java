@@ -419,105 +419,139 @@ public class String {
 
 
 
-// ..................String to Integer (atoi)................
-String str = " -1337c0d3";
+// ........................................String to Integer (atoi)................
+// String str = " -1337c0d3";
           
-if(str == null || str.length() == 0){
-    System.out.println(0);
-    return ;
-}
+// if(str == null || str.length() == 0){
+//     System.out.println(0);
+//     return ;
+// }
 
-str = str.trim();
+// str = str.trim();
 
-if(str.length() == 0){
-     System.out.println(0);
-    return ;
-}
-  int i =0; // traverse..
-  int sign = 1; // lets assume positive..
-  int result = 0; // store the final result..
+// if(str.length() == 0){
+//      System.out.println(0);
+//     return ;
+// }
+//   int i =0; // traverse..
+//   int sign = 1; // lets assume positive..
+//   int result = 0; // store the final result..
 
-  if(str.charAt(i) == '-' || str.charAt(i) == '+'){
-      sign = (str.charAt(i) == '-') ? -1 : 1;
-      i++;
-  }
+//   if(str.charAt(i) == '-' || str.charAt(i) == '+'){
+//       sign = (str.charAt(i) == '-') ? -1 : 1;
+//       i++;
+//   }
 
-while(i < str.length() && Character.isDigit(str.charAt(i))){
-      int digit = str.charAt(i) - '0'; //String to number..converter
+// while(i < str.length() && Character.isDigit(str.charAt(i))){
+//       int digit = str.charAt(i) - '0'; //String to number..converter
       
-      if(result > (Integer.MAX_VALUE - digit) / 10){
-       System.out.println((sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE);
-       return;
-}
+//       if(result > (Integer.MAX_VALUE - digit) / 10){
+//        System.out.println((sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE);
+//        return;
+// }
 
 
-  result = result * 10 + digit;
- i++;
+//   result = result * 10 + digit;
+//  i++;
   
-}
-  System.out.println(result * sign);
+// }
+//   System.out.println(result * sign);
 
 
-  //..................Longest Palindromic Substring..........   
-  String str = "cbbd";
-  if(str == null || str.length() == 0){
- System.out.println(0);
- return;
-}
-        String ans ="";
- for(int i=0; i<str.length(); i++){
-     for(int j=i+1; j<str.length(); j++){
-      String temp = str.substring(i, j);
+  //.....................................Longest Palindromic Substring..........   
+//   String str = "cbbd";
+//   if(str == null || str.length() == 0){
+//  System.out.println(0);
+//  return;
+// }
+//         String ans ="";
+//  for(int i=0; i<str.length(); i++){
+//      for(int j=i+1; j<str.length(); j++){
+//       String temp = str.substring(i, j);
           
           
           
-         int left =0;
-         int right = temp.length()-1;
-         while(left < right){
-             if(temp.charAt(left) != temp.charAt(right)){
-                  break;
+//          int left =0;
+//          int right = temp.length()-1;
+//          while(left < right){
+//              if(temp.charAt(left) != temp.charAt(right)){
+//                   break;
                 
-             } 
-             left++;
-             right--;
-         }
-         if(left >= right && temp.length() > ans.length()){
-             ans = temp;
-         }
-     }
+//              } 
+//              left++;
+//              right--;
+//          }
+//          if(left >= right && temp.length() > ans.length()){
+//              ans = temp;
+//          }
+//      }
      
- }
- System.out.println(ans);
+//  }
+//  System.out.println(ans);
 
- //  ..................Sum of Beauty of All Substrings.............
-              String str = "aabcbaa";
-              int totl =0;
+ //  ..................................Sum of Beauty of All Substrings.............
+            //   String str = "aabcbaa";
+            //   int totl =0;
            
-              for(int i=0; i<str.length(); i++){
-                  for(int j=i+1; j<=str.length(); j++){
-                   String temp = str.substring(i, j);
+            //   for(int i=0; i<str.length(); i++){
+            //       for(int j=i+1; j<=str.length(); j++){
+            //        String temp = str.substring(i, j);
                    
-                    HashMap<Character, Integer> hs = new HashMap<>();
+            //         HashMap<Character, Integer> hs = new HashMap<>();
                     
-                   for(char chacha: temp.toCharArray()){
-                       hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
+            //        for(char chacha: temp.toCharArray()){
+            //            hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
                        
-                   }
+            //        }
                    
-                      int maxfreq = Integer.MIN_VALUE;
-                      int minfreq = Integer.MAX_VALUE;
+            //           int maxfreq = Integer.MIN_VALUE;
+            //           int minfreq = Integer.MAX_VALUE;
                       
-                       for(int val: hs.values()){
-                         maxfreq = Math.max(maxfreq, val);
-                         minfreq = Math.min(minfreq, val);
-                     }
+            //            for(int val: hs.values()){
+            //              maxfreq = Math.max(maxfreq, val);
+            //              minfreq = Math.min(minfreq, val);
+            //          }
                    
-                     totl += (maxfreq - minfreq);
+            //          totl += (maxfreq - minfreq);
                       
                       
                    
-                  }
-              }
-              System.out.println(totl);
+            //       }
+            //   }
+            //   System.out.println(totl);
+
+
+
+      // .......................Reverse Words in a String......................
+            String input = "Hello world this is a test";
+            String[] words = input.split(" ");
+            StringBuilder sb = new StringBuilder();
+            for(int i = words.length-1; i>=0; i--){
+                sb.append(words[i]);
+                if(i != 0){
+                    sb.append(" ");
+                }
+            }
+        System.out.println(sb);
+
+        // ....................Minimum Add to Make Parentheses Valid.................
+        String str = "())";
+        int open = 0;
+        int close = 0;
+        for(char ch: str.toCharArray()){
+            if(ch == '('){
+               open++;
+            }
+            else if(ch == ')'){
+                if(open > 0){
+                    open--;
+                }
+                else {
+                    close++;
+                }
+            }
+        }
+        int result = open + close;
+        System.out.println(result);
     }
 }

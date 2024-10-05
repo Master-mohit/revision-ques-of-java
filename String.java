@@ -556,50 +556,50 @@ public class String {
 
 
         //  ........................Count and say....................................
-        int n = 3;
-        String result = "1";
-        for(int j=0; j<n; j++){
-               int count = 1;
-        StringBuilder sb = new StringBuilder();
-        for(int i=1; i<result.length(); i++){
-            if(result.charAt(i) == result.charAt(i-1)){
-                count++;
-            }
-            else {
-                sb.append(count).append(result.charAt(i-1));
-                count = 1;
-            }
-        }
-        sb.append(count).append(result.charAt(result.length()-1));
-           result = sb.toString();
-        }
-        System.out.println(result);
+    //     int n = 3;
+    //     String result = "1";
+    //     for(int j=0; j<n; j++){
+    //            int count = 1;
+    //     StringBuilder sb = new StringBuilder();
+    //     for(int i=1; i<result.length(); i++){
+    //         if(result.charAt(i) == result.charAt(i-1)){
+    //             count++;
+    //         }
+    //         else {
+    //             sb.append(count).append(result.charAt(i-1));
+    //             count = 1;
+    //         }
+    //     }
+    //     sb.append(count).append(result.charAt(result.length()-1));
+    //        result = sb.toString();
+    //     }
+    //     System.out.println(result);
 
 
-        // .....................Repeated String Match..................
-        String s1 = "abc";
-        String s2 = "cabca";
+    //     // .....................Repeated String Match..................
+    //     String s1 = "abc";
+    //     String s2 = "cabca";
         
-        int count = 0;
-      StringBuilder sb = new StringBuilder();
-      while(sb.length() < s2.length()){
-          sb.append(s1);
-          count++;
-      }
-      if(sb.toString().contains(s2)){
-         System.out.println(count);
-         return;
-      }
-      sb.append(s1);
-      count++;
+    //     int count = 0;
+    //   StringBuilder sb = new StringBuilder();
+    //   while(sb.length() < s2.length()){
+    //       sb.append(s1);
+    //       count++;
+    //   }
+    //   if(sb.toString().contains(s2)){
+    //      System.out.println(count);
+    //      return;
+    //   }
+    //   sb.append(s1);
+    //   count++;
       
-      if(sb.toString().contains(s2)){
-         System.out.println(count);
-         return;
-      }
-      else {
-          System.out.println(-1);
-      }
+    //   if(sb.toString().contains(s2)){
+    //      System.out.println(count);
+    //      return;
+    //   }
+    //   else {
+    //       System.out.println(-1);
+    //   }
       
     }
 }

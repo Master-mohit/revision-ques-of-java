@@ -51,3 +51,78 @@ select sum(rollno) from student;
 select max(rollno) from student;
 select min(rollno) from student;
 select avg(rollno) from student;
+
+
+-- ..................................  JOIN ..................................
+
+
+CREATE TABLE department (
+    id INT PRIMARY KEY,         
+    name VARCHAR(50)         
+);
+
+
+INSERT INTO department (id, name) VALUES
+(1, 'HR'),
+(2, 'Engineering'),
+(3, 'Sales'),
+(4, 'Marketing');
+
+select * from department;
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,         
+    first_name VARCHAR(50),      
+    last_name VARCHAR(50),      
+    contact_number VARCHAR(15),   
+    department_id INT,          
+    FOREIGN KEY (department_id) REFERENCES department(id)
+);
+
+
+INSERT INTO employees (id, first_name, last_name, contact_number, department_id) VALUES
+(1, 'Mohit', 'Gupta', '9844169856', 1), 
+(2, 'Rohit', 'Singh', '9876543210', 2), 
+(3, 'Gagan', 'Sharma', '9988776655', 3),
+(4, 'Mahima', 'Mehta', '9996663331', 4); 
+
+select * from employees;
+
+SELECT e.first_name, e.last_name 
+FROM employees e
+INNER JOIN department d ON e.department_id = d.id;
+
+INSERT INTO department (id) VALUES
+(5);
+INSERT INTO department (id) VALUES
+(6);
+select * from department;
+INSERT INTO employees (id, first_name, last_name, contact_number, department_id) VALUES
+(5, 'pretii', 'Gupta', '965469856', 5),
+(6, 'teena', 'Mehta', '956663331', 6); 
+select * from employees;
+
+-- Question: Write a query to list all employees along with 
+-- their department names. If an employee does not belong
+-- to any department, show "No Department" instead of a department name.
+
+-- Query to fetch employees and their departments
+SELECT e.first_name, COALESCE(d.name, 'No Department') AS department_name
+FROM employees e
+RIGHT JOIN department d ON e.department_id = d.id;
+
+-- Question: How would you write a query to find 
+-- all employees who do not belong to any department?
+
+select e.first_name from department d right join
+employees e on d.id = e.department_id where d.name is null;
+
+select * from department;
+select * from employees;
+
+-- Question: Write a query to select all employees 
+-- whose last names start with 'G' and who work in the 'Sales' department.
+
+select e.first_name from department d right join employees e
+on d.id = e.department_id where d.name = 'sales' and e.last_name like 'g%';
+

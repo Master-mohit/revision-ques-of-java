@@ -427,7 +427,7 @@ public class Main
 	}
 }
 
-// ...................... dleete element at end.............................
+// ...................... dlelete element at end.............................
 
 class Node{
     int data;
@@ -964,4 +964,193 @@ public class Main
             System.out.println("null");
         }
     }   
+
+
+    // .......................INSERTION ELEMENT ANYWHERE IN LIST...............
+
+    class Node{
+        int data;
+        Node next, prev;
+       
+       Node(int data){
+           this.data = data;
+           this.next = null;
+           this.prev = null;
+       }
+    }
+    public class Main
+    {
+        public static void main(String[] args) {
+           Node head = new Node(10);
+           head.next = new Node(20);
+           head.next.next = new Node(30);
+           head.next.next.next = new Node(40);
+           head.next.next.next.next = new Node(50);
+           
+           Node newNode = new Node(45);
+           int position = 4;
+           
+           if(head == null){
+               head = newNode;
+           }
+           else {
+              Node temp = head;
+               for(int i =0; i<position-1; i++){
+                   temp = temp.next;
+                   
+               }
+               newNode.next = temp.next;
+               temp.next = newNode;
+               newNode.prev = temp;
+              
+           }
+           
+           Node temp = head;
+           while(temp != null){
+               System.out.print(temp.data + " -> ");
+               temp = temp.next;
+           }
+           System.out.println("null");
+        }
+    }
+
+
+    // .......................DELETE ELEMENT AT STARTING................
+
+    class Node{
+        int data;
+        Node next, prev;
+       
+       Node(int data){
+           this.data = data;
+           this.next = null;
+           this.prev = null;
+       }
+    }
+    public class Main
+    {
+        public static void main(String[] args) {
+           Node head = new Node(10);
+           head.next = new Node(20);
+           head.next.next = new Node(30);
+           head.next.next.next = new Node(40);
+           head.next.next.next.next = new Node(50);
+           
+         if(head == null){
+             System.out.println("null");
+             return;
+         }
+         else {
+            head = head.next;
+           head.prev = null;
+         }
+           
+           Node temp = head;
+           while(temp != null){
+               System.out.print(temp.data + " -> ");
+               temp = temp.next;
+           }
+           System.out.println("null");
+        }
+    }
+
+
+
+    // ....................delete element at last........................
+    class Node{
+        int data;
+        Node next, prev;
+       
+       Node(int data){
+           this.data = data;
+           this.next = null;
+           this.prev = null;
+       }
+    }
+    public class Main
+    {
+        public static void main(String[] args) {
+           Node head = new Node(10);
+           head.next = new Node(20);
+           head.next.next = new Node(30);
+           head.next.next.next = new Node(40);
+           head.next.next.next.next = new Node(50);
+           head.next.next.next.next.prev = head.next.next.next;
+           
+         if(head == null){
+             System.out.println("null");
+             return;
+         }
+         else {
+             Node temp = head;
+             while(temp.next != null){
+               temp = temp.next;
+                 
+             }
+              temp.prev.next = null;
+              
+         }
+         
+           
+           Node temp = head;
+           while(temp != null){
+               System.out.print(temp.data + " <-> ");
+               temp = temp.next;
+           }
+           System.out.println("null");
+        }
+    }
+
+    // ...........................delete element accoding to postion in list....
+
+    class Node{
+        int data;
+        Node next, prev;
+       
+       Node(int data){
+           this.data = data;
+           this.next = null;
+           this.prev = null;
+       }
+    }
+    public class Main
+    {
+        public static void main(String[] args) {
+           Node head = new Node(10);
+           head.next = new Node(20);
+           head.next.next = new Node(30);
+           head.next.next.next = new Node(40);
+           head.next.next.next.next = new Node(50);
+           
+            int position = 4;
+           
+           
+         if(head == null){
+             System.out.println("null");
+             return;
+         }
+         else {
+             Node temp = head;
+             for(int i=0; i<position-1; i++){
+                 temp = temp.next;
+             }
+              temp.next = temp.next.next;
+              
+              if(temp.next != null){
+                  temp.next.prev = temp;
+              }
+         }
+        
+         
+           
+           Node temp = head;
+           while(temp != null){
+               System.out.print(temp.data + " <-> ");
+               temp = temp.next;
+           }
+           System.out.println("null");
+        }
+    }
+
+
      

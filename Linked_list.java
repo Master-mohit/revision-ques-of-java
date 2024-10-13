@@ -1153,4 +1153,102 @@ public class Main
     }
 
 
+
+    // ............................CIRCULOR LINKED-LIST.........................
+
+// .......................PRINT ELEMENT IN CIRCULOR LINKED IN SINGLY..........
+
+class Node{
+    int data;
+    Node next;
+    
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		Node head = new Node(10);
+		head.next = new Node(20);
+		head.next.next = new Node(30);
+		head.next.next.next = new Node(40);
+		
+	   Node temp = head;
+	   while(temp.next != null){
+	       temp = temp.next;
+	   }
+	   temp.next = head;
+	   
+	   Node current = head;
+	   while(current.next != null){
+	       System.out.print(current.data + " -> ");
+	       current = current.next;
+	        if(current == head){
+	       break;
+	   }
+	   }
+	   System.out.println("back to head");
+	  
+	}
+}
+
+
+// .....................Detect cyclee.....................
+
+
+class Node{
+    int data;
+    Node next;
+    
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	  Node head = new Node(10);
+	  head.next = new Node(20);
+	  head.next.next = new Node(30);
+	  head.next.next.next = new Node(40);
+	  head.next.next.next.next = head.next;
+	  
+	   
+	    Node slow = head;
+	     Node fast = head;
+	     
+	     boolean cycle = false;
+	     
+	     while(fast != null && fast.next != null){
+	         slow = slow.next;
+	         fast = fast.next.next;
+	         if(slow == fast){
+	             cycle = true;
+	             break;
+	         }
+	     }
+	     
+	     if(cycle){
+	         System.out.println("detect cycle " + slow.data);
+	     }
+	     else {
+	         System.out.println(false);
+	     }
+	  
+	  Node temp = head;
+	  while(temp != null){
+	      System.out.print(temp.data + " -> ");
+	      temp = temp.next;
+	  }
+	  System.out.println("null");
+	}
+}
+
+
+
+
      

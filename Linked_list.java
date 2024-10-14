@@ -1442,4 +1442,146 @@ public class Main
 }
 
 
+// ......................................odd even linked-list...............................
+
+
+class Node{
+    int data;
+    Node next;
+    
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	   Node head = new Node(1);
+	   head.next = new Node(2);
+	   head.next.next = new Node(3);
+	   head.next.next.next = new Node(4);
+	   head.next.next.next.next = new Node(5);
+	    head.next.next.next.next.next = new Node(16);
+	   
+	   Node odd = null;
+	   Node even = null;
+	   Node oddtail = null;
+	   Node eventail = null;
+	   
+        Node current = head;
+        while(current != null){
+            int value = current.data;
+            if(value % 2 != 0){
+               if(odd == null){
+                    odd  = oddtail = current;
+               }
+               else {
+                  oddtail.next = current;
+                  oddtail = oddtail.next;
+               }
+               
+            }
+            if(value % 2 == 0){
+                if(even == null){
+                    even = eventail = current;
+                }
+                else {
+                    eventail.next = current;
+                    eventail = eventail.next;
+                }
+            }
+           current = current.next;
+        }
+        
+        if(eventail != null){
+            eventail.next = null;
+        }
+        
+        if(oddtail != null){
+            oddtail.next = null;
+        }
+        
+        Node evenList = even;
+        while(evenList != null){
+         System.out.print(evenList.data + " -> ");
+         evenList = evenList.next;
+        }
+         System.out.println("null");
+	   
+	    Node oddList = odd;
+        while(oddList != null){
+         System.out.print(oddList.data + " -> ");
+         oddList = oddList.next;
+        }
+         System.out.println("null");
+	}
+}
+
+
+// ................................... plus one in linked-list...................................
+
+class Node{
+    int data;
+    Node next;
+    
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		Node head = new Node(1);
+		head.next = new Node(2);
+		head.next.next = new Node(3);
+		
+		Node prev = null;
+		Node current = head;
+		while(current != null){
+		      Node next = current.next;
+		      current.next = prev;
+		      prev = current;
+		      current = next;
+		}
+		   head = prev;
+		   
+		   int carry = 1;
+		    current = head;
+		 while(current != null){
+		     int sum = current.data + carry;
+		     carry = sum / 10;
+		    current.data = sum % 10;
+		     if(carry == 0){
+		        current = current.next;
+	     	  }
+		 }
+		 if(carry > 0){
+		     Node newNode = new Node(carry);
+		         newNode.next = head;
+		         head = newNode;
+		     }
+	  	  prev = null;
+		  current = head;
+		while(current != null){
+		      Node next = current.next;
+		      current.next = prev;
+		      prev = current;
+		      current = next;
+		}
+		   head = prev;
+		 	
+		    Node temp = head;
+		    while(temp != null){
+		        System.out.print(temp.data + " -> ");
+		        temp = temp.next;
+		    }
+		     System.out.println("null");
+}
+}
+
+
+
      

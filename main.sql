@@ -51,6 +51,10 @@ select sum(rollno) from student;
 select max(rollno) from student;
 select min(rollno) from student;
 select avg(rollno) from student;
+alter table student add stu_enroll int;
+alter table student RENAME column stu_enroll to enroll;
+alter table student drop enroll;
+alter table student modify stu_depart varchar(200);
 
 
 -- ..................................  JOIN ..................................
@@ -102,6 +106,9 @@ INSERT INTO employees (id, first_name, last_name, contact_number, department_id)
 (6, 'teena', 'Mehta', '956663331', 6); 
 select * from employees;
 
+-- ....................................JOIN QUESTION .  .............................
+
+
 -- Question: Write a query to list all employees along with 
 -- their department names. If an employee does not belong
 -- to any department, show "No Department" instead of a department name.
@@ -125,4 +132,29 @@ select * from employees;
 
 select e.first_name from department d right join employees e
 on d.id = e.department_id where d.name = 'sales' and e.last_name like 'g%';
+
+
+
+-- .........................knowledge of SQL..........................
+
+-- ............................view in sql.........................
+-- A view in SQL is a virtual table that is based on the result of a SELECT query
+-- It does not store data itself; instead, it provides a way to represent
+--  data from one or more tables in a specific format. Views can simplify 
+--  complex queries, improve security.
+
+create table student(stu_id int , stu_name varchar(40), stu_depart varchar(20));
+insert into student values(1, 'mohit', 'EC');
+select * from student;
+insert into student value(2, 'kartik', 'CS'),
+                         (3, 'ankush', 'ME'),
+                         (4, 'hemant', 'AIML');
+                         select * from student;
+                         
+create view emplo As select stu_id, stu_name from student
+where stu_depart = 'EC';
+
+select * from emplo;
+
+
 

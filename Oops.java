@@ -37,7 +37,7 @@ public class Main
 
 // ..............................OVERLOADING................................
 
-class add{
+class calculator{
     int add(int a , int b){
         return a + b;
     }
@@ -54,7 +54,7 @@ class add{
 public class Main
 {
 	public static void main(String[] args) {
-		add a = new add();
+		calculator a = new calculator();
 		System.out.println(a.add(5 , 5));
 		
 		System.out.println(a.add(1 , 2 , 3));
@@ -140,3 +140,97 @@ public class Main
 	
 	}
 }
+
+
+// ...................................INHERITANCE without constructor..............................
+
+// .....parent class....
+class animal{
+    void eat(){
+        System.out.println("eatiing...");
+    }
+}
+// .......child class...
+class dog extends animal{
+   
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+// .......child class ke object ke through parent class ke method ko inherit kr skte h
+		dog an = new dog();
+		an.eat();
+		
+	}
+}
+
+
+// ...............................INHERITANCE with constructor.................
+
+class animal{
+    String name;
+    int age;
+    
+    animal(String name , int age){
+        this.name = name;
+        this.age = age;
+    }
+    
+    void eat(){
+        System.out.println(name + " is eating... ");
+    }
+    
+}
+
+class Dog extends animal{
+    Dog(String name, int age){
+        super(name, age);   //call to parent class constructor using super keyword
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Dog an = new Dog("bull dog", 10);
+	    an.eat();
+
+	}
+}
+
+
+// ...............................INHERITANCE with constructor.................
+
+// class animal{
+//     String name;
+//     int age;
+    
+//     animal(String name , int age){
+//         this.name = name;
+//         this.age = age;
+//     }
+    
+//     void sleep(){
+//         System.out.println(name + " slepping");
+//     }
+    
+// }
+
+// class hathi extends animal{
+//     hathi(String name, int age){
+//         super(name , age);
+//     }
+// }
+
+
+// public class Main
+// {
+// 	public static void main(String[] args) {
+// 			hathi h = new hathi("ghoda", 50);
+// 		   System.out.println(h.name);
+// 		   System.out.println(h.age);
+// 		   h.sleep();
+// 	}
+// }
+
+

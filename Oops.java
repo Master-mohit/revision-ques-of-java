@@ -234,3 +234,37 @@ public class Main
 // }
 
 
+// ..........................Abstraction....................................
+
+// .....Abstract class....
+abstract class phone{
+    
+    abstract void call(); // abstract method.....
+    
+}
+
+class Iphone extends phone{
+     void call(){
+        System.out.println("iphone se call lgaao...");
+    }
+}
+
+class One_plus extends phone{
+    void call(){
+        System.out.println("Once plus se lga lo...");
+    }
+} 
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    phone i = new Iphone();
+	      i.call();
+	      
+	    phone o = new One_plus();
+	     o.call();
+	    
+	
+	}
+}
+

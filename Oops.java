@@ -63,6 +63,7 @@ public class Main
 	}
 }
 
+// .................................POLYMORPHISM................................
 // .........................OVERRIDING................................
 
 // ...Parent class....
@@ -268,3 +269,47 @@ public class Main
 	}
 }
 
+// .............................ENCAPSULATION..........................
+
+class BankAccount{
+    private double Balannce;
+    
+    public BankAccount(double Balannce){
+        this.Balannce = Balannce;
+    }
+    
+    public void deposite(double amount){
+        if(amount > 0){
+            Balannce += amount;
+        }
+        else {
+            System.out.println("in valid Amount");
+        }
+    }
+    
+    public void widrow(double amount){
+        if(amount > 0 && amount <= Balannce){
+            Balannce -= amount;
+        }
+        else{
+            System.out.println("insufficient amount");
+        }
+    }
+    
+    public double getbalance(){
+        return Balannce;
+    }
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	 BankAccount bank = new BankAccount(300);
+	 bank.deposite(200);
+	 System.out.println("dEPOSITE MONEY = " + bank.getbalance());
+	 
+	 bank.widrow(100);
+	 System.out.println("Total = " + bank.getbalance());
+	 
+	}
+}

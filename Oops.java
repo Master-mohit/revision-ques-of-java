@@ -66,40 +66,40 @@ public class Main
 // .................................POLYMORPHISM................................
 // .........................OVERRIDING................................
 
-// ...Parent class....
-class Animal{
-    void sound(){
-        System.out.println("animal makes a sound");
+// Parent Class
+class Phone {
+    void makeCall() {
+        System.out.println("Making a call using a general phone.");
     }
 }
 
-// ...Child class....
-class Dog extends Animal{
-    void sound(){
-        System.out.println("Dogs bark...");
+// Child Class 1
+class Landline extends Phone {
+    @Override
+    void makeCall() {
+        System.out.println("Making a call using a landline (wired connection).");
     }
 }
 
-// ....also Child class....
-class Cat extends Animal{
-    void sound(){
-        System.out.println("Cat meoms..");
+// Child Class 2
+class Smartphone extends Phone {
+    @Override
+    void makeCall() {
+        System.out.println("Making a call using a smartphone (wireless connection).");
     }
 }
 
-public class Main
-{
-	public static void main(String[] args) {
-	    Animal an = new Animal();  
-	     an.sound();
-// dog object but refrence animal......  
-	    Animal d = new Dog();
-	    d.sound();
-	    
-	   Animal c = new Cat();
-	    c.sound();
-	
-	}
+// Main Class
+public class Main {
+    public static void main(String[] args) {
+        Phone generalPhone = new Phone();
+        Phone landline = new Landline();
+        Phone smartphone = new Smartphone();
+
+        generalPhone.makeCall();  // Output: Making a call using a general phone.
+        landline.makeCall();      // Output: Making a call using a landline (wired connection).
+        smartphone.makeCall();    // Output: Making a call using a smartphone (wireless connection).
+    }
 }
 
 

@@ -87,7 +87,7 @@ CREATE TABLE employees (
 INSERT INTO employees (id, first_name, last_name, contact_number, department_id) VALUES
 (1, 'Mohit', 'Gupta', '9844169856', 1), 
 (2, 'Rohit', 'Singh', '9876543210', 2), 
-(3, 'Gagan', 'Sharma', '9988776655', 3),
+(3, 'Gagan', 'Sharma', '9988776655', 3), 
 (4, 'Mahima', 'Mehta', '9996663331', 4); 
 
 select * from employees;

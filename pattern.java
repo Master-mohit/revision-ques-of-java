@@ -224,6 +224,19 @@
 //     System.out.println();
 // }
 
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// int num =1;
+// for(int i=0; i<=6; i++){
+// 	for(int j=1; j<=i; j++){
+//  System.out.print( num + " ");
+//     num++;
+//     }
+// 	System.out.println();
+// }
+
 // *     *
 //  *   *
 //   * *
@@ -231,15 +244,31 @@
 //   * *
 //  *   *
 // *     *
-// int n = 5;  // Size of the pattern     
-// for (int i = 0; i < n; i++) {  // Loop for rows
-//     for (int j = 0; j < n; j++) {  // Loop for columns
-//         if (j == i || j == n - i - 1) {
-//             System.out.print("*");  // Print '*' for the diagonals
-//         } else {
-//             System.out.print(" ");  // Print space for non-diagonal positions
+// for(int i=1; i<=5; i++){
+//     for(int j=1; j<=5; j++){
+//         if(i == j || i+j == 5+1){
+//             System.out.print("*");
+//         }
+//         else {
+//             System.out.print(" ");
 //         }
 //     }
-//     System.out.println();  // Move to the next line after each row
-// }   
+//     System.out.println();
+// }
 
+// *****
+//    *
+//   *
+//  *
+// *****
+// 	  for(int i=1; i<=5; i++){
+// 	      for(int j=1; j<=5; j++){
+// 	          if(i == 1 || i == 5 || i+j == 5+1){
+// 	              System.out.print("*");
+// 	          }
+// 	          else {
+// 	              System.out.print(" ");
+// 	          }
+// 	      }
+// 	      System.out.println();
+// 	  }

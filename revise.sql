@@ -30,4 +30,4 @@ SELECT item FROM Orders o left JOIN Customers c ON o.customer_id = c.customer_id
 group by :--------------------- column1: Yeh woh column hoga jispar grouping hogi.
 -- aggregate_function(column2): Aggregate functions jaise SUM(), COUNT(), AVG(), MAX(), ya MIN() ka use hota hai.
 -- GROUP BY: Same values wale rows ko ek group mein combine karne ke liye.
-SELECT customer_id, SUM(amount) AS total_amountFROM OrdersGROUP BY customer_id;
+SELECT customer_id, SUM(amount) AS total_amount FROM Orders GROUP BY customer_id;

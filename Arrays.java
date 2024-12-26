@@ -100,6 +100,34 @@ public class Arrays {
     //    }
     //  }
     //  System.out.println(min);
+    
+    // .................................SECOND LARGEST..........................
+    // int[] arr = {5, 2, 9, 1, 5, 12, 6};
+    // int largest = arr[0];
+    // int secondlargest = arr[0];
+    // for(int i=1; i<arr.length; i++){
+    //     if(arr[i] > largest){
+    //         secondlargest = largest;
+    //         largest = arr[i];
+    //     }
+    // }
+    // System.out.println("largest : " + largest);
+    // System.out.println("secondlargest : " + secondlargest);
+
+    // ........... second MINIMUM ELEMENT OF ARRAY........
+    // int[] arr = {5, 2, 9, 1, 5, 12, 6};
+    //     int minimum = arr[0];
+    //     int secondMinimum = arr[0];
+
+    //     for (int i = 1; i < arr.length; i++) {
+    //         if (arr[i] < minimum) {
+    //             secondMinimum = minimum;
+    //             minimum = arr[i];
+    //         }
+    //     }
+
+    //     System.out.println("Minimum: " + minimum);
+    //     System.out.println("Second Minimum: " + secondMinimum);
 
         // .................RIGHT ROTATION ELEMENT OF ARRAY......
         // int arr[] = {43,65,34,87,44};

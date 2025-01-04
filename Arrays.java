@@ -28,6 +28,19 @@ public class Arrays {
 //      }
 //  }
 
+
+
+
+	//  print single line Odd and Even Numbers from an Array.....
+		// Scanner sc = new Scanner(System.in);
+		// System.out.println("chooose any number");
+		// int n = sc.nextInt();
+		// for(int i=0; i<=n; i++) if(i % 2 == 0)
+		// System.out.println(i + " ");
+		// for(int i=0; i<=n; i++) if(i % 2 != 0)
+		// System.out.println(i + " ");
+
+
      //........................ REVERSE ELEMENT OF ARRAY...........//////////////////
     //  int start = 0;
     //  int end = arr.length-1;
@@ -100,7 +113,7 @@ public class Arrays {
     //    }
     //  }
     //  System.out.println(min);
-    
+
     // .................................SECOND LARGEST..........................
     // int[] arr = {5, 2, 9, 1, 5, 12, 6};
     // int largest = arr[0];
@@ -207,6 +220,19 @@ public class Arrays {
 //   for(int i=0; i<j; i++){
 //     System.out.println(temp[i]);
 //   }
+
+// ............REMOVE DUPLICATE ELEMENT FROM SORTED ARRAYS WITHOUT TEMP...........
+// import java.util.*;
+// public class Main {
+//     public static void main(String[] args) {
+//         HashSet<Integer> hs = new HashSet<>();
+//          int arr[] =  {1,2,2,3,4,4,5,6,7,7,7,8};
+//          for(int chacha : arr){
+//              hs.add(chacha);
+//          }
+//          System.out.println(hs);
+//     }
+// }
 
 // ............REMOVE DUPLICATE ELEMENT FROM SORTED ARRAYS WITHOUT TEMP...........
 //  int arr[] =  {1,2,2,3,4,4,5,6,7,7,7,8};

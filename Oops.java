@@ -26,7 +26,7 @@ public class Main
 // ..........Object.....
 		car c = new car("red", "honda");
 
-// .........mettod is calling on object.....
+.........mettod is calling on object.....
 		c.drive();
 		
 		c.stop();
@@ -35,7 +35,7 @@ public class Main
 	}
 }
 
-// ..............................OVERLOADING................................
+..............................OVERLOADING................................
 
 class calculator{
     int add(int a , int b){
@@ -63,8 +63,8 @@ public class Main
 	}
 }
 
-// .................................POLYMORPHISM................................
-// .........................OVERRIDING................................
+.................................POLYMORPHISM................................
+.........................OVERRIDING................................
 
 // Parent Class
 class Phone {
@@ -143,7 +143,7 @@ public class Main
 }
 
 
-// ...................................INHERITANCE without constructor..............................
+...................................INHERITANCE without constructor..............................
 
 // .....parent class....
 class animal{
@@ -159,7 +159,7 @@ class dog extends animal{
 public class Main
 {
 	public static void main(String[] args) {
-// .......child class ke object ke through parent class ke method ko inherit kr skte h
+.......child class ke object ke through parent class ke method ko inherit kr skte h h abhi ke liye
 		dog an = new dog();
 		an.eat();
 		
@@ -167,7 +167,7 @@ public class Main
 }
 
 
-// ...............................INHERITANCE with constructor.................
+...............................INHERITANCE with constructor.................
 
 class animal{
     String name;
@@ -200,44 +200,44 @@ public class Main
 }
 
 
-// ...............................INHERITANCE with constructor.................
+...............................INHERITANCE with constructor.................
 
-// class animal{
-//     String name;
-//     int age;
+class animal{
+    String name;
+    int age;
     
-//     animal(String name , int age){
-//         this.name = name;
-//         this.age = age;
-//     }
+    animal(String name , int age){
+        this.name = name;
+        this.age = age;
+    }
     
-//     void sleep(){
-//         System.out.println(name + " slepping");
-//     }
+    void sleep(){
+        System.out.println(name + " slepping");
+    }
     
-// }
+}
 
-// class hathi extends animal{
-//     hathi(String name, int age){
-//         super(name , age);
-//     }
-// }
-
-
-// public class Main
-// {
-// 	public static void main(String[] args) {
-// 			hathi h = new hathi("ghoda", 50);
-// 		   System.out.println(h.name);
-// 		   System.out.println(h.age);
-// 		   h.sleep();
-// 	}
-// }
+class hathi extends animal{
+    hathi(String name, int age){
+        super(name , age);
+    }
+}
 
 
-// ..........................Abstraction....................................
+public class Main
+{
+	public static void main(String[] args) {
+			hathi h = new hathi("ghoda", 50);
+		   System.out.println(h.name);
+		   System.out.println(h.age);
+		   h.sleep();
+	}
+}
 
-// .....Abstract class....
+
+..........................Abstraction....................................
+
+.....Abstract class....
 abstract class phone{
     
     abstract void call(); // abstract method.....
@@ -269,7 +269,7 @@ public class Main
 	}
 }
 
-// .............................ENCAPSULATION..........................
+.............................ENCAPSULATION..........................
 
 class BankAccount{
     private double Balannce;

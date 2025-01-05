@@ -441,6 +441,21 @@ public class Arrays {
 //   System.out.println(count);
 
 
+// ..............Find the Longest Consecutive Sequence in the array............
+// int[] arr = {100, 200, 1, 3, 2};
+// int currentOne = 1;
+// int longest = 1;
+// Arrays.sort(arr);
+// for(int i=1; i<arr.length; i++){
+//     if(arr[i] == arr[i-1] +1){
+//         currentOne++;
+//     }
+//     else if(arr[i] != arr[i-1]){
+//         currentOne = 1;
+//     }
+//     longest = Math.max(longest, currentOne);
+// }
+// System.out.println(longest);
 
 // ..............Find the Majority element of an integer in the array...................
 	  //  HashMap<Integer, Integer> hs = new HashMap<>();
@@ -698,38 +713,57 @@ public class Arrays {
 
 //.........Rearrange the array in alternating positive and
 //....................negative items.................
-// int arr[] = {-4, -17, 4, 3, 5, -2 ,10}; 
-// List<Integer> positive = new ArrayList<>();
-//   List<Integer> negative = new ArrayList<>();
-//   for(int num: arr){
-//      if(num >= 0){
-//          positive.add(num);
-//      }
-//      else {
-//          negative.add(num);
-//      }
-//   }
-//   int posiveidx =0;
-//   int negaidx =0;
-//   int i=0;
-
-//   while(posiveidx < positive.size() && negaidx < negative.size()){
-//       if(i % 2 == 0){
-//           arr[i] = positive.get(posiveidx);
-//           posiveidx++;
+// List<Integer> positiveList = new ArrayList<>();
+// List<Integer> negativeList = new ArrayList<>();
+//    int arr[] = {-4, -17, 4, 3, 5, -2 ,10}; 
+//    for(int num : arr){
+//       if(num >= 0){
+//           positiveList.add(num);
 //       }
 //       else {
-//          arr[i] = negative.get(negaidx);
-//          negaidx++;
+//           negativeList.add(num);
 //       }
-//       i++;
-//   }
-//   for(int num: arr){
-//       System.out.print(num + " ");
-//   }
-
-
+//    }
+//    int positiveNum = 0;
+//    int negativeNum = 0;
+//    int i = 0;
+   
+//    while(positiveNum < positiveList.size() && negativeNum < negativeList.size()){
+//        arr[i++] = positiveList.get(positiveNum++);
+//        arr[i++] = negativeList.get(negativeNum++);
+//    }
+//    while(positiveNum < positiveList.size()){
+//        arr[i++] = positiveList.get(positiveNum++);
+//    }
+//    while(negativeNum < negativeList.size()){
+//        arr[i++] = negativeList.get(negativeNum++);
+//    }
       
+//       System.out.println(Arrays.toString(arr));
+ 
+// ........................firstly negative then all positive................
+
+// List<Integer> positiveList = new ArrayList<>();
+// List<Integer> negativeList = new ArrayList<>();
+//    int arr[] = {-4, -17, 4, 3, 5, -2 ,10}; 
+//    for(int num : arr){
+//       if(num >= 0){
+//           positiveList.add(num);
+//       }
+//       else {
+//           negativeList.add(num);
+//       }
+//    }
+//    int i = 0;
+//    for(int negative : negativeList){
+//        arr[i++] = negative;
+//    }
+//         for(int positive : positiveList){
+//        arr[i++] = positive;
+//    }
+//       System.out.println(Arrays.toString(arr));
+          
+
 //   .....................Stock Buy And Sells..................
 // int arr[] = {7, 1, 5, 3, 6, 4}; 
 // int maxprofit = 0;

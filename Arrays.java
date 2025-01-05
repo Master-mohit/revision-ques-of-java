@@ -440,6 +440,43 @@ public class Arrays {
 //   }
 //   System.out.println(count);
 
+
+
+// ..............Find the Majority element of an integer in the array...................
+	  //  HashMap<Integer, Integer> hs = new HashMap<>();
+	  //  int arr[] = {2, 2, 1, 1, 1, 2, 2};
+    //      int maxRepElem = arr.length/2;
+    //      for(int num : arr){
+    //          hs.put(num, hs.getOrDefault(num, 0) + 1);
+            
+    //      }
+    //      for(int totl : hs.keySet()){
+    //          if(hs.get(totl) > maxRepElem){
+    //              System.out.println(totl);
+    //              return;
+    //          }
+    //      }
+    //      System.out.println("no majority element");
+         
+	
+    // ..............Find the duplicate element of an integer in the array...................	
+    // HashMap<Integer, Integer> hs = new HashMap<>();
+    // int arr[] = {2, 2, 1,1, 2, 2,3,5,3};
+       
+    //     for(int num : arr){
+    //         hs.put(num, hs.getOrDefault(num, 0) + 1);
+    //     }
+    //     boolean findDupplicate = false;
+    //     for(int key: hs.keySet()){
+    //         if( hs.get(key) > 1){
+    //             System.out.println(key);
+    //             findDupplicate = true;
+    //         }
+    //     }
+    //     if(!findDupplicate){
+    //         System.out.println("koi ni h duplicate");
+    //     }
+
 // .......................program to put all negative..................
 // .......................numbers before positive numbers..........
 // int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };

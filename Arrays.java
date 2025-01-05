@@ -1049,3 +1049,37 @@ public class Arrays {
 // 	}
 // }
 }
+
+
+// .......................QUESTION OF SUBARRAYS............................
+
+// Find the sum of all subarrays of a given array.......
+// List<Integer> list = new ArrayList<>();
+// int arr[] = {2, 7, 4, 3, 5, 2}; 
+// for(int i=0; i<arr.length; i++){
+//   int sum = 0;
+//   for(int j=i; j<arr.length; j++){
+//       sum = sum + arr[j];
+//       list.add(sum);
+//   }
+// } 
+// System.out.println(list);
+
+// Find the maximum sum of any subarray in a given array...........
+// ..............................using kadane algorithm............
+// int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+// int max = Integer.MIN_VALUE;
+// int currentSum = 0;
+// for(int num : arr){
+//    currentSum = currentSum + num;
+//    if(currentSum > max){
+//        max = Math.max(max, currentSum);
+//    }
+//    if(currentSum < 0){
+//        currentSum = 0;
+//    }
+// }
+// System.out.println(max);
+
+
+

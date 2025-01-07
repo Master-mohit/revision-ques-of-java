@@ -1,8 +1,23 @@
-import java.util.Arrays;
-import java.util.HashMap;
+//////////////////////////OPERATIONS WITH STRINGBUILDER...............
 
-public class String {
-    public static void main(String[] args) {
+// String s = "mohit";
+// StringBuilder sb = new StringBuilder(s);
+//   sb.append(" gupta");
+//    System.out.println(sb);
+   
+//    sb.insert(3, "x");
+//    System.out.println(sb);
+   
+//    sb.delete(3,4);
+//    System.out.println(sb);
+   
+//    sb.replace(0,3, "chacha");
+//    System.out.println(sb);
+   
+//    sb.setCharAt(0, 'm');
+//    System.out.println(sb);
+  
+//    System.out.println(sb.length());
         
 //   ................REVERSE STRING......................
         //  String str = "mohit";
@@ -92,7 +107,7 @@ public class String {
 //      if(hs.get(key) == 1){
 //          System.out.println(key);
 //          return;
-//      }
+//      } 
 //  }
 //  System.out.println(-1);
 

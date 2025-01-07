@@ -38,6 +38,12 @@
 	// 	    System.out.println("not");
 	// 	}
 
+  // ....................remove all vowel in string......................
+  // String s = "mohit";
+  // StringBuilder sb = new StringBuilder(s);
+  // String consonent =  sb.toString().replaceAll("[aeiouAEIOU]", "");
+  //  System.out.println(consonent);
+  
 
 //     ....................ANAGRAM STRING......................
 //     String s1 = "silent";
@@ -98,21 +104,38 @@
 
 
     //........................ First Non-Repeating Character..................
-//     String str = "aabbcc";
-//     HashMap<Character, Integer> hs = new HashMap<>();
-//  for(char chacha: str.toCharArray()){
-//      hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
-//  }
-//  for(char key: str.toCharArray()){
-//      if(hs.get(key) == 1){
-//          System.out.println(key);
-//          return;
-//      } 
-//  }
-//  System.out.println(-1);
+    // HashMap<Character, Integer> hs = new HashMap<>();
+    // int vowel = 0;
+    // int consonent = 0;
+    // String s = "swiss";
+    // for(char ch : s.toCharArray()){
+    //     hs.put(ch, hs.getOrDefault(ch, 0) + 1);
+    // }
+    // boolean isfound = false;
+    // for(char key: hs.keySet()){
+    //     if(hs.get(key) == 1){
+    //         System.out.println(key);
+    //         isfound = true;
+    //         break;
+    //     }
+    // }
+    // if(!isfound){
+    //     System.out.println("no one ");
+    // }
+    
+    // ...........Check if a String Contains Only Digits.........
+//     List<String> list = new ArrayList<>();
+//     String s = "12345";
+//     boolean result = true;
+//     for(int i=0; i<s.length(); i++){
+//         if(!Character.isDigit(s.charAt(i))){
+//             result = false;
+//             break;
+//         }
+//     }
+//  System.out.println(result);
 
-
-//.................................Compress a String.........................
+//................................Compress a String.........................
 // HashMap<Character, Integer> hs = new HashMap<>();
 // String str = "aaabbccdee";
 
@@ -417,8 +440,6 @@
 //     } else if (ch == 'M') {
 //         count += 1000;
 //     }
-
-   
 //     if (i + 1 < s.length()) { 
 //         char nextChar = s.charAt(i + 1);
 //         if (ch == 'I' && (nextChar == 'V' || nextChar == 'X')) {
@@ -434,7 +455,7 @@
 
 
 
-// ........................................String to Integer (atoi)................
+// ........................String to Integer (atoi)................
 // String str = " -1337c0d3";
           
 // if(str == null || str.length() == 0){
@@ -473,7 +494,7 @@
 //   System.out.println(result * sign);
 
 
-  //.....................................Longest Palindromic Substring..........   
+  //.......................Longest Palindromic Substring..........   
 //   String str = "cbbd";
 //   if(str == null || str.length() == 0){
 //  System.out.println(0);
@@ -482,16 +503,12 @@
 //         String ans ="";
 //  for(int i=0; i<str.length(); i++){
 //      for(int j=i+1; j<str.length(); j++){
-//       String temp = str.substring(i, j);
-          
-          
-          
+//       String temp = str.substring(i, j);     
 //          int left =0;
 //          int right = temp.length()-1;
 //          while(left < right){
 //              if(temp.charAt(left) != temp.charAt(right)){
-//                   break;
-                
+//                   break; 
 //              } 
 //              left++;
 //              right--;
@@ -504,7 +521,7 @@
 //  }
 //  System.out.println(ans);
 
- //  ..................................Sum of Beauty of All Substrings.............
+ //  ......................Sum of Beauty of All Substrings.............
             //   String str = "aabcbaa";
             //   int totl =0;
            
@@ -549,7 +566,7 @@
         //     }
         // System.out.println(sb);
 
-        // // ....................Minimum Add to Make Parentheses Valid.................
+        // // ........Minimum Add to Make Parentheses Valid.................
         // String str = "())";
         // int open = 0;
         // int close = 0;

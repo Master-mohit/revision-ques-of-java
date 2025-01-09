@@ -240,7 +240,7 @@
 
 
 
-//..............................REMOVE OUTERMOST PARENTHIS..........................
+//......................REMOVE OUTERMOST PARENTHIS..........................
 // String str = "(()())(())";
 // int count = 0;
 // StringBuilder sb = new StringBuilder();
@@ -457,47 +457,6 @@
 // }
 // return count;
 
-
-
-// ........................String to Integer (atoi)................
-// String str = " -1337c0d3";
-          
-// if(str == null || str.length() == 0){
-//     System.out.println(0);
-//     return ;
-// }
-
-// str = str.trim();
-
-// if(str.length() == 0){
-//      System.out.println(0);
-//     return ;
-// }
-//   int i =0; // traverse..
-//   int sign = 1; // lets assume positive..
-//   int result = 0; // store the final result..
-
-//   if(str.charAt(i) == '-' || str.charAt(i) == '+'){
-//       sign = (str.charAt(i) == '-') ? -1 : 1;
-//       i++;
-//   }
-
-// while(i < str.length() && Character.isDigit(str.charAt(i))){
-//       int digit = str.charAt(i) - '0'; //String to number..converter
-      
-//       if(result > (Integer.MAX_VALUE - digit) / 10){
-//        System.out.println((sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE);
-//        return;
-// }
-
-
-//   result = result * 10 + digit;
-//  i++;
-  
-// }
-//   System.out.println(result * sign);
-
-
   //.......................Longest Palindromic Substring..........   
 //   String str = "cbbd";
 //   if(str == null || str.length() == 0){
@@ -506,7 +465,7 @@
 // }
 //         String ans ="";
 //  for(int i=0; i<str.length(); i++){
-//      for(int j=i+1; j<str.length(); j++){
+//      for(int j=i+1; j<str.length(); j++){ 
 //       String temp = str.substring(i, j);     
 //          int left =0;
 //          int right = temp.length()-1;
@@ -537,9 +496,7 @@
                     
             //        for(char chacha: temp.toCharArray()){
             //            hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
-                       
             //        }
-                   
             //           int maxfreq = Integer.MIN_VALUE;
             //           int minfreq = Integer.MAX_VALUE;
                       
@@ -612,7 +569,7 @@
     //     System.out.println(result);
 
 
-    //     // .....................Repeated String Match..................
+    //// .....................Repeated String Match..................
     //     String s1 = "abc";
     //     String s2 = "cabca";
         
@@ -640,24 +597,38 @@
 
     // ........Longest Substring Without Repeating Characters.
 
-    HashSet<Character> hs = new HashSet<>();
-	  String s = "abcabcabc";
-	  int maxLength = 0;
-	  int left = 0;
+  //   HashSet<Character> hs = new HashSet<>();
+	//   String s = "abcabcabc";
+	//   int maxLength = 0;
+	//   int left = 0;
 	
-	 for(int right=0; right<s.length(); right++){
-	     char akhshar = s.charAt(right);
+	//  for(int right=0; right<s.length(); right++){
+	//      char akhshar = s.charAt(right);
 	     
-	     while(hs.contains(akhshar)){
-	         hs.remove(s.charAt(left));
-	         left++;
-	     }
+	//      while(hs.contains(akhshar)){
+	//          hs.remove(s.charAt(left));
+	//          left++;
+	//      }
 	     
-	     hs.add(akhshar);
-	    maxLength = Math.max(maxLength, right - left +1);
-	 }
+	//      hs.add(akhshar);
+	//     maxLength = Math.max(maxLength, right - left +1);
+	//  }
 	 
-	  System.out.println(maxLength);
+	//   System.out.println(maxLength);
       
-    }
-}
+  
+  //  .................Group anagram................
+  // HashMap<String, List<String>> map = new HashMap<>();
+  // String[] words = {"eat", "tea", "tan", "ate", "nat", "bat"};
+  // for(String word : words){
+  //     char[] ch =  word.toCharArray();
+  //     Arrays.sort(ch);
+  //     String newstring = new String(ch);
+      
+  //     if(!map.containsKey(newstring)){
+  //         map.put(newstring, new ArrayList<>());
+  //     }
+  //     map.get(newstring).add(word);
+  // }
+  // System.out.println(map.values());
+       

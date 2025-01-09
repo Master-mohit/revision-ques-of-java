@@ -1,5 +1,9 @@
 //////////////////////////OPERATIONS WITH STRINGBUILDER...............
+        // n*n+1/2:--- find subString...
 
+
+
+        
 // String s = "mohit";
 // StringBuilder sb = new StringBuilder(s);
 //   sb.append(" gupta");
@@ -632,6 +636,28 @@
     //   else {
     //       System.out.println(-1);
     //   }
+
+
+    // ........Longest Substring Without Repeating Characters.
+
+    HashSet<Character> hs = new HashSet<>();
+	  String s = "abcabcabc";
+	  int maxLength = 0;
+	  int left = 0;
+	
+	 for(int right=0; right<s.length(); right++){
+	     char akhshar = s.charAt(right);
+	     
+	     while(hs.contains(akhshar)){
+	         hs.remove(s.charAt(left));
+	         left++;
+	     }
+	     
+	     hs.add(akhshar);
+	    maxLength = Math.max(maxLength, right - left +1);
+	 }
+	 
+	  System.out.println(maxLength);
       
     }
 }

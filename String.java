@@ -368,24 +368,6 @@
 //  System.out.println(result.toString());
 
 
-//  // .........................Maximum Nesting Depth of the Parentheses..................
-//  String str =  "(1+(2*3)+((8)/4))+1";
-//  int count = 0;
-//  int maxcount = 0;
- 
-//  for(char chacha: str.toCharArray()){
-//      if(chacha == '('){
-//          count++;
-//          maxcount = Math.max(maxcount, count);
-//      }
-//      else if(chacha == ')'){
-//          count--;
-//      }
-//  }
-//  System.out.println(maxcount);
-
-
-
 // //    ...........................Roman to Integer.........................
 // int count = 0;
 // for (int i = 0; i < s.length(); i++) {
@@ -595,3 +577,17 @@
   // }
   // System.out.println(map.values());
        
+  // .................maximum nasted parenthsis................
+  // String str = "(1)+((2))+(((3))";
+	//    int maxcount = 0;
+	//    int currentcount = 0;
+	//    for(char ch : str.toCharArray()){
+	//        if(ch  == '('){
+	//            currentcount++;
+	//            maxcount = Math.max(maxcount, currentcount);
+	//        }
+	//        else if(ch == ')'){
+	//            currentcount--;
+	//        }
+	//    }
+	//    System.out.println(maxcount);

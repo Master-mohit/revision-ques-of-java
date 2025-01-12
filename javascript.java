@@ -104,3 +104,19 @@
 //            else {
 //              console.log("not anagram")
 //            }
+
+
+// 12) .............. Group anagram..................
+// const str = ["eat", "tea", "tan", "ate", "nat", "bat"];
+// const map = new Map();
+// for(const word of str){
+//  const sortstring = word.split("").sort().join();
+//  if(!map.has(sortstring)){
+//      map.set(sortstring, []);
+//  }
+//  map.get(sortstring).push(word);
+// } 
+// const result = Array.from(map.values());
+//  console.log(result);
+
+// 13) ..............anagram String..................

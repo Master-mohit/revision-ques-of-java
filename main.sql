@@ -38,6 +38,7 @@ update student set rollno = 41 where id = 2;
 update student set rollno = 26 where id = 3;
 update student set rollno = 5 where id = 5;
 update student set rollno = 18 where id = 6;
+delete from student where id = 5;
 select * from student;
 select name , lastname from student where rollno >= 26;
 select * from student;
@@ -61,6 +62,9 @@ select sum(rollno) from student;
 select max(rollno) from student;
 select min(rollno) from student;
 select avg(rollno) from student;
+
+--   delete completelyy table quicklyy...............................
+TRUNCATE TABLE table_name;
 
 
 -- ..................................  JOIN ..................................

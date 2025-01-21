@@ -48,6 +48,17 @@ select name , lastname from student order by rollno desc limit 1,1;
 select name , lastname from student where name like '_o%';
 select * from student where lastname like '%a' ;
 
+-- .....whenever set the multiple values at once so need case like this.......
+update student set city = case
+                when id =1 then 'katni'
+                when id = 2 then "jabalpur"
+                when id = 3 then "satna"
+                when id = 4 then "maihar"
+                when id = 5 then "rewa"
+                else city
+                end;
+
+
 -- ........................  ALTER TABLE ...........................
 alter table student add stu_enroll int;
 alter table student change email city varchar(50);

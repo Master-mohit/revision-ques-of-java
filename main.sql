@@ -80,52 +80,56 @@ TRUNCATE TABLE table_name;
 
 -- ..................................  JOIN ..................................
 
+--     student table...............
+create table student (id int , name varchar(10) , enroll int);
+insert into student (id, name , enroll) values
+(1, "mohit", 64),
+(2, 'matelee', 43),
+(3, "priyansh", 22),
+(4, "shubh", 76);
+select * from student;
 
-CREATE TABLE department (
-    id INT PRIMARY KEY,         
-    name VARCHAR(50)         
-);
+-- ......marks table...........
+create table marks(stu_id int , mark int);
+insert into marks (stu_id, mark) values
+(1, 88),
+(2, 65),
+(4, 73),
+(5, 33);
+select * from marks;
 
+            -- inner join...........
+select student.name , marks.mark from student
+    inner join
+        marks on student.id = marks.stu_id;
 
-INSERT INTO department (id, name) VALUES
-(1, 'HR'),
-(2, 'Engineering'),
-(3, 'Sales'),
-(4, 'Marketing');
+select * from student;
+select * from marks;
 
-select * from department;
-
-CREATE TABLE employees (
-    id INT PRIMARY KEY,         
-    first_name VARCHAR(50),      
-    last_name VARCHAR(50),      
-    contact_number VARCHAR(15),   
-    department_id INT,          
-    FOREIGN KEY (department_id) REFERENCES department(id)
-);
-
-
-INSERT INTO employees (id, first_name, last_name, contact_number, department_id) VALUES
-(1, 'Mohit', 'Gupta', '9844169856', 1), 
-(2, 'Rohit', 'Singh', '9876543210', 2), 
-(3, 'Gagan', 'Sharma', '9988776655', 3), 
-(4, 'Mahima', 'Mehta', '9996663331', 4); 
-
-select * from employees;
-
-SELECT e.first_name, e.last_name 
-FROM employees e
-INNER JOIN department d ON e.department_id = d.id;
-
-INSERT INTO department (id) VALUES
-(5);
-INSERT INTO department (id) VALUES
-(6);
-select * from department;
-INSERT INTO employees (id, first_name, last_name, contact_number, department_id) VALUES
-(5, 'pretii', 'Gupta', '965469856', 5),
-(6, 'teena', 'Mehta', '956663331', 6); 
-select * from employees;
+            -- left join......
+select s.name , m.mark from student as s
+    left join
+        marks as m on s.id = m.stu_id;
+         
+select * from student;
+select * from marks; 
+    
+    --      right join.......
+select s.name , m.mark from student as s
+      right join 
+            marks as m on s.id = m.stu_id;
+             
+             
+             
+          -- full join..........
+select s.name , m.mark from student as s 
+        left join
+               marks as m on s.id = m.stu_id
+            
+                                          union
+select s.name , m.mark from student as s 
+        right join
+               marks as m on s.id = m.stu_id;
 
 -- ....................................JOIN QUESTION .  .............................
 

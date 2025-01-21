@@ -46,15 +46,21 @@ select rollno from student order by rollno asc limit 3,1;
 select name , lastname from student order by rollno desc limit 1,1;
 select name , lastname from student where name like '_o%';
 select * from student where lastname like '%a' ;
+
+-- ........................  ALTER TABLE ...........................
+alter table student add stu_enroll int;
+alter table student change email city varchar(50);
+alter table student RENAME column stu_enroll to enroll;
+alter table student drop enroll;
+alter table student modify stu_depart varchar(200);
+
+
+-- ..........................  Aggrigate function...............................
 select count(rollno) from student;
 select sum(rollno) from student;
 select max(rollno) from student;
 select min(rollno) from student;
 select avg(rollno) from student;
-alter table student add stu_enroll int;
-alter table student RENAME column stu_enroll to enroll;
-alter table student drop enroll;
-alter table student modify stu_depart varchar(200);
 
 
 -- ..................................  JOIN ..................................

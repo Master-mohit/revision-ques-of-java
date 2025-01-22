@@ -98,7 +98,7 @@ insert into marks (stu_id, mark) values
 (5, 33);
 select * from marks;
 
-            -- inner join...........
+            -- inner join........................
 select student.name , marks.mark from student
     inner join
         marks on student.id = marks.stu_id;

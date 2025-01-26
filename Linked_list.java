@@ -427,7 +427,7 @@ public class Main
 	}
 }
 
-// ...................... dlelete element at end.............................
+// ...................... delete element at end.............................
 
 class Node{
     int data;
@@ -744,18 +744,17 @@ public class Main
 
     //  ...................check pallindrome.......................
 
-    class Node{
+    class Node {
         int data;
-         Node next;
-         
-         Node(int data){
-             this.data = data;
-             this.next = null;
-             
-         }
+        Node next;
+    
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
     }
-    public class Main
-    {
+    
+    public class Main {
         public static void main(String[] args) {
             Node head = new Node(1);
             head.next = new Node(2);
@@ -763,61 +762,47 @@ public class Main
             head.next.next.next = new Node(2);
             head.next.next.next.next = new Node(1);
             
-    // 		find middle element.....
+            // **1. Find middle element**
             Node slow = head;
             Node fast = head;
-            
-            while(fast  != null && fast.next != null){
+            while (fast.next != null && fast.next.next != null) {
                 slow = slow.next;
                 fast = fast.next.next;
             }
-    // 		System.out.println(slow.data);
+    
+            // **2. Reverse second half**
+            Node current = slow;
+            Node prev = null;
+            while (current != null) {
+                Node temp = current.next;
+                current.next = prev;
+                prev = current;
+                current = temp;
+            }
+    
+            // **3. Compare first half and reversed second half**
+            Node firstHalf = head;
+            Node secondHalf = prev;
+            boolean isPalindrome = true;
             
-            
-            
-    // 	     reverse element.....
-             Node cur = slow;
-             Node prev = null;
-             Node next = null;
-             
-             while(cur != null){
-                 next = cur.next;
-                 cur.next = prev;
-                 prev = cur;
-                 cur = next;
-                 
-             }
-    // 		 System.out.println(prev);
-        
-            
-            //   Node temp = prev;
-            //   while(temp != null){
-            //       System.out.print(temp.data + " <- ");
-            //       temp = temp.next;
-            //   }
-            //   System.out.println("null");
-            
-    // 		check paliindrome...............
-            
-             Node firsthalf = head;
-             Node secondhalf = prev;
-             boolean isplalindrom = true;
-             
-             while(secondhalf != null){
-                 if(firsthalf.data != secondhalf.data){
-                      isplalindrom = false;
-                   break;
-                 }
-                 firsthalf = firsthalf.next;
-                 secondhalf = secondhalf.next;
-             }
-             
-             if(isplalindrom){
-                 System.out.println("pallindrom h sir..");
-             }
-             else {
-                  System.out.println("nahiii h sir....");
-             }
+            while (secondHalf != null) {
+                if (firstHalf.data != secondHalf.data) {
+                    isPalindrome = false;
+                    break;
+                }
+                firstHalf = firstHalf.next;
+                secondHalf = secondHalf.next;
+            }
+    
+            // **4. Print Result**
+            if (isPalindrome) {
+                System.out.println("Palindrome hai");
+            } else {
+                System.out.println("Palindrome nahi hai");
+            }
+        }
+    }
+    
              
             
             

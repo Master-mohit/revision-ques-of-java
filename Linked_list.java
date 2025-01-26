@@ -744,77 +744,61 @@ public class Main
 
     //  ...................check pallindrome.......................
 
-    class Node {
+    class Node{
         int data;
         Node next;
-    
-        Node(int data) {
+        
+        Node(int data){
             this.data = data;
             this.next = null;
-        }
     }
-    
-    public class Main {
-        public static void main(String[] args) {
-            Node head = new Node(1);
-            head.next = new Node(2);
-            head.next.next = new Node(3);
-            head.next.next.next = new Node(2);
-            head.next.next.next.next = new Node(1);
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Node head = new Node(1);
+		head.next = new Node(2);
+		head.next.next = new Node(3);
+		head.next.next.next = new Node(2);
+		head.next.next.next.next = new Node(1);
+		
+         Node slow = head;
+         Node fast = head;
+    while(fast.next != null && fast.next.next != null){
+              slow = slow.next;
+              fast = fast.next.next;
+          }
+          
+          Node current = slow.next;
+          Node prev = null;
+          while(current != null){
+              Node temp = current.next;
+              current.next = prev;
+              prev = current;
+              current = temp;
+          }
             
-            // **1. Find middle element**
-            Node slow = head;
-            Node fast = head;
-            while (fast.next != null && fast.next.next != null) {
-                slow = slow.next;
-                fast = fast.next.next;
-            }
-    
-            // **2. Reverse second half**
-            Node current = slow;
-            Node prev = null;
-            while (current != null) {
-                Node temp = current.next;
-                current.next = prev;
-                prev = current;
-                current = temp;
-            }
-    
-            // **3. Compare first half and reversed second half**
-            Node firstHalf = head;
+            
+            Node fristHlaf = head;
             Node secondHalf = prev;
-            boolean isPalindrome = true;
+            boolean isPallindrom = true;
             
-            while (secondHalf != null) {
-                if (firstHalf.data != secondHalf.data) {
-                    isPalindrome = false;
+            while(secondHalf != null){
+                if(fristHlaf.data != secondHalf.data){
+                    isPallindrom = false;
                     break;
                 }
-                firstHalf = firstHalf.next;
+                fristHlaf = fristHlaf.next;
                 secondHalf = secondHalf.next;
             }
-    
-            // **4. Print Result**
-            if (isPalindrome) {
-                System.out.println("Palindrome hai");
-            } else {
-                System.out.println("Palindrome nahi hai");
+            if(isPallindrom){
+                System.out.println("this is Pallindrom");
             }
-        }
-    }
-    
-             
-            
-            
-    // 		print all element.....
-    // 		 temp = head;
-    // 		while(temp != null){
-    // 		    System.out.print(temp.data + " -> ");
-    // 		    temp = temp.next;
-    // 		}
-    // 		System.out.println("null");
-        }
-    }
+            else {
+                System.out.println("not Pallindrom");
+            }
+	}
+}
 
 
 
@@ -899,6 +883,38 @@ public class Main
             return isPalindrome;
         }
     }
+
+    //     ....................find the length in linkedList....................
+
+    class Node{
+        int data;
+        Node next;
+        
+        Node(int data){
+            this.data = data;
+            this.next = null;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Node head = new Node(1);
+		head.next = new Node(2);
+		head.next.next = new Node(3);
+		head.next.next.next = new Node(4);
+		head.next.next.next.next = new Node(5);
+		
+		
+		int index = 0;
+        Node temp = head;
+        while(temp != null){
+            
+            temp = temp.next;
+            index++;
+        }
+       System.out.println(index);
+	}
+}
 
     // ..............................DOUBLYY LINKED LIST.................
     // ....................INSERTION ELEMENT AT THA start ............

@@ -963,7 +963,95 @@ public class Main
 }
 
     // ..............................DOUBLYY LINKED LIST.................
-    // ....................INSERTION ELEMENT AT THA start ............
+    //     All deletion process of doubly linked list..................
+
+    class Node{
+        int data;
+        Node next , prev;
+        
+        Node(int data){
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
+    }
+    public class Main
+    {
+        public static void main(String[] args) {
+             Node head = new Node(1);
+             head.next = new Node(2);
+             head.next.next = new Node(3);
+             head.next.next.next = new Node(4);
+             head.next.next.next.next = new Node(5);
+             head.next.next.next.next.prev = head.next.next.next;
+             
+             
+    //       dlete middle element......  
+             Node prev = null;
+             Node slow = head;
+             Node fast = head;
+             
+             if(head == null){
+                 System.out.println("Empty");
+                 return;
+             }
+             else {
+                 Node temp = head;
+                 while(fast.next != null && fast.next.next != null){
+                     prev = slow;
+                     slow = slow.next;
+                     fast = fast.next.next;
+                 }
+                 
+                 prev.next = slow.next;
+                 slow.next.prev  = prev; 
+             }
+             
+             
+             
+            
+           //   delete element in ending......
+                  if(head == null){
+                      System.out.println("Empty");
+                      return;
+                  }
+                  else {
+                         Node temp = head;
+                      while(temp.next.next != null){
+                         temp = temp.next;
+                      }
+                       temp.next = null;
+                  }
+                     Node temp = head;
+                  if(temp.prev != null){
+                      temp.prev.next = null;
+                  }
+                  
+                  
+          
+    // 	        Delete element in the starting......
+                if(head == null){
+                    System.out.println("empty");
+                    return;
+                }
+                else {
+                    head = head.next;
+                }
+                if(head != null){
+                   head.prev = null;
+                }
+          
+    // 	      print..............
+            Node temp = head;
+             while(temp != null){
+                 System.out.print(temp.data + "->");
+                 temp = temp.next;
+             }
+             System.out.println("null");
+        }
+    }
+
+
 
     class Node{
         int data;
@@ -1105,47 +1193,136 @@ public class Main
         }
     }
 
+//     All process of insertion in doubly linked list.................
+
+    class Node{
+        int data;
+        Node next , prev;
+        
+        Node(int data){
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
+    }
+    public class Main
+    {
+        public static void main(String[] args) {
+             Node head = new Node(1);
+             head.next = new Node(2);
+             head.next.next = new Node(3);
+             head.next.next.next = new Node(4);
+             head.next.next.next.next = new Node(5);
+             head.next.next.next.next.prev = head.next.next.next;
+             
+             Node newNode = new Node(35);
+             
+           //  insert element at starting...
+           //     newNode.next = head;
+           //     head.prev = newNode;
+           //     head = newNode;
+           
+          // insert element at ending...
+           //   if(head == null){
+           //       System.out.println("khali");
+           //       return;
+           //   }
+           //   else{
+           //       Node temp = head;
+           //       while(temp.next != null){
+           //           temp = temp.next;
+           //       }
+           //        temp.next =  newNode; //single LL
+           //        newNode.prev = temp;  // doubly ll
+                     
+           //   }
+           
+           //  insert element in the posistion..  
+           //  int position = 4;
+           // if(head == null){
+           //     System.out.print("khali");
+           // }
+           // else {
+           //     Node temp = head;
+           //     for(int i=0; i<position-1; i++){
+           //         temp = temp.next;
+           //     }
+           //     newNode.next = temp.next;
+           //     temp.next = newNode;
+           //     newNode.prev = temp;
+           // }
+           
+            Node slow = head;
+            Node fast = head;
+         
+           //........insert element in exact middle.. 
+    // 	  while(fast.next != null && fast.next.next != null){
+    // 	        slow = slow.next;
+    // 	        fast = fast.next.next;
+    // 	    }
+    // 	        newNode.next = slow.next;
+    // 	        slow.next = newNode;
+    // 	        newNode.prev = slow; 
+                 
+    // 	         if(newNode.next != null){
+    // 	             newNode.next.prev = newNode;
+    // 	         }
+            
+             
+             Node temp = head;
+             while(temp != null){
+                 System.out.print(temp.data + "->");
+                 temp = temp.next;
+             }
+             System.out.println("null");
+        }
+    }
+
 
     // .......................DELETE ELEMENT AT STARTING................
 
     class Node{
         int data;
-        Node next, prev;
-       
-       Node(int data){
-           this.data = data;
-           this.next = null;
-           this.prev = null;
-       }
+        Node next , prev;
+        
+        Node(int data){
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
     }
     public class Main
     {
         public static void main(String[] args) {
-           Node head = new Node(10);
-           head.next = new Node(20);
-           head.next.next = new Node(30);
-           head.next.next.next = new Node(40);
-           head.next.next.next.next = new Node(50);
-           
-         if(head == null){
+             Node head = new Node(1);
+             head.next = new Node(2);
+             head.next.next = new Node(3);
+             head.next.next.next = new Node(4);
+             head.next.next.next.next = new Node(5);
+             head.next.next.next.next.prev = head.next.next.next;
+             
+             Node newNode = new Node(35);
+             
+              if(head == null){
+                  System.out.println("khalii");
+                  return;
+              }
+              else {
+                  head = head.next;
+              }
+              
+              if(head != null){
+                 head.prev = null;
+              }
+             
+             Node temp = head;
+             while(temp != null){
+                 System.out.print(temp.data + "->");
+                 temp = temp.next;
+             }
              System.out.println("null");
-             return;
-         }
-         else {
-            head = head.next;
-           head.prev = null;
-         }
-           
-           Node temp = head;
-           while(temp != null){
-               System.out.print(temp.data + " -> ");
-               temp = temp.next;
-           }
-           System.out.println("null");
         }
     }
-
-
 
     // ....................delete element at last........................
     class Node{
@@ -1380,69 +1557,93 @@ public class Solution {
     }
 }
 
-import java.util.HashSet;
-
-class Node{
+class Node {
     int data;
     Node next;
-    
-    Node(int data){
+
+    Node(int data) {
         this.data = data;
         this.next = null;
     }
 }
-public class Main
-{
-	public static void main(String[] args) {
-	   // ................union of two list.................
-	   
-	    Node head1 = new Node(1);
-	    head1.next = new Node(2);
-	    head1.next.next = new Node(3);
-	    head1.next.next.next = new Node(4);
-	   // output :- 1-> 2-> 3-> 4-> 5-> 6 -> 7......
-	    Node head2 = new Node(6);
-	    head2.next = new Node(3);
-	    head2.next.next = new Node(5);
-	    head2.next.next.next = new Node(4);
-	    head2.next.next.next.next = new Node(7);
-	    
-	    Node temp1 = head1;
-	    Node temp2 = head2;
-	     HashSet<Integer> hs = new HashSet<>();
-	   
-	   while(temp1 != null){
-	       hs.add(temp1.data);
-	       temp1 = temp1.next;
-	   }
-	   
-	    while(temp2 != null){
-	       hs.add(temp2.data);
-	       temp2 = temp2.next;
-	   }
-	   
-	   Node unionHead = null;
-	   Node unionTail = null;
-	   
-	   for(int chacha: hs){
-	       Node newNode = new Node(chacha);
-	       if(unionHead == null){
-	           unionHead = newNode;
-	           unionTail = newNode;
-	       }
-	       else {
-	           unionTail.next = newNode;
-	           unionTail = unionTail.next;
-	       }
-	   }
-	   
-	  Node unionList = unionHead;
-	  while(unionList != null){
-	      System.out.print(unionList.data + " -> ");
-	      unionList = unionList.next;
-	  }
-	  System.out.println("null");
-	}
+
+public class Main {
+    public static void main(String[] args) {
+        // Common intersection node
+        Node common = new Node(8);
+        common.next = new Node(10);
+
+        // First Linked List: 3 → 6 → 9 → 8 → 10
+        Node headA = new Node(3);
+        headA.next = new Node(6);
+        headA.next.next = new Node(9);
+        headA.next.next.next = common; // Intersection starts from node 8
+
+        // Second Linked List: 4 → 7 → 8 → 10
+        Node headB = new Node(4);
+        headB.next = new Node(7);
+        headB.next.next = common; // Intersection at node 8
+
+        // Print Linked Lists
+        printList(headA, "List A");
+        printList(headB, "List B");
+        
+        
+          Node temp1 = headA;
+           Node temp2 = headB;
+           
+           int length1 = 0;
+           while(temp1 != null){
+               length1++;
+               temp1 = temp1.next;
+           }
+       
+         int length2 = 0;
+           while(temp2 != null){
+               length2++;
+               temp2 = temp2.next;
+           }
+           
+        System.out.println(temp1);
+        System.out.println(temp2);
+        
+           Node temp3 = headA;
+           Node temp4 = headB;
+        
+        if(length1 > length2){
+            int distance = length1 - length2;
+            for(int i=1; i<=distance; i++){
+                temp3 = temp3.next;
+            }
+        }
+        else {
+            int distance = length2 - length1;
+            for(int i=1; i<=distance; i++){
+                temp4 = temp4.next;
+            }
+        }
+        
+         while(temp3 != null && temp4 != null){
+             if(temp3 == temp4){
+            System.out.println("Intersection Node: " + temp3.data);
+                 return;
+             }
+             temp3 = temp3.next;
+            temp4 = temp4.next;
+         }
+       System.out.println("No Intersection Found");
+        
+    }
+    
+        
+    static void printList(Node head, String name) {
+        System.out.print(name + ": ");
+        while (head != null) {
+            System.out.print(head.data + "->");
+            head = head.next;
+        }
+        System.out.println("null");
+    }
 }
 
 

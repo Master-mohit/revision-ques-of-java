@@ -1517,46 +1517,6 @@ public class Main
 }
 
 // ............160. Intersection of Two Linked Lists...............on leetcode...
-
-public class Solution {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-           ListNode temp1 = headA;
-        ListNode temp2 = headB;
-
-      int lengthA = 0;
-      while(temp1 != null){
-        lengthA++;
-        temp1 = temp1.next;
-      }
-      temp1 = headA;
-
-      int lengthB = 0;
-      while(temp2 != null){
-        lengthB++;
-        temp2 = temp2.next;
-      }
-      temp2 = headB;
-     if(lengthA > lengthB){
-        int distance = lengthA - lengthB;
-         for(int i=1; i<=distance; i++){
-              temp1 = temp1.next;
-         }
-     }
-     else {
-         int distance = lengthB - lengthA;
-         for(int i=1; i<=distance; i++){
-            temp2 = temp2.next;
-         }
-     }
-      while(temp1 != temp2){
-        temp1 = temp1.next;
-        temp2 = temp2.next;
-      }
-      return temp1;
-
-    }
-}
-
 class Node {
     int data;
     Node next;
@@ -1644,6 +1604,60 @@ public class Main {
         }
         System.out.println("null");
     }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	   // ................union of two list.................
+	   
+	    Node head1 = new Node(1);
+	    head1.next = new Node(2);
+	    head1.next.next = new Node(3);
+	    head1.next.next.next = new Node(4);
+	   // output :- 1-> 2-> 3-> 4-> 5-> 6 -> 7......
+	    Node head2 = new Node(6);
+	    head2.next = new Node(3);
+	    head2.next.next = new Node(5);
+	    head2.next.next.next = new Node(4);
+	    head2.next.next.next.next = new Node(7);
+	    
+	    Node temp1 = head1;
+	    Node temp2 = head2;
+	     HashSet<Integer> hs = new HashSet<>();
+	   
+	   while(temp1 != null){
+	       hs.add(temp1.data);
+	       temp1 = temp1.next;
+	   }
+	   
+	    while(temp2 != null){
+	       hs.add(temp2.data);
+	       temp2 = temp2.next;
+	   }
+	   
+	   Node unionHead = null;
+	   Node unionTail = null;
+	   
+	   for(int chacha: hs){
+	       Node newNode = new Node(chacha);
+	       if(unionHead == null){
+	           unionHead = newNode;
+	           unionTail = newNode;
+	       }
+	       else {
+	           unionTail.next = newNode;
+	           unionTail = unionTail.next;
+	       }
+	   }
+	   
+	  Node unionList = unionHead;
+	  while(unionList != null){
+	      System.out.print(unionList.data + " -> ");
+	      unionList = unionList.next;
+	  }
+	  System.out.println("null");
+	}
 }
 
 
@@ -1737,77 +1751,72 @@ public class Main
 // ......................................odd even linked-list...............................
 
 
-class Node{
+import java.util.ArrayList;
+
+class Node {
     int data;
     Node next;
-    
-    Node(int data){
+
+    Node(int data) {
         this.data = data;
         this.next = null;
     }
 }
-public class Main
-{
-	public static void main(String[] args) {
-	   Node head = new Node(1);
-	   head.next = new Node(2);
-	   head.next.next = new Node(3);
-	   head.next.next.next = new Node(4);
-	   head.next.next.next.next = new Node(5);
-	    head.next.next.next.next.next = new Node(16);
-	   
-	   Node odd = null;
-	   Node even = null;
-	   Node oddtail = null;
-	   Node eventail = null;
-	   
-        Node current = head;
-        while(current != null){
-            int value = current.data;
-            if(value % 2 != 0){
-               if(odd == null){
-                    odd  = oddtail = current;
-               }
-               else {
-                  oddtail.next = current;
-                  oddtail = oddtail.next;
-               }
-               
-            }
-            if(value % 2 == 0){
-                if(even == null){
-                    even = eventail = current;
+
+public class Main {
+    public static void main(String[] args) {
+        // Original linked list creation
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
+        head.next.next.next.next.next = new Node(6);
+        
+        Node oddHead = null; 
+        Node oddTail = null;
+        Node evenHead = null;
+        Node evenTail = null;
+        
+        Node temp = head;
+        while(temp != null){
+            if(temp.data % 2 != 0){
+                if(oddHead == null){
+                    oddHead = new Node(temp.data);
+                    oddTail = oddHead;
                 }
                 else {
-                    eventail.next = current;
-                    eventail = eventail.next;
+                    oddTail.next = new Node(temp.data);
+                    oddTail = oddTail.next;
                 }
             }
-           current = current.next;
+            else {
+                if(evenHead == null){
+                    evenHead = new Node(temp.data);
+                    evenTail = evenHead;
+                }
+                else {
+                    evenTail.next = new Node(temp.data);
+                    evenTail = evenTail.next;
+                }
+            }
+              temp = temp.next;
         }
-        
-        if(eventail != null){
-            eventail.next = null;
-        }
-        
-        if(oddtail != null){
-            oddtail.next = null;
-        }
-        
-        Node evenList = even;
-        while(evenList != null){
-         System.out.print(evenList.data + " -> ");
-         evenList = evenList.next;
-        }
-         System.out.println("null");
-	   
-	    Node oddList = odd;
-        while(oddList != null){
-         System.out.print(oddList.data + " -> ");
-         oddList = oddList.next;
-        }
-         System.out.println("null");
-	}
+         
+                Node temp3 = evenHead;
+             while(temp3 != null){
+                 System.out.print(temp3.data + "->");
+                 temp3 = temp3.next;
+             }
+                System.out.println("null");
+           
+        Node temp4 = oddHead;
+             while(temp4 != null){
+                 System.out.print(temp4.data + "->");
+                 temp4 = temp4.next;
+             }
+                System.out.println("null");
+    }
 }
 
 

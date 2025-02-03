@@ -30,3 +30,63 @@ public class Main
        System.out.println(st.size());
 	}
 }
+
+//  ............. Take the Input in Stack............................
+
+// import java.util.*;
+// public class Main
+// {
+// 	public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);
+		Stack<Integer> st = new Stack<>();
+
+   System.out.println("choose the no.of element");
+   int n = sc.nextInt();
+   System.out.println("enter element");
+    
+   for(int i=1; i<=n; i++){
+        int x = sc.nextInt();
+          st.push(x);
+   }
+   System.out.println(st);
+     
+// 	}
+// }
+
+//  ..................Move element from one stack to other stack..........
+
+// import java.util.*;
+// public class Main
+// {
+	public static void main(String[] args) {
+		Stack<Integer> st = new Stack<>();
+       
+        st.push(9);
+        st.push(4);
+        st.push(8);
+        st.push(4);
+        st.push(1);
+        
+     System.out.println(st);
+//  make a new stack to copy emelent from st.
+    Stack<Integer> rt = new Stack<>();
+    
+//   copy element to new stack and remove
+    //  the element in old stack 
+    // but this reverse order
+      while(st.size() > 0){
+        rt.push(st.pop());
+//   Pop :- jayega utha kr first element layega
+//         push krega or remove bhi kr dega sath me...
+      }
+      
+      System.out.println(st);
+      System.out.println(rt);
+      
+      Stack<Integer> ct = new Stack<>();
+      while(rt.size() > 0){
+          ct.push(rt.pop());
+      }
+      System.out.println(ct);
+// 	}
+// }

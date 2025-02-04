@@ -119,3 +119,61 @@ public class Main
 	 System.out.println(st);
 	}
 // }
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   Stack<Integer> st = new Stack<>();
+	   
+	   st.push(1);
+	   st.push(2);
+	   st.push(3);
+	   st.push(4);
+	   st.push(5);
+	   
+	 int n = st.size();
+	 int arr[] = new int[n];
+	 for(int i=n-1; i>=0; i--){
+	    int x = st.pop();
+	    arr[i] = x;
+	    
+	 }
+	 System.out.println(Arrays.toString(arr));
+	}
+}
+
+
+// .......................Implement of stack using arrays............
+
+public class Main {
+       public static void main(String[] args) {
+           int arr[] = new int[5]; // Array to store stack elements
+           int top = -1;           // Stack is initially empty
+   
+           // Push operations
+           arr[++top] = 10; // Push 10
+           arr[++top] = 20; // Push 20
+           arr[++top] = 30; // Push 30
+   
+           // Display Stack
+           System.out.print("Stack: ");
+           for (int i = 0; i <= top; i++) {
+               System.out.print(arr[i] + " ");
+           }
+           System.out.println();
+   
+           // Pop operation
+           System.out.println("Popped: " + arr[top--]); // Removes 30
+   
+           // Peek operation
+           System.out.println("Top element: " + arr[top]); // Shows 20
+   
+           // Updated Stack
+           System.out.print("Updated Stack: ");
+           for (int i = 0; i <= top; i++) {
+               System.out.print(arr[i] + " ");
+           }
+       }
+   }
+   

@@ -55,9 +55,7 @@ public class Main
 
 //  ..................Move element from one stack to other stack..........
 
-// import java.util.*;
-// public class Main
-// {
+
 	public static void main(String[] args) {
 		Stack<Integer> st = new Stack<>();
        
@@ -93,9 +91,7 @@ public class Main
 
 
 // ....................INSERTION ELEMENT ACCROING TO INDEX................
-// import java.util.*;
-// public class Main
-// {
+
 	public static void main(String[] args) {
 	   Stack<Integer> st = new Stack<>();
 	   
@@ -176,7 +172,7 @@ public class Main {
 }
 
 
-// ..................advance version of implement using arrays for interview.....
+// ..................advance version of implement stack using arrays for interview.....
 
 public class Main {
     static int size = 5;
@@ -226,6 +222,74 @@ public class Main {
             System.out.println("Stack is empty");
         } else {
             System.out.println("Stack is not empty");
+        }
+    }
+}
+
+
+
+// ...............advance implement stack using LinkedList for interview
+
+class Node{
+    int data;
+    Node next;
+    
+    Node(int data){
+       this.data = data;
+       this.next = null;
+    }
+}
+
+public class Main{
+    static Node top = null;
+    
+    static void push(int value){
+        Node newNode = new Node(value);
+        newNode.next = top;
+        top = newNode;
+        System.out.println("Pushed element : " + value);
+    }
+    
+    static int pop(){
+        if(top == null){
+            System.out.println("stack underflow");
+            return -1;
+        }
+        else {
+            int popedValue = top.data;
+            top = top.next;
+            return popedValue;
+        }
+    }
+    
+    static int peek(){
+        if(top == null){
+            System.out.println("stack IsEmpty");
+            return -1;
+        }
+        else {
+          return top.data;
+        }
+    }
+    
+    public static void main(String[] args) {
+        push(10);
+        push(20);
+        push(30);
+        push(40);
+        push(50);
+        
+        
+        System.out.println("Poped 1st element : " + pop());
+        System.out.println("Poped 2nd element : " + pop());
+        
+        System.out.println("Peeked element : " + peek());
+        
+        if(top == null){
+            System.out.println("stacl IsEmpty");
+        }
+        else {
+            System.out.println("stack IsNotEmpty");
         }
     }
 }

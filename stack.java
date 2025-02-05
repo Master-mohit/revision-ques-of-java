@@ -144,8 +144,36 @@ public class Main
 }
 
 
-// .......................Implement of stack using arrays............
+// ................Basic Implement of stack using arrays............
 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int size = 5;
+        int[] stack = new int[size];
+        int top = -1;  // Initial stack is empty
+
+        // Pushing elements
+        stack[++top] = 10;
+        stack[++top] = 20;
+        stack[++top] = 30;
+
+        // Peek operation
+        System.out.println("Top element: " + stack[top]);  // Output: 30
+
+        // Popping elements
+        System.out.println("Popped: " + stack[top--]);     // Output: 30
+        System.out.println("Popped: " + stack[top--]);     // Output: 20
+
+        // Check if stack is empty
+        if (top == -1) {
+            System.out.println("Stack is empty");
+        } else {
+            System.out.println("Stack is not empty");
+        }
+    }
+}
 public class Main {
        public static void main(String[] args) {
            int arr[] = new int[5]; // Array to store stack elements

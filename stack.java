@@ -174,34 +174,58 @@ public class Main {
         }
     }
 }
+
+
+// ..................advance version of implement using arrays for interview.....
+
 public class Main {
-       public static void main(String[] args) {
-           int arr[] = new int[5]; // Array to store stack elements
-           int top = -1;           // Stack is initially empty
-   
-           // Push operations
-           arr[++top] = 10; // Push 10
-           arr[++top] = 20; // Push 20
-           arr[++top] = 30; // Push 30
-   
-           // Display Stack
-           System.out.print("Stack: ");
-           for (int i = 0; i <= top; i++) {
-               System.out.print(arr[i] + " ");
-           }
-           System.out.println();
-   
-           // Pop operation
-           System.out.println("Popped: " + arr[top--]); // Removes 30
-   
-           // Peek operation
-           System.out.println("Top element: " + arr[top]); // Shows 20
-   
-           // Updated Stack
-           System.out.print("Updated Stack: ");
-           for (int i = 0; i <= top; i++) {
-               System.out.print(arr[i] + " ");
-           }
-       }
-   }
-   
+    static int size = 5;
+    static int[] stack = new int[size];
+    static int top = -1;
+
+    // Push Function
+    static void push(int value) {
+        if (top == size - 1) {
+            System.out.println("Stack Overflow");
+        } else {
+            stack[++top] = value;
+        }
+    }
+
+    // Pop Function
+    static int pop() {
+        if (top == -1) {
+            System.out.println("Stack Underflow");
+            return -1;
+        } else {
+            return stack[top--];
+        }
+    }
+
+    // Peek Function
+    static int peek() {
+        if (top == -1) {
+            System.out.println("Stack is empty");
+            return -1;
+        } else {
+            return stack[top];
+        }
+    }
+
+    public static void main(String[] args) {
+        push(10);
+        push(20);
+        push(30);
+
+        System.out.println("Top element: " + peek()); // Output: 30
+
+        System.out.println("Popped: " + pop());       // Output: 30
+        System.out.println("Popped: " + pop());       // Output: 20
+
+        if (top == -1) {
+            System.out.println("Stack is empty");
+        } else {
+            System.out.println("Stack is not empty");
+        }
+    }
+}

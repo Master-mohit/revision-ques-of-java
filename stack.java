@@ -293,3 +293,44 @@ public class Main{
         }
     }
 }
+
+
+// ................. Check if a string is balanced (Valid Parentheses).......
+
+	public static void main(String[] args) {
+	 Stack<Character> stack = new Stack<>();
+          String s1 = "{([])}";
+         for(int i=0; i<s1.length(); i++){
+             char ch = s1.charAt(i);
+             if(ch == '{' || ch == '(' || ch == '['){
+                   stack.push(ch);
+                   
+             }
+             else {
+                 if(stack.isEmpty()){
+                     System.out.println("false");
+                     return;
+                 }
+                 
+                 char top = stack.pop();
+                 
+                 
+                 if ((ch == '}' && top != '{') ||
+                 (ch == ')' && top != '(') ||
+                 (ch == ']' && top != '[')){
+                     System.out.println("false");
+                     return;
+                 }
+                 
+             }
+         }
+         
+         if(stack.isEmpty()){
+             System.out.println("true");
+             
+         }
+         else {
+             System.out.println("false");
+             
+         }
+	}

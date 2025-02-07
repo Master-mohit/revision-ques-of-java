@@ -334,3 +334,20 @@ public class Main{
              
          }
 	}
+
+
+    // ................... Reverse String using stack............
+
+	public static void main(String[] args) {
+	  Stack<Character> stack = new Stack<>();
+	     
+	    String s = "mohit";
+	   for(int i=0; i<s.length(); i++){
+	       char ch = s.charAt(i);
+	       stack.push(ch);
+	   }
+	      StringBuilder sb = new StringBuilder();
+	   while(!stack.isEmpty()){
+	       sb.append(stack.pop());
+	   }
+	   System.out.println(sb);

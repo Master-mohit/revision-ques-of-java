@@ -240,9 +240,7 @@ class Node{
     }
 }
 
-public class Main{
-    static Node top = null;
-    
+
     static void push(int value){
         Node newNode = new Node(value);
         newNode.next = top;
@@ -351,3 +349,62 @@ public class Main{
 	       sb.append(stack.pop());
 	   }
 	   System.out.println(sb);
+
+
+// ................. Implement 2 stacks in one array..........................
+       
+              static int n = 5;
+              static int arr[] = new int[n];
+              static int top1 = -1;
+              static int top2 = n;
+               
+        static void push1(int value){
+            if(top1 + 1 < top2){
+                arr[++top1] = value;
+            }
+            else {
+                System.out.println("stack overflow");
+            }
+        }
+        
+        static void push2(int value){
+            if(top1 + 1 < top2){
+                arr[--top2] = value;
+            }
+            else {
+                System.out.println("stack overflow");
+            }
+        }
+        
+        static int pop1(){
+            if(top1 >= 0 ){
+                return arr[top1--];
+            }
+            else {
+                System.out.println("stack underflow");
+                return -1;
+            }
+        }
+        
+        static int pop2(){
+            if(top2 < n ){
+                return arr[top2++];
+            }
+            else {
+                System.out.println("stack underflow");
+                return -1;
+            }
+        }
+       
+           public static void main(String[] args) {
+              
+               push1(10);
+               push1(20);
+               push2(30);
+               push2(40);
+               
+             System.out.println("poped1 element : " + pop1());
+             System.out.println("poped2 element : " + pop2());
+                
+           }
+       }

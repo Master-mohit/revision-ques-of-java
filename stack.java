@@ -452,3 +452,28 @@ class Node{
 	   
 	   System.out.println(Arrays.toString(nge));
 	   
+
+
+    //    ............... NEXT GREATEST EKEMENT 2 (NGE) CIRCULOR .........................
+       import java.util.*;
+       public class Main {
+           public static void main(String[] args) {
+               int arr[] = {5, 3, 8, -2, 7};
+                 int n = arr.length;
+                int nge[] = new int[n];
+                 Stack<Integer> stack =  new Stack<>();
+                 for(int i = 2 * n - 1; i>=0; i--){
+                     while(!stack.isEmpty() && stack.peek() <= arr[i % n]){
+                         stack.pop();
+                     }
+               
+                     if(i < n){
+                     nge[i] = stack.isEmpty() ? -1 : stack.peek();
+                    
+                 }
+                  stack.push(arr[i % n]);
+                 }
+             System.out.println(Arrays.toString(nge));
+           }
+       }
+       

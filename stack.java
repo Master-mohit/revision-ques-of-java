@@ -408,3 +408,25 @@ class Node{
                 
            }
        }
+
+
+    //   ........................ NEXT GREATER ELEMENT (NGE)....................
+
+	public static void main(String[] args) {
+	   Stack<Integer>stack = new Stack<>();
+	   int arr[] = {4, 5, 2, 10, 8};
+	   int n = arr.length;
+	   int nge[] = new int[n];
+	   
+	   for(int i = n-1; i>=0; i--){
+	       while(!stack.isEmpty() && stack.peek() <= arr[i]){
+	           stack.pop();
+	       }
+	       nge[i] = stack.isEmpty() ? -1 : stack.peek();
+	       
+	       stack.push(arr[i]);
+	       
+	   }
+	   
+	   System.out.println(Arrays.toString(nge));
+	   

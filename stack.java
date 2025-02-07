@@ -455,8 +455,7 @@ class Node{
 
 
     //    ............... NEXT GREATEST EKEMENT 2 (NGE) CIRCULOR .........................
-       import java.util.*;
-       public class Main {
+       
            public static void main(String[] args) {
                int arr[] = {5, 3, 8, -2, 7};
                  int n = arr.length;
@@ -474,6 +473,24 @@ class Node{
                   stack.push(arr[i % n]);
                  }
              System.out.println(Arrays.toString(nge));
-           }
-       }
-       
+      
+
+    //.....................	Number of NGEs to the right (counting).........
+    int arr[] = {4, 5, 2, 10, 8};
+    int n = arr.length;
+    int countArr[] = new int[n];
+    Stack<Integer> stack =  new Stack<>();
+    
+    for(int i=n - 1; i >= 0; i--){
+       int count = 0;
+        
+        for(int num : stack){
+            if(num > arr[i]){
+                count++;
+            }
+        }
+        countArr[i] = count;
+          stack.push(arr[i]);
+    }
+    
+  System.out.println(Arrays.toString(countArr));

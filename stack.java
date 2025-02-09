@@ -454,7 +454,7 @@ class Node{
 	   
 
 
-    //    ............... NEXT GREATEST EKEMENT 2 (NGE) CIRCULOR .........................
+    // ............... NEXT GREATEST EKEMENT 2 (NGE) CIRCULOR .........................
        
            public static void main(String[] args) {
                int arr[] = {5, 3, 8, -2, 7};
@@ -494,3 +494,49 @@ class Node{
     }
     
   System.out.println(Arrays.toString(countArr));
+
+
+// .........................Min stack.........................
+import java.util.Stack;
+
+public class Main {
+    static Stack<Integer> stack = new Stack<>();
+    static Stack<Integer> minstack = new Stack<>();
+    
+    
+static void push(int val){
+    stack.push(val);
+    if(minstack.isEmpty() || val <= minstack.peek()){
+        minstack.push(val);
+    } 
+}
+
+static void pop(){
+    if(!stack.isEmpty()){
+        if(stack.pop().equals(minstack.peek())){
+            minstack.pop();
+        }
+    }
+}
+
+static int peek(){
+    return stack.isEmpty() ? -1 : stack.peek();
+}
+
+static int getmin(){
+    return minstack.isEmpty() ? -1 : minstack.peek();
+}
+    public static void main(String[] args) {
+      push(3);
+      push(1);
+      push(5);
+      push(-2);
+      
+      System.out.println(getmin());
+      pop();
+      
+      System.out.println(getmin());
+      System.out.println(peek());
+      
+    }
+}

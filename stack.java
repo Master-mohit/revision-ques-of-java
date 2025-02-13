@@ -540,3 +540,21 @@ static int getmin(){
       
     }
 }
+
+// .......................Daily Temperatures...........................
+
+int arr[] = {73, 74, 75, 45, 96, 76, 54};
+int n = arr.length;
+int result[] = new int[n];
+
+for(int i=0; i<n; i++){
+    for(int j= i + 1; j<n; j++){
+        if(arr[j] > arr[i]){
+            result[i] = j - i;
+            break;
+        }
+    }
+}
+for(int ans : result){
+    System.out.print(ans + " ");
+}

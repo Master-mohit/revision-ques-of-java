@@ -662,3 +662,22 @@ for(int i = prefix.length() - 1; i>=0; i--){
  }
 }
 System.out.println(stack.pop());
+
+// ..............................Prefix to postfix.....................
+Stack<String> stack = new Stack<>();
+String prefix = "*+AB-CD";
+for(int i=prefix.length()-1; i>=0; i--){
+    char c = prefix.charAt(i);
+    
+    if(Character.isLetterOrDigit(c)){
+        stack.push(c + "");
+    }
+    else {
+        String op1 = stack.pop();
+        String op2 = stack.pop();
+        
+        String exp = op1 + op2 + c;
+        stack.push(exp);
+    }
+}
+System.out.println(stack.pop());

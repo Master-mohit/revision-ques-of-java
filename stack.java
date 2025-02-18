@@ -174,7 +174,7 @@ public class Main {
 
 // ..................advance version of implement stack using arrays for interview.....
 
-public class Main {
+
     static int size = 5;
     static int[] stack = new int[size];
     static int top = -1;
@@ -558,3 +558,33 @@ for(int i=0; i<n; i++){
 for(int ans : result){
     System.out.print(ans + " ");
 }
+
+// .........................Asteroid Collision...........................
+Stack<Integer> stack = new Stack<>();
+		int nums[] = {3, -4, 6};
+		for(int arr : nums){
+		   	while(!stack.isEmpty() && arr < 0 && stack.peek() > 0){
+		   int top =  stack.pop();
+		   
+		   if(top == -arr){
+		       arr = 0;
+		       break;
+		   }
+		   
+		   if(top > -arr){
+		       arr = 0;
+		       stack.push(top);
+		       break;
+		   }
+		  
+		} 
+		 if(arr != 0){
+		       stack.push(arr);
+		   }
+		}
+		
+		int result[] = new int[stack.size()];
+		  for(int i=stack.size()-1; i>=0; i--){
+		      result[i] = stack.pop();
+		  }
+		  System.out.println(Arrays.toString(result));

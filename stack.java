@@ -643,6 +643,60 @@ public class Main
 	}
 }
 
+
+
+// ...........................infix to postfix........................
+static int precedence(char op) {
+    if (op == '+' || op == '-') return 1;
+    if (op == '*' || op == '/') return 2;
+    return 0;
+}
+
+public static void main(String[] args) {
+    String infix = "(A+B)*C-(D+E)*(F+G)";
+    Stack<Character> stack = new Stack<>();
+    StringBuilder result = new StringBuilder();
+    
+    // Step 1: Reverse infix expression and swap '(' with ')'
+    StringBuilder reversedInfix = new StringBuilder();
+    for (int i = infix.length() - 1; i >= 0; i--) {
+        char c = infix.charAt(i);
+        if (c == '(') reversedInfix.append(')');
+        else if (c == ')') reversedInfix.append('(');
+        else reversedInfix.append(c);
+    }
+
+    // Step 2: Convert modified infix to postfix
+    for (int i = 0; i < reversedInfix.length(); i++) {
+        char c = reversedInfix.charAt(i);
+
+        if (Character.isLetterOrDigit(c)) {
+            result.append(c);
+        } 
+        else if (c == '(') {
+            stack.push(c);
+        } 
+        else if (c == ')') {
+            while (!stack.isEmpty() && stack.peek() != '(') {
+                result.append(stack.pop());
+            }
+            stack.pop(); // Remove '('
+        } 
+        else {
+            while (!stack.isEmpty() && precedence(c) <= precedence(stack.peek())) {
+                result.append(stack.pop());
+            }
+            stack.push(c);
+        }
+    }
+
+    while (!stack.isEmpty()) {
+        result.append(stack.pop());
+    }
+
+    // Step 3: Reverse the postfix to get prefix
+    System.out.println("Prefix: " + result.reverse().toString());
+    
 // ............................Postfix to infix................
 Stack<String> stack = new Stack<>();
 String postfix = "AB+CD*+";

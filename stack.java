@@ -643,7 +643,25 @@ public class Main
 	}
 }
 
+// ............................Postfix to infix................
+Stack<String> stack = new Stack<>();
+String postfix = "AB+CD*+";
+for(int i=0; i<postfix.length(); i++){
+    char c = postfix.charAt(i);
+    
+    if(Character.isLetterOrDigit(c)){
+        stack.push(c + "");
+    }
+    else {
+        String op1 = stack.pop();
+        String op2 = stack.pop();
+        
+        String exp = "(" + op2 + c + op1 + ")";
+        stack.push(exp);
+    }
+}
 
+System.out.println(stack.pop());
 // ............................Prefix to infix................
 Stack<String> stack = new Stack<>();
 String prefix = "*+AB-CD";

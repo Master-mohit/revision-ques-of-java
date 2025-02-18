@@ -642,3 +642,23 @@ public class Main
             System.out.println(result.toString());
 	}
 }
+
+
+// ............................Prefix to infix................
+Stack<String> stack = new Stack<>();
+String prefix = "*+AB-CD";
+for(int i = prefix.length() - 1; i>=0; i--){
+ char c = prefix.charAt(i);
+ 
+ if(Character.isLetterOrDigit(c)){
+      stack.push(c + "");
+ }
+ else {
+     String op1 = stack.pop();
+     String op2 = stack.pop();
+     String exp = "(" + op1 + c + op2 + ")";
+     
+     stack.push(exp);
+ }
+}
+System.out.println(stack.pop());

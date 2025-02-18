@@ -588,3 +588,57 @@ Stack<Integer> stack = new Stack<>();
 		      result[i] = stack.pop();
 		  }
 		  System.out.println(Arrays.toString(result));
+
+
+// ..............................infix to postfix........................
+
+import java.util.*;
+public class Main
+{
+    static int precedence(char op){
+       if(op == '+' || op == '-'){
+            return 1;
+      }
+      else if(op == '*' || op == '/'){
+            return 2;
+      }
+      else {
+           return 0;
+      } 
+    }
+	public static void main(String[] args) {
+	    String infix = "(A+B)*C-(D+E)*(F+G)";
+	    Stack<Character> stack = new Stack<>();
+	    StringBuilder result = new StringBuilder();
+	    
+	    for(int i=0; i<infix.length(); i++){
+	        char c = infix.charAt(i);
+	        
+	        if(Character.isLetterOrDigit(c)){
+	            result.append(c);
+	        }
+	        else if(c == '('){
+	            stack.push(c);
+	        }
+	        else if(c == ')'){
+	            if(!stack.isEmpty() && stack.peek() != '('){
+	               result.append(stack.pop());
+	            }
+	            stack.pop();
+	        }
+	        
+	        else {
+	           while(!stack.isEmpty() && precedence(c) <= precedence(stack.peek())){
+	               result.append(stack.pop());
+	           }
+	           stack.push(c);
+	        }
+	        
+	        
+	    }
+	    while(!stack.isEmpty()){
+	        result.append(stack.pop());
+	    }
+            System.out.println(result.toString());
+	}
+}

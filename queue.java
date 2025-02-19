@@ -1,5 +1,8 @@
 // Queue is linear data structure which is work on FIFO principle like fisrt in fisrt out.
 
+
+
+// ..............................Implement Queue using Array.......................
 static int size = 5;
 static int arr[] = new int[size];
 static int front = -1;
@@ -45,3 +48,71 @@ public static void main(String[] args) {
     System.out.println("Dequeued: " + dequeue()); // 20
 
     System.out.println("Front Element: " + getFront()); // 30
+
+
+    // ............................Implement Queue using LinkedList.................
+
+
+class Node{
+    int data;
+    Node next;
+     
+     Node(int data){
+        this.data = data;
+        this.next = null;
+     }
+}
+
+public class Main
+{
+    static Node front = null;
+    static Node rear = null;
+
+static void enqueue(int value){
+    Node newNode = new Node(value);
+    if(front == null){
+        front = rear = newNode;
+    }
+    else {
+        rear.next =  newNode;
+        rear = newNode;
+    }
+    System.out.println("enqueue " + value);
+}
+
+static int dequeue(){
+    if(front == null){
+        System.out.println("stack underflow");
+        return -1;
+    }
+    else {
+        int dequeuValue = front.data;
+        front = front.next;
+       if(front == null){
+           rear = null;
+       }
+        return dequeuValue;
+    }
+    
+}
+
+static int front(){
+    if(front == null){
+        System.out.println("stack is empty");
+        return -1;
+    }
+    else {
+        return front.data;
+    }
+}
+	public static void main(String[] args) {
+	   enqueue(10);
+	   enqueue(20);
+	   enqueue(30);
+	   enqueue(40);
+	   System.out.println("dequeue first " + dequeue());
+	   System.out.println("dequeue second " + dequeue());
+	   
+	   System.out.println("frontend " + front());
+	}
+}

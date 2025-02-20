@@ -222,3 +222,52 @@ static int peek(){
 	 System.out.println("peeked element " + peek());
 	}
 }
+
+// ............... Queue using two stack means  queue ko banan stack ki help se
+public class Main
+{
+    Stack<Integer> s1 = new Stack<>();
+    Stack<Integer> s2 = new Stack<>();
+    
+ void enqueue(int value){
+     s1.push(value);
+ }
+ 
+ int dequeue(){
+     if(s1.isEmpty() && s2.isEmpty()){
+         return -1;
+     }
+     else {
+         if(s2.isEmpty()){
+             while(!s1.isEmpty()){
+                 s2.push(s1.pop());
+             }
+         }
+         return s2.pop();
+     }
+ }
+ 
+ int front(){
+     if(s1.isEmpty() && s2.isEmpty()){
+         return -1;
+     }
+     else {
+         if(s2.isEmpty()){
+             while(!s1.isEmpty()){
+                 s2.push(s1.pop());
+             }
+         }
+         return s2.peek();
+     }
+ }
+	public static void main(String[] args) {
+	   Main queueUsingstack = new Main();
+	   queueUsingstack.enqueue(10);
+	   queueUsingstack.enqueue(20);
+	   queueUsingstack.enqueue(30);
+	   queueUsingstack.enqueue(40);
+	   System.out.println("dequeue first " + queueUsingstack.dequeue());
+	   System.out.println("dequeue second " + queueUsingstack.dequeue());
+	    System.out.println("peeked first " + queueUsingstack.front());
+	}
+}

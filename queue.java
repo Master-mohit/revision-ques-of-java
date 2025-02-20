@@ -116,3 +116,50 @@ static int front(){
 	   System.out.println("frontend " + front());
 	}
 }
+
+
+// .....................Stack using one Queue.....................
+public class Main
+{
+   static Queue<Integer> q = new LinkedList<>();
+    
+static void push(int value){
+    q.add(value);
+    int size = q.size();
+    while(size > 1){
+        size--;
+        q.add(q.remove());
+    }
+}
+static int pop(){
+    if(q.isEmpty()){
+        return -1;
+    }
+    else {
+       return q.remove();
+    }
+}
+static int peek(){
+    if(q.isEmpty()){
+        return -1;
+        
+    }
+    else {
+        return q.peek();
+    }
+}
+	public static void main(String[] args) {
+	    
+		Main.push(10);
+		Main.push(20);
+		Main.push(30);
+		Main.push(40);
+		
+		System.out.println("poped first " + Main.pop());
+		System.out.println("poped second " + Main.pop());
+		
+		System.out.println("peeked " + Main.peek());
+		
+		
+	}
+}

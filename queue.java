@@ -271,3 +271,51 @@ public class Main
 	    System.out.println("peeked first " + queueUsingstack.front());
 	}
 }
+
+
+// .......................Queue using one stack.......................
+public class Main
+{
+    Stack<Integer> s1 = new Stack<>();
+    
+ void enqueue(int value){
+    if(s1.isEmpty()){
+        s1.push(value);
+        return;
+    }
+    
+        int top = s1.pop();
+        enqueue(value);
+        s1.push(top);
+ }
+ 
+ int dequeue(){
+     if(s1.isEmpty()){
+         return -1;
+         
+     }
+     else{
+         return s1.pop();
+     }
+ }
+ 
+ int front(){
+     if(s1.isEmpty()){
+         return -1;
+         
+     }
+     else{
+         return s1.peek();
+     }
+ }
+	public static void main(String[] args) {
+	   Main queueUsingstack = new Main();
+	   queueUsingstack.enqueue(10);
+	   queueUsingstack.enqueue(20);
+	   queueUsingstack.enqueue(30);
+	   queueUsingstack.enqueue(40);
+	   System.out.println("dequeue first " + queueUsingstack.dequeue());
+	   System.out.println("dequeue second " + queueUsingstack.dequeue());
+	    System.out.println("peeked first " + queueUsingstack.front());
+	}
+}

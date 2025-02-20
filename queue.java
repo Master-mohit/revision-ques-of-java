@@ -118,7 +118,7 @@ static int front(){
 }
 
 
-// .....................Stack using one Queue.....................
+// .....................Stack using one Queue (Push Costly Approach).....................
 public class Main
 {
    static Queue<Integer> q = new LinkedList<>();
@@ -161,5 +161,64 @@ static int peek(){
 		System.out.println("peeked " + Main.peek());
 		
 		
+	}
+}
+
+
+// ..................Stack Using Two Queues (Pop Costly Approach)................
+
+public class Main {
+    static Queue<Integer> q1 =  new LinkedList<>();
+    static Queue<Integer> q2 =  new LinkedList<>();
+    
+static void push(int value){
+    q1.add(value);
+}
+static int pop(){
+    if(q1.isEmpty()){
+        return -1;
+    }
+    else {
+        while(q1.size() > 1){
+            q2.add(q1.remove());
+        }
+        int lastElement = q1.remove();
+        
+        Queue<Integer> temp = q1;
+        q1 = q2;
+        q2 = temp;
+        
+        return lastElement;
+    }
+}
+
+static int peek(){
+    if(q1.isEmpty()){
+        return -1;
+    }
+    else {
+        while(q1.size() > 1){
+            q2.add(q1.remove());
+        }
+        int topElement = q1.peek();
+         q2.add(q1.remove());
+         
+         Queue<Integer> temp = q1;
+         q1 = q2;
+         q2 = temp;
+        
+        return topElement;
+    }
+}
+
+	public static void main(String[] args) {
+	   Main.push(10);	
+	   Main.push(20);
+	   Main.push(30);
+	   Main.push(40);
+	   
+	 System.out.println("poped first " + pop());
+	 System.out.println("poped second " + pop());
+	 System.out.println("peeked element " + peek());
 	}
 }

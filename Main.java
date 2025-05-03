@@ -241,6 +241,16 @@ import java.util.Scanner;
     //     System.out.println("consonent");
     // }
 
+    // Scanner sc = new Scanner(System.in);
+    // char alph = sc.next().charAt(0);
+    //   String vowel = "aeiouAEIOU";
+    //   if(vowel.indexOf(alph) != -1){
+    //       System.out.println("vowel");
+    //   }
+    //   else {
+    //       System.out.println("consonent");
+    //   }
+
     // 23- Accept an integer and Print hello world n times
     // System.out.println("kitni baar");
     // int n = sc.nextInt();
@@ -313,7 +323,7 @@ import java.util.Scanner;
 //  System.out.println(oddsum);
 
 // 31- Print the sum of all factors of a number, 50 -> 1 + 2 + 5 + 10 + 25 = 43
-int sum = 0;
+// int sum = 0;
 // System.out.println("choose any number");
 // int n = sc.nextInt();
 // for(int i=1; i<n; i++){

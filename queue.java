@@ -121,50 +121,45 @@ static int front(){
 // .....................Stack using one Queue (Push Costly Approach).....................
 public class Main
 {
-   static Queue<Integer> q = new LinkedList<>();
+    Queue<Integer> q = new LinkedList<>();
+ 
     
-static void push(int value){
-    q.add(value);
-    int size = q.size();
-    while(size > 1){
-        size--;
+ void push(int value){
+     q.add(value);
+      int size = q.size();
+    for(int i=0; i<size-1; i++){
         q.add(q.remove());
     }
-}
-static int pop(){
-    if(q.isEmpty()){
-        return -1;
-    }
-    else {
+     
+ }
+ int pop(){
+   if(q.isEmpty()){
+       return -1;
+   } 
+   else {
        return q.remove();
-    }
+   }
+    
 }
-static int peek(){
+ int peek(){
     if(q.isEmpty()){
         return -1;
-        
     }
-    else {
-        return q.peek();
-    }
-}
+   else{
+          return q.peek();
+   }
+
+ }
 	public static void main(String[] args) {
-	    
-		Main.push(10);
-		Main.push(20);
-		Main.push(30);
-		Main.push(40);
+		Main s = new Main();
+		s.push(10);
+		s.push(20);
+		s.push(30);
 		
-		System.out.println("poped first " + Main.pop());
-		System.out.println("poped second " + Main.pop());
-		
-		System.out.println("peeked " + Main.peek());
-		
-		
+		System.out.println("poped " + s.pop());
+		System.out.println("peeked " + s.peek());
 	}
 }
-
-
 // ..................Stack Using Two Queues (Pop Costly Approach)................
 
 public class Main {
@@ -277,6 +272,7 @@ public class Main
 public class Main
 {
     Stack<Integer> s1 = new Stack<>();
+    
     
  void enqueue(int value){
     if(s1.isEmpty()){

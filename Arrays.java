@@ -146,20 +146,26 @@ public class Arrays {
 
 
     // ........... second MINIMUM ELEMENT OF ARRAY........
-    // int[] arr = {5, 2, 9, 1, 5, 12, 6};
-    //     int minimum = arr[0];
-    //     int secondMinimum = arr[0];
-
-    //     for (int i = 1; i < arr.length; i++) {
-    //         if (arr[i] < minimum) {
-    //             secondMinimum = minimum;
-    //             minimum = arr[i];
-    //         }
-    //     }
-
-    //     System.out.println("Minimum: " + minimum);
-    //     System.out.println("Second Minimum: " + secondMinimum);
-
+    // int [] arr = {2,3,32,4,5,54};
+    // int mini = Integer.MAX_VALUE;  
+    //  int sndmini = Integer.MAX_VALUE;
+     // sbse bda value kuki jitne value
+    //aaye usse chote aaye
+      // agr smaller niklna h to max lelo or max
+       // to min lelo
+     
+//      for(int i=0; i<arr.length; i++){
+//      if(arr[i] < mini){
+//          sndmini = mini;
+//          mini = arr[i];
+//      }
+//      else if(arr[i] < sndmini && arr[i] != mini){
+//          sndmini = arr[i];
+//      }
+//  }
+//  System.out.println(sndmini);
+//  System.out.println(mini);
+ 
         // .................RIGHT ROTATION ELEMENT OF ARRAY......
         // int arr[] = {43,65,34,87,44};
         // int lastelement = arr[arr.length-1];

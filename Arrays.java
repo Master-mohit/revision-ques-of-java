@@ -10,7 +10,7 @@ public class Arrays {
 // System.out.println(sum);
 
 
-     //  print Odd and Even Numbers from an Array.....
+   //  print Odd and Even Numbers from an Array.....
 //      int arr[] = {1,2,3,4,5,6};
 //      System.out.println("ODD NUMBER");
 //      for(int i=0; i<arr.length; i++){
@@ -44,7 +44,6 @@ public class Arrays {
      //........................ REVERSE ELEMENT OF ARRAY...........//////////////////
     //  int start = 0;
     //  int end = arr.length-1;
-     
     //  while(start < end ){
     //    int temp = arr[start];
     //    arr[start] = arr[end];
@@ -53,6 +52,7 @@ public class Arrays {
     //      end--;
     //      System.out.println(Arrays.toString(arr));
 
+    
     //........................ SORTED ELEMENT OF ARRAY...........//////////////////
     //  for(int i=0; i<arr.length; i++){
     //     for(int j=i+1; j<arr.length; j++){
@@ -126,6 +126,24 @@ public class Arrays {
     // }
     // System.out.println("largest : " + largest);
     // System.out.println("secondlargest : " + secondlargest);
+
+  // .................................SECOND LARGEST..........................?
+
+  // int [] arr = {1,2,3,32,4,5,54};
+  // int largest = arr[0];
+  // int Sndlargest = arr[0];
+  
+  // for(int i=0; i<arr.length; i++){
+  //     if(arr[i] > largest){
+  //         Sndlargest = largest;
+  //         largest = arr[i];
+  //     }
+  //     else if(arr[i] > Sndlargest && arr[i] != largest){
+  //         Sndlargest = arr[i];
+  //     }
+  // }
+  // System.out.println(Sndlargest);
+
 
     // ........... second MINIMUM ELEMENT OF ARRAY........
     // int[] arr = {5, 2, 9, 1, 5, 12, 6};

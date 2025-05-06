@@ -245,6 +245,17 @@ public class Arrays {
 //     System.out.println(temp[i]);
 //   }
 
+// ............REMOVE DUPLICATE ELEMENT FROM SORTED ARRAYS WITHOUT TEMP..........
+  //  HashSet<Integer> set = new HashSet<>();
+	//    int arr[] = {4,2,6};
+	//      for(int num : arr){
+	//          set.add(num);
+	//      }
+	//      for(int ans: set){
+	//          System.out.print(ans + " ");
+	//      }
+
+
 // ............REMOVE DUPLICATE ELEMENT FROM SORTED ARRAYS WITHOUT TEMP...........
 // import java.util.*;
 // public class Main {
@@ -313,6 +324,14 @@ public class Arrays {
 // for(int i =0; i<j; i++){
 //   System.out.println(temp[i]);
 // }
+
+// ..........Program to copy all elements of one array into another array............
+// int arr1 [] = {4,2,6};
+// int arr2 [] = Arrays.copyOf(arr1, arr1.length);
+
+// arr1= kon se array se copy krna, arr1.length kitna copy krna pure element
+// System.out.println(Arrays.toString(arr2));
+
 
 // ..........Program to copy all elements of one array into another array.............
 

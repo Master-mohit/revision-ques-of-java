@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Arrays {
     //........................ Array Question...........//////////////////
 
@@ -553,19 +555,22 @@ public class Arrays {
 
 // .......................program to put all negative..................
 // .......................numbers before positive numbers..........
-// int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
-// int j = 0;
-// for(int i=0; i<arr.length; i++){
-//     if(arr[i] < 0){
-//        int temp = arr[i];
-//        arr[i] = arr[j];
-//        arr[j] = temp;
-//        j++;
-//     }
-// }
-// for(int i=0; i<arr.length; i++){
-//     System.out.print(arr[i] + " ");
-// }
+    ArrayList<Integer> list = new ArrayList<>();
+     int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+     int j = 0;
+       
+       for(int i=0; i<arr.length; i++){
+           if(arr[i] < 0){
+               int temp = arr[i];
+               arr[i] = arr[j];
+               arr[j] = temp;
+               j++;
+           }
+       }
+      for(int i=0; i<arr.length; i++){
+          list.add(arr[i]);
+      }  
+      System.out.println(list);
 
 //..................Subarray with given Sum...................
 // int[] arr = {1, 2, 3, 7, 5};

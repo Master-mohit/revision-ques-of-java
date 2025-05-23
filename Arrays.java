@@ -574,6 +574,18 @@ public class Arrays {
 
 
     //⭐⭐ .......................QUESTION OF SUBARRAYS............................
+
+    // ............find All the subarrays of an array............
+         int[] arr = {2, 3, 2, 4}; 
+       
+       for(int i=0; i<arr.length; i++){
+          for(int j =i; j<arr.length; j++){
+          for(int k =i; k<= j; k++){
+              System.out.print(arr[k] + " ");
+          }
+          System.out.println();
+          }
+       }
 //..................Subarray with given Maximum Sum...................
 //    .................Brute Force Approach...................
 	// int arr[] = {1, 2, -1, 3};

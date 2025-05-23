@@ -584,6 +584,25 @@ public class Arrays {
 	// 	}
 	// 	System.out.println(maxSum);
 
+  //  Find the Length of the Longest Subarray with Sum = K
+  int arr[] = {1, 2, 3, 1, 1, 1, 1};
+		int k = 3;
+		int maxLen = 0;
+		
+		for(int i=0; i<arr.length; i++){
+		    int sum = 0;
+		    
+		    for(int j =i; j<arr.length; j++){
+		        sum = sum + arr[i];
+		        
+		        if(sum == k){
+		       maxLen = Math.max(maxLen, j-i + 1);
+		    }
+		    }
+		    
+		}
+         System.out.println(maxLen);
+
  //...............Maximum Consecutive Ones.................
 //  int arr[] = {1, 1, 0,1, 1, 1, 1};
 //  //   Output: 3

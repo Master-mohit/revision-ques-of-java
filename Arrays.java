@@ -555,39 +555,34 @@ public class Arrays {
 
 // .......................program to put all negative..................
 // .......................numbers before positive numbers..........
-    ArrayList<Integer> list = new ArrayList<>();
-     int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
-     int j = 0;
+    // ArrayList<Integer> list = new ArrayList<>();
+    //  int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+    //  int j = 0;
        
-       for(int i=0; i<arr.length; i++){
-           if(arr[i] < 0){
-               int temp = arr[i];
-               arr[i] = arr[j];
-               arr[j] = temp;
-               j++;
-           }
-       }
-      for(int i=0; i<arr.length; i++){
-          list.add(arr[i]);
-      }  
-      System.out.println(list);
+    //    for(int i=0; i<arr.length; i++){
+    //        if(arr[i] < 0){
+    //            int temp = arr[i];
+    //            arr[i] = arr[j];
+    //            arr[j] = temp;
+    //            j++;
+    //        }
+    //    }
+    //   for(int i=0; i<arr.length; i++){
+    //       list.add(arr[i]);
+    //   }  
+    //   System.out.println(list);
 
-//..................Subarray with given Sum...................
-// int[] arr = {1, 2, 3, 7, 5};
-// int sum = 12;
-// int current = 0;
-// int start = 0;
-// for(int i=0; i<arr.length; i++){
-//    current = current + arr[i];
+//..................Subarray with given Maximum Sum...................
 
-// while(current > sum && start <= i){
-//     current = current - arr[start];
-//     start++;
-// }
-// if(current == sum){
-//    System.out.println("Subarray found from index " + (start+1) + " to " + (i + 1));
-// }
-// }
+	// int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+	// 	int maxSum = arr[0];
+	// 	int current = arr[0];
+		
+	// 	for(int i = 1; i < arr.length; i++){
+	// 	   current =  Math.max(arr[i] , current + arr[i]);
+	// 	   maxSum = Math.max(maxSum , current);
+	// 	}
+	// 	System.out.println(maxSum);
 
  //...............Maximum Consecutive Ones.................
 //  int arr[] = {1, 1, 0,1, 1, 1, 1};
@@ -695,33 +690,6 @@ public class Arrays {
 // System.out.println(Arrays.toString(arr));
 
 
-//.................... Majority Element (>n/2 times).....................
-// int[] arr = {2, 2, 1, 1, 1, 1, 1, 2, 2}; 
-// int count = 0;
-// int candidate = -1; //take no which is not present giving array
-//  for(int i=0; i<arr.length; i++){
-//      if(count == 0){
-//          candidate = arr[i];
-//      }
-//      if(arr[i] == candidate){
-//          count++;
-//      }
-//      else {
-//          count--;
-//      }
-//  }
-//  count = 0;
-//  for(int i=0; i<arr.length; i++){
-//      if(arr[i] == candidate){
-//          count++;
-//      }
-//  }
-
-//  if(count > arr.length/2){
-//      System.out.println("MAjority element = " + candidate);
-//  }
-//  }
-
 
 //.....................Count subarrays with given sum....................
     // int arr[] = {1,2,3};
@@ -740,93 +708,21 @@ public class Arrays {
     // System.out.println(count);
 
 
- //....................Longest Consecutive Sequence..................
-    // int arr[] = {1,2,100,4,300,5}; 
-    // int maxlength = 1;
-    // int currlength = 1;
-    
-  //   Arrays.sort(arr);
-    // for(int i=1; i<arr.length; i++){
-    //     if(arr[i] == arr[i-1] + 1){
-    //         currlength++;
-    //     }
-    //     else{
-    //         currlength = 1;
-    //     }
-        
-    //     maxlength = Math.max(maxlength, currlength);
-    // }
-    // maxlength = Math.max(maxlength, currlength);
-    // System.out.println(maxlength);
-
-
 //..................Leaders in an Array problem...................
-    // int arr[] = {16, 17, 4, 3, 5, 2}; 
-    // int n = arr.length;
-  //   int leader = arr[n-1];
+    int arr[] = {16, 17, 4, 3, 5, 2}; 
+    int n = arr.length;
+    int leader = arr[n-1];
     
-  //           System.out.println(leader);
+            System.out.println(leader);
           
-//     for(int i = n-2; i >= 0; i--){
-//         if(arr[i] > leader){
-//             System.out.println(arr[i]);
-//             leader = arr[i];
-//         }
-//     }
+    for(int i = n-2; i >= 0; i--){
+        if(arr[i] > leader){
+            System.out.println(arr[i]);
+            leader = arr[i];
+        }
+    }
 
 
-//.........Rearrange the array in alternating positive and
-//....................negative items.................
-// List<Integer> positiveList = new ArrayList<>();
-// List<Integer> negativeList = new ArrayList<>();
-//    int arr[] = {-4, -17, 4, 3, 5, -2 ,10}; 
-//    for(int num : arr){
-//       if(num >= 0){
-//           positiveList.add(num);
-//       }
-//       else {
-//           negativeList.add(num);
-//       }
-//    }
-//    int positiveNum = 0;
-//    int negativeNum = 0;
-//    int i = 0;
-   
-//    while(positiveNum < positiveList.size() && negativeNum < negativeList.size()){
-//        arr[i++] = positiveList.get(positiveNum++);
-//        arr[i++] = negativeList.get(negativeNum++);
-//    }
-//    while(positiveNum < positiveList.size()){
-//        arr[i++] = positiveList.get(positiveNum++);
-//    }
-//    while(negativeNum < negativeList.size()){
-//        arr[i++] = negativeList.get(negativeNum++);
-//    }
-      
-//       System.out.println(Arrays.toString(arr));
- 
-// ........................firstly negative then all positive................
-
-// List<Integer> positiveList = new ArrayList<>();
-// List<Integer> negativeList = new ArrayList<>();
-//    int arr[] = {-4, -17, 4, 3, 5, -2 ,10}; 
-//    for(int num : arr){
-//       if(num >= 0){
-//           positiveList.add(num);
-//       }
-//       else {
-//           negativeList.add(num);
-//       }
-//    }
-//    int i = 0;
-//    for(int negative : negativeList){
-//        arr[i++] = negative;
-//    }
-//         for(int positive : positiveList){
-//        arr[i++] = positive;
-//    }
-//       System.out.println(Arrays.toString(arr));
-          
 
 //   .....................Stock Buy And Sells..................
 // int arr[] = {7, 1, 5, 3, 6, 4}; 

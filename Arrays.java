@@ -638,23 +638,39 @@ public class Arrays {
 	  //  System.out.println(count);
 
 // ...........Find the length of the Longest Subarray with sum = 0
-    	int arr[] = {1, -1, 3, 2, -2, -3, 3};
-	     int k = 0;
-	     int maxLen = 0;
+    	// int arr[] = {1, -1, 3, 2, -2, -3, 3};
+	    //  int k = 0;
+	    //  int maxLen = 0;
 	     
-	     for(int i=0; i<arr.length; i++){
-	           int sum = 0;
-	       for(int j = i; j<arr.length; j++){
-	           sum += arr[j];
+	    //  for(int i=0; i<arr.length; i++){
+	    //        int sum = 0;
+	    //    for(int j = i; j<arr.length; j++){
+	    //        sum += arr[j];
 	           
-	           if(sum == k){
-	           maxLen = Math.max(maxLen, j - i + 1);
-	       }
-	       }
+	    //        if(sum == k){
+	    //        maxLen = Math.max(maxLen, j - i + 1);
+	    //    }
+	    //    }
 	        
-	     }
+	    //  }
 	      
-	       System.out.println(maxLen);
+	    //    System.out.println(maxLen);
+
+// ................Count subarrays with sum divisible by K...................
+      	int arr[] = {2, 4, 1, 3, 5};
+		int count = 0;
+		int k = 3;
+		for(int i=0; i<arr.length; i++){
+		    int sum = 0;
+		    for(int j =i; j<arr.length; j++){
+		        sum += arr[j];
+		          if(sum % k == 0){
+		            count++;
+		        }
+		    }
+		  
+		}
+	    System.out.println(count);
 
  //...............Maximum Consecutive Ones.................
 //  int arr[] = {1, 1, 0,1, 1, 1, 1};

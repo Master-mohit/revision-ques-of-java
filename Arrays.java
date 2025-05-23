@@ -574,20 +574,20 @@ public class Arrays {
 
 //..................Subarray with given Maximum Sum...................
 //    .................Brute Force Approach...................
-	int arr[] = {1, 2, -1, 3};
-	    int maxSum = Integer.MIN_VALUE;
+	// int arr[] = {1, 2, -1, 3};
+	//     int maxSum = Integer.MIN_VALUE;
 	    
-	    for(int i =0; i<arr.length; i++){
-	      int sum =0;
-	        for(int j = i; j<arr.length; j++){
+	//     for(int i =0; i<arr.length; i++){
+	//       int sum =0;
+	//         for(int j = i; j<arr.length; j++){
 	            
-	            sum = sum + arr[j];
+	//             sum = sum + arr[j];
 	            
-	          maxSum =  Math.max(maxSum, sum);
-	        }
+	//           maxSum =  Math.max(maxSum, sum);
+	//         }
 	        
-	    }
-	    System.out.println(maxSum);
+	//     }
+	//     System.out.println(maxSum);
 
 //..................Subarray with given Maximum Sum...................
 	// int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
@@ -600,7 +600,7 @@ public class Arrays {
 	// 	}
 	// 	System.out.println(maxSum);
 
-  //  Find the Length of the Longest Subarray with Sum = K
+  //  ........................Find the Length of the Longest Subarray with Sum = K
   // int arr[] = {1, 2, 3, 1, 1, 1, 1};
 	// 	int k = 3;
 	// 	int maxLen = 0;
@@ -615,10 +615,27 @@ public class Arrays {
 	// 	       maxLen = Math.max(maxLen, j-i + 1);
 	// 	    }
 	// 	    }
-		    
 	// 	}
   //        System.out.println(maxLen);
 
+// .................Count subarrays with given sum K...................
+  		int arr[] = {1, 1, 1};
+		int k = 2;
+		int count = 0;
+		
+		for(int i=0; i<arr.length; i++){
+		    int sum = 0;
+		    
+		  for(int j = i; j<arr.length; j++){
+		      sum += arr[j];
+		       if(sum == k){
+		          count++;
+		  }
+		  }
+		 
+		}
+	   
+	   System.out.println(count);
 
  //...............Maximum Consecutive Ones.................
 //  int arr[] = {1, 1, 0,1, 1, 1, 1};

@@ -619,23 +619,42 @@ public class Arrays {
   //        System.out.println(maxLen);
 
 // .................Count subarrays with given sum K...................
-  		int arr[] = {1, 1, 1};
-		int k = 2;
-		int count = 0;
+  	// 	int arr[] = {1, 1, 1};
+		// int k = 2;
+		// int count = 0;
 		
-		for(int i=0; i<arr.length; i++){
-		    int sum = 0;
+		// for(int i=0; i<arr.length; i++){
+		//     int sum = 0;
 		    
-		  for(int j = i; j<arr.length; j++){
-		      sum += arr[j];
-		       if(sum == k){
-		          count++;
-		  }
-		  }
+		//   for(int j = i; j<arr.length; j++){
+		//       sum += arr[j];
+		//        if(sum == k){
+		//           count++;
+		//   }
+		//   }
 		 
-		}
+		// }
 	   
-	   System.out.println(count);
+	  //  System.out.println(count);
+
+// ...........Find the length of the Longest Subarray with sum = 0
+    	int arr[] = {1, -1, 3, 2, -2, -3, 3};
+	     int k = 0;
+	     int maxLen = 0;
+	     
+	     for(int i=0; i<arr.length; i++){
+	           int sum = 0;
+	       for(int j = i; j<arr.length; j++){
+	           sum += arr[j];
+	           
+	           if(sum == k){
+	           maxLen = Math.max(maxLen, j - i + 1);
+	       }
+	       }
+	        
+	     }
+	      
+	       System.out.println(maxLen);
 
  //...............Maximum Consecutive Ones.................
 //  int arr[] = {1, 1, 0,1, 1, 1, 1};

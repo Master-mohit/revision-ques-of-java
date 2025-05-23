@@ -573,19 +573,43 @@ public class Arrays {
     //   System.out.println(list);
 
 
-    //⭐⭐ .......................QUESTION OF SUBARRAYS............................
+
+
+   
 
     // ............find All the subarrays of an array............
-         int[] arr = {2, 3, 2, 4}; 
+      //    int[] arr = {2, 3, 2, 4}; 
        
-       for(int i=0; i<arr.length; i++){
-          for(int j =i; j<arr.length; j++){
-          for(int k =i; k<= j; k++){
-              System.out.print(arr[k] + " ");
-          }
-          System.out.println();
-          }
-       }
+      //  for(int i=0; i<arr.length; i++){
+      //     for(int j =i; j<arr.length; j++){
+      //     for(int k =i; k<= j; k++){
+      //         System.out.print(arr[k] + " ");
+      //     }
+      //     System.out.println();
+      //     }
+      //  }
+
+      // ....................Subarray with given sum = 0...................
+       	int[] arr = {4, 2, -3, 1, 6};
+            boolean found = false;
+            
+		for(int i=0; i<arr.length; i++) {
+			int sum = 0;
+			for(int j =i; j<arr.length; j++) {
+				sum += arr[j];
+           if(sum == 0) {
+               found = true;
+			break;
+		}
+			}
+		}
+	  	if(found){
+				    System.out.println("yes");
+				}
+				else {
+				    System.out.println("No");
+				}
+
 //..................Subarray with given Maximum Sum...................
 //    .................Brute Force Approach...................
 	// int arr[] = {1, 2, -1, 3};

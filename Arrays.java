@@ -572,6 +572,8 @@ public class Arrays {
     //   }  
     //   System.out.println(list);
 
+
+    //⭐⭐ .......................QUESTION OF SUBARRAYS............................
 //..................Subarray with given Maximum Sum...................
 //    .................Brute Force Approach...................
 	// int arr[] = {1, 2, -1, 3};
@@ -673,28 +675,42 @@ public class Arrays {
 	  //   System.out.println(count);
 
 // .................Find the length of the smallest subarray with sum >= K..........
-    int[] arr = {2, 3, 1, 2, 4, 3};
-         int k = 7;
-         int minLen = Integer.MAX_VALUE;
+    // int[] arr = {2, 3, 1, 2, 4, 3};
+        //  int k = 7;
+        //  int minLen = Integer.MAX_VALUE;
        
-         for(int i=0; i<arr.length; i++){
-             int sum = 0;
-             for(int j= i; j<arr.length; j++){
-                 sum += arr[j];
+        //  for(int i=0; i<arr.length; i++){
+        //      int sum = 0;
+        //      for(int j= i; j<arr.length; j++){
+        //          sum += arr[j];
                  
-                 if(sum >= k){
-                     minLen = Math.min(minLen, j - i + 1);
-                    break;
-                 }
-             }
-         }
-         if(minLen == Integer.MAX_VALUE){
-             System.out.println(0);
-         }
-         else {
-              System.out.println(minLen);
-         }
+        //          if(sum >= k){
+        //              minLen = Math.min(minLen, j - i + 1);
+        //             break;
+        //          }
+        //      }
+        //  }
+        //  if(minLen == Integer.MAX_VALUE){
+        //      System.out.println(0);
+        //  }
+        //  else {
+        //       System.out.println(minLen);
+        //  }
 
+
+// .............. Find the maximum product of a subarray...........
+      //    int[] arr = {2, 3, -2, 4}; 
+      //      int maxProduct = Integer.MIN_VALUE;
+           
+      //  for(int i =0; i<arr.length; i++){
+      //      int product = 1;
+           
+      //      for(int j = i; j<arr.length; j++){
+      //          product = product * arr[j];
+      //        maxProduct =  Math.max(maxProduct, product);
+      //      }
+      //  }
+      //  System.out.println(maxProduct);
 
  //...............Maximum Consecutive Ones.................
 //  int arr[] = {1, 1, 0,1, 1, 1, 1};
@@ -723,35 +739,7 @@ public class Arrays {
 //    }
 //    System.out.println(result);
 
-
-// ..........Longest subarray with given sum K(positives)..........
-//         int[] arr = {1, 2, 3, 4, 5}; // Input array
-//         int K = 9; // Desired sum
-
-//         int start = 0; // Start of the window
-//         int currSum = 0; // Current sum of the window
-//         int maxLength = 0; // Length of the longest subarray
-
-//         // Iterate through the array with the 'end' pointer
-//         for (int end = 0; end < arr.length; end++) {
-//             // Add the current element to the current sum
-//             currSum += arr[end];
-
-//             // Shrink the window from the start if the current sum exceeds K
-//             while (currSum > K && start <= end) {
-//                 currSum -= arr[start];
-//                 start++;
-//             }
-
-//             // Check if the current sum equals K and update maxLength
-//             if (currSum == K) {
-//                 maxLength = Math.max(maxLength, end - start + 1);
-//             }
-//         }
-
-//         System.out.println("Length of the longest subarray with sum " + K + " is: " + maxLength);
-//     }
-// }
+}
 
         // ...............MEDIUM QUESTION?.....................
 // 		................................ 2 sum ...........................
@@ -821,18 +809,18 @@ public class Arrays {
 
 
 //..................Leaders in an Array problem...................
-    int arr[] = {16, 17, 4, 3, 5, 2}; 
-    int n = arr.length;
-    int leader = arr[n-1];
+    // int arr[] = {16, 17, 4, 3, 5, 2}; 
+    // int n = arr.length;
+    // int leader = arr[n-1];
     
-            System.out.println(leader);
+    //         System.out.println(leader);
           
-    for(int i = n-2; i >= 0; i--){
-        if(arr[i] > leader){
-            System.out.println(arr[i]);
-            leader = arr[i];
-        }
-    }
+    // for(int i = n-2; i >= 0; i--){
+    //     if(arr[i] > leader){
+    //         System.out.println(arr[i]);
+    //         leader = arr[i];
+    //     }
+    // }
 
 
 
@@ -1120,38 +1108,11 @@ public class Arrays {
 // 	System.out.println(ans);
 // 	}
 // }
-}
-
-
-// .......................QUESTION OF SUBARRAYS............................
-
-// Find the sum of all subarrays of a given array.......
-// List<Integer> list = new ArrayList<>();
-// int arr[] = {2, 7, 4, 3, 5, 2}; 
-// for(int i=0; i<arr.length; i++){
-//   int sum = 0;
-//   for(int j=i; j<arr.length; j++){
-//       sum = sum + arr[j];
-//       list.add(sum);
-//   }
-// } 
-// System.out.println(list);
-
-// Find the maximum sum of any subarray in a given array...........
-// ..............................using kadane algorithm............
-// int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-// int max = Integer.MIN_VALUE;
-// int currentSum = 0;
-// for(int num : arr){
-//    currentSum = currentSum + num;
-//    if(currentSum > max){
-//        max = Math.max(max, currentSum);
-//    }
-//    if(currentSum < 0){
-//        currentSum = 0;
-//    }
 // }
-// System.out.println(max);
+
+
+
+
 
 
 

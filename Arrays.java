@@ -657,20 +657,44 @@ public class Arrays {
 	    //    System.out.println(maxLen);
 
 // ................Count subarrays with sum divisible by K...................
-      	int arr[] = {2, 4, 1, 3, 5};
-		int count = 0;
-		int k = 3;
-		for(int i=0; i<arr.length; i++){
-		    int sum = 0;
-		    for(int j =i; j<arr.length; j++){
-		        sum += arr[j];
-		          if(sum % k == 0){
-		            count++;
-		        }
-		    }
+    //   	int arr[] = {2, 4, 1, 3, 5};
+		// int count = 0;
+		// int k = 3;
+		// for(int i=0; i<arr.length; i++){
+		//     int sum = 0;
+		//     for(int j =i; j<arr.length; j++){
+		//         sum += arr[j];
+		//           if(sum % k == 0){
+		//             count++;
+		//         }
+		//     }
 		  
-		}
-	    System.out.println(count);
+		// }
+	  //   System.out.println(count);
+
+// .................Find the length of the smallest subarray with sum >= K..........
+    int[] arr = {2, 3, 1, 2, 4, 3};
+         int k = 7;
+         int minLen = Integer.MAX_VALUE;
+       
+         for(int i=0; i<arr.length; i++){
+             int sum = 0;
+             for(int j= i; j<arr.length; j++){
+                 sum += arr[j];
+                 
+                 if(sum >= k){
+                     minLen = Math.min(minLen, j - i + 1);
+                    break;
+                 }
+             }
+         }
+         if(minLen == Integer.MAX_VALUE){
+             System.out.println(0);
+         }
+         else {
+              System.out.println(minLen);
+         }
+
 
  //...............Maximum Consecutive Ones.................
 //  int arr[] = {1, 1, 0,1, 1, 1, 1};

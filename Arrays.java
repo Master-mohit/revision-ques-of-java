@@ -572,11 +572,7 @@ public class Arrays {
     //   }  
     //   System.out.println(list);
 
-
-
-
-   
-
+// ..............................ALL SUBARRAYS QUESTIONS..................
     // ............find All the subarrays of an array............
       //    int[] arr = {2, 3, 2, 4}; 
        
@@ -590,25 +586,25 @@ public class Arrays {
       //  }
 
       // ....................Subarray with given sum = 0...................
-       	int[] arr = {4, 2, -3, 1, 6};
-            boolean found = false;
+    //    	int[] arr = {4, 2, -3, 1, 6};
+    //         boolean found = false;
             
-		for(int i=0; i<arr.length; i++) {
-			int sum = 0;
-			for(int j =i; j<arr.length; j++) {
-				sum += arr[j];
-           if(sum == 0) {
-               found = true;
-			break;
-		}
-			}
-		}
-	  	if(found){
-				    System.out.println("yes");
-				}
-				else {
-				    System.out.println("No");
-				}
+		// for(int i=0; i<arr.length; i++) {
+		// 	int sum = 0;
+		// 	for(int j =i; j<arr.length; j++) {
+		// 		sum += arr[j];
+    //        if(sum == 0) {
+    //            found = true;
+		// 	break;
+		// }
+		// 	}
+		// }
+	  // 	if(found){
+		// 		    System.out.println("yes");
+		// 		}
+		// 		else {
+		// 		    System.out.println("No");
+		// 		}
 
 //..................Subarray with given Maximum Sum...................
 //    .................Brute Force Approach...................
@@ -775,7 +771,29 @@ public class Arrays {
 //    }
 //    System.out.println(result);
 
-}
+// ..........Count the number of subarrays with equal number of 0's and 1's........
+
+int[] arr = {0, 1, 0, 1, 1, 1, 0};
+          int count = 0;
+          for(int i=0; i<arr.length; i++){
+              int onces = 0;
+              int zeros = 0;
+              
+              for(int j =i; j<arr.length; j++){
+                  if(arr[j] == 0){
+                      zeros++;
+                  }
+                  else {
+                      onces++;
+                  }
+                   if(onces == zeros){
+              count++;
+          }
+              }
+             
+          }
+          
+          System.out.println(count);
 
         // ...............MEDIUM QUESTION?.....................
 // 		................................ 2 sum ...........................

@@ -913,10 +913,33 @@ public class Arrays {
         //  System.out.println("Lower " + lower);
 
   //...................... find transpose matrinx.................
-       int mat[][] = {{1, 2, 3},
+      //  int mat[][] = {{1, 2, 3},
+      //               {4, 5, 6},
+      //               {7, 8, 9}};
+        
+      //   for(int i=0; i<mat.length; i++){
+      //       for(int j =i + 1; j<mat.length; j++){
+      //           int temp = mat[i][j];
+      //           mat[i][j] = mat[j][i];
+      //           mat[j][i] = temp;
+      //       }
+      //   }
+        
+      //   for(int i=0; i<mat.length; i++){
+      //       for(int j =0; j<mat.length; j++){
+      //           System.out.print(mat[i][j] + " ");
+      //       }
+      //       System.out.println();
+      //   }
+
+
+ //.....................90 degree rotation clockwise...............
+     int mat[][] = {{1, 2, 3},
                     {4, 5, 6},
                     {7, 8, 9}};
         
+
+        //   .. ...........transpose..................
         for(int i=0; i<mat.length; i++){
             for(int j =i + 1; j<mat.length; j++){
                 int temp = mat[i][j];
@@ -925,49 +948,26 @@ public class Arrays {
             }
         }
         
-        for(int i=0; i<mat.length; i++){
-            for(int j =0; j<mat.length; j++){
-                System.out.print(mat[i][j] + " ");
-            }
-            System.out.println();
-        }
+        //   .. ...........reverse each row..................
+      for(int i=0; i<mat.length; i++){
+          int left = 0;
+          int right = mat.length-1;
+           while(left < right){
+               int temp = mat[i][left];
+               mat[i][left] = mat[i][right];
+               mat[i][right] = temp;
+               left++;
+               right--;
+           }
+      }
 
-
- //.....................90 degree rotation clockwise...............
-// int n =4;
-// int mat[][] = {{1, 1, 1, 1},
-//               {2, 2, 2, 2},
-//               {3, 3, 3, 3},
-//               {4, 4, 4, 4}};
-            
-//       //. firsly transpose .......
-//             for(int i=0; i<n; i++){
-//                 for(int j=0; j<i; j++){
-//                     int temp = mat[i][j];
-//                     mat[i][j] = mat[j][i];
-//                     mat[j][i] = temp;
-//                 }
-//             }
-//         //  . ...then 90 degree roration....
-//             for(int i=0; i<n; i++){
-//                 for(int j=0; j<n/2; j++){
-//                     int temp = mat[i][j];
-//                     mat[i][j] = mat[i][n-j-1];
-//                     mat[i][n-j-1] = temp;
-//                 }
-//             }
-//             for(int i=0; i<n; i++){
-//                 for(int j=0; j<n; j++){
-//                     System.out.print(mat[i][j] +" ");
-//                 }
-//                 System.out.println();
-//             }
-
-
-//   int mat[][] = {{0,1,2,0},
-//   {3,4,5,2},
-//   {1,3,1,5}
-// };
+      //   .. ...........print..................
+      for(int i=0; i<mat.length; i++){
+          for(int j = 0; j<mat.length; j++){
+              System.out.print(mat[i][j] + " ");
+          }
+          System.out.println();
+      }
 
 //.....................set of metrix zeros.........................
 

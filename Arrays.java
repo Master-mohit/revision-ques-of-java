@@ -970,79 +970,79 @@ public class Arrays {
 
 //.....................set of metrix zeros.........................
 
-  int mat[][] = {{1, 1, 1},
-                    {1, 0, 1},
-                    {1, 1, 1}};
+  // int mat[][] = {{1, 1, 1},
+  //                   {1, 0, 1},
+  //                   {1, 1, 1}};
         
-      int row = mat.length;
-      int coloums = mat[0].length;
+  //     int row = mat.length;
+  //     int coloums = mat[0].length;
       
-      boolean [] rowzero = new boolean[row];
-      boolean [] colzero = new boolean[coloums];
-    //   ....Traversing element where is Zero..
-      for(int i=0; i<row; i++){
-          for(int j=0; j<coloums; j++){
-              if(mat[i][j] == 0){
-                  rowzero[i] = true;
-                  colzero[j] = true;
-              }
-          }
-      }
-    //   ...set zero to entire row...
-             for(int i=0; i<row; i++){
-                 if(rowzero[i]){
-                     for(int j =0; j<coloums; j++){
-                         mat[i][j] = 0;
-                     }
-                 }
-             }
-    // ......set zero to entire coloums... 
-             for(int j=0; j<coloums; j++){
-                 if(colzero[j]){
-                     for(int i=0; i<row; i++){
-                         mat[i][j] = 0;
-                     }
-                 }
-             }
-      
-    //  ......print element....
-      for(int i=0; i<row; i++){
-          for(int j =0; j<coloums; j++){
-              System.out.print(mat[i][j] + " ");
-          }
-          System.out.println();
-      }
+  //     boolean [] rowzero = new boolean[row];
+  //     boolean [] colzero = new boolean[coloums];
+  //   //   ....Traversing element where is Zero..
+  //     for(int i=0; i<row; i++){
+  //         for(int j=0; j<coloums; j++){
+  //             if(mat[i][j] == 0){
+  //                 rowzero[i] = true;
+  //                 colzero[j] = true;
+  //             }
+  //         }
+  //     }
+  //   //   ...set zero to entire row...
+  //            for(int i=0; i<row; i++){
+  //                if(rowzero[i]){
+  //                    for(int j =0; j<coloums; j++){
+  //                        mat[i][j] = 0;
+  //                    }
+  //                }
+  //            }
+  //   // ......set zero to entire coloums... 
+  //            for(int j=0; j<coloums; j++){
+  //                if(colzero[j]){
+  //                    for(int i=0; i<row; i++){
+  //                        mat[i][j] = 0;
+  //                    }
+  //                }
+  //            }
+ 
+  //   //  ......print element....
+  //     for(int i=0; i<row; i++){
+  //         for(int j =0; j<coloums; j++){
+  //             System.out.print(mat[i][j] + " ");
+  //         }
+  //         System.out.println();
+  //     }
 //........................multiply matrix....................... 
     
-// int[][] mat1 = {{1, 2, 3},
-// {4, 5, 6}};
+int[][] mat1 = {{1, 2, 3},
+{4, 5, 6}};
 
-// int[][] mat2 = {{7, 8},
-// {9, 10},
-// {11, 12}};
+int[][] mat2 = {{7, 8},
+{9, 10},
+{11, 12}};
 
-// int row1 = mat1.length;
-// int col1 = mat1[0].length;
-// int col2 = mat2[0].length;
+int row1 = mat1.length;
+int col1 = mat1[0].length;
+int col2 = mat2[0].length;
 
-// int [][] result = new int[row1][col2]; 
+int [][] result = new int[row1][col2]; 
 
-// for(int i=0; i<row1; i++){
-// for(int j=0; j<col2; j++){
-// int sum = 0;
-// for(int k=0; k<col1; k++){
-// sum = sum + mat1[i][k] * mat2[k][j];
-// }
-// result[i][j] = sum;
-// }
-// }
+for(int i=0; i<row1; i++){
+for(int j=0; j<col2; j++){
+int sum = 0;
+for(int k=0; k<col1; k++){
+sum = sum + mat1[i][k] * mat2[k][j];
+}
+result[i][j] = sum;
+}
+}
            
-// for(int i=0; i<row1; i++){
-// for(int j=0; j<col2; j++){
-// System.out.print(result[i][j]+ " ");
-// }
-// System.out.println();
-// }
+for(int i=0; i<row1; i++){
+for(int j=0; j<col2; j++){
+System.out.print(result[i][j]+ " ");
+}
+System.out.println();
+}
 
 
 //........................... Spiral Matrix.......................... 

@@ -744,6 +744,51 @@ public class Arrays {
       //  }
       //  System.out.println(maxProduct);
 
+
+//.......Find the number that appears once, and other numbers twice.
+// int arr[] = {4,2,1,2,1};
+//     //   Output: 2
+//    int result = 0;
+//    for(int i=0; i<arr.length; i++){
+//        result = result^arr[i];
+//    }
+//    System.out.println(result);
+
+
+// ..........Count the number of subarrays with equal number of 0's and 1's........
+
+// int[] arr = {0, 1, 0, 1, 1, 1, 0};
+//           int count = 0;
+//           for(int i=0; i<arr.length; i++){
+//               int onces = 0;
+//               int zeros = 0;
+              
+//               for(int j =i; j<arr.length; j++){
+//                   if(arr[j] == 0){
+//                       zeros++;
+//                   }
+//                   else {
+//                       onces++;
+//                   }
+//                    if(onces == zeros){
+//               count++;
+//           }
+//               }  
+//           }
+//           System.out.println(count);
+
+        // ...............MEDIUM QUESTION?.....................
+// 		................................ 2 sum ...........................
+//  int arr[] = {2, 7, 11, 15};
+//  int target = 9;
+//  for(int i=0; i<arr.length; i++){
+//      for(int j=i+1; j<arr.length; j++){
+//          if(arr[i] + arr[j] == target){
+//                System.out.println(+ i + " " + j + " ");
+//          }
+//      }
+//  }
+
  //...............Maximum Consecutive Ones.................
 //  int arr[] = {1, 1, 0,1, 1, 1, 1};
 //  //   Output: 3
@@ -761,53 +806,6 @@ public class Arrays {
 //      maxcount = Math.max(maxcount, count);
 // }
 // System.out.println(maxcount);
-
-//.......Find the number that appears once, and other numbers twice.
-// int arr[] = {4,2,1,2,1};
-//     //   Output: 2
-//    int result = 0;
-//    for(int i=0; i<arr.length; i++){
-//        result = result^arr[i];
-//    }
-//    System.out.println(result);
-
-// ..........Count the number of subarrays with equal number of 0's and 1's........
-
-int[] arr = {0, 1, 0, 1, 1, 1, 0};
-          int count = 0;
-          for(int i=0; i<arr.length; i++){
-              int onces = 0;
-              int zeros = 0;
-              
-              for(int j =i; j<arr.length; j++){
-                  if(arr[j] == 0){
-                      zeros++;
-                  }
-                  else {
-                      onces++;
-                  }
-                   if(onces == zeros){
-              count++;
-          }
-              }
-             
-          }
-          
-          System.out.println(count);
-
-        // ...............MEDIUM QUESTION?.....................
-// 		................................ 2 sum ...........................
-//  int arr[] = {2, 7, 11, 15};
-//  int target = 9;
-//  for(int i=0; i<arr.length; i++){
-//      for(int j=i+1; j<arr.length; j++){
-//          if(arr[i] + arr[j] == target){
-//                System.out.println(+ i + " " + j + " ");
-//          }
-//      }
-//  }
-
-
 
 //..................... Sort an array of 0's 1's and 2'....................
 // int[] arr = {2, 0, 2, 1, 1, 0}; 
@@ -894,30 +892,25 @@ int[] arr = {0, 1, 0, 1, 1, 1, 0};
 
 
    //...................... sum of upper and lower triangles...........
-//  int n =3;
-//  int mat[][] = {{6, 5, 3},
-//              {1, 2, 5},
-//              {7, 9, 7}};
-             
-             
-//               // lower sum fo tringlee....
-//              int lower_sum =0;
-//              for(int i=0; i<n; i++){
-//                  for(int j=0; j<=i; j++){
-//                     lower_sum = lower_sum + mat[i][j];
-//                  }
-//              }
-//              System.out.println(lower_sum);
-             
-//             // upper sum fo tringlee....
-//          int upper_sum =0;
-//          for(int i=0; i<n; i++){
-//              for(int j=n-1; j>=i; j--){
-//                  upper_sum = upper_sum + mat[i][j];
-//              }
-//          }
-//          System.out.println(upper_sum);
+         int mat[][] = {{1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}};
 
+         int upper = 0;
+         int lower = 0;
+                    
+         for(int i=0; i<mat.length; i++){
+             for(int j =0; j<mat.length; j++){
+                 if(i <= j){
+                   upper = upper + mat[i][j];
+                 }
+                  if(i >= j){
+                     lower = lower + mat[i][j];
+                 }
+             }
+         }    
+         System.out.println("Upper " + upper);
+         System.out.println("Lower " + lower);
 
   //...................... find transpose matrinx.................
     // int n =4;
@@ -1146,24 +1139,6 @@ int[] arr = {0, 1, 0, 1, 1, 1, 0};
 // 	}
 
 // }
-
-
-// ...................missing numberr...................
-// 	HashMap<Integer, Integer> hs = new HashMap<>();
-// 	  int count = 0;
-// 	int arr[] = {0, 1, 2 , 4};
-// 	int sum =0;
-// 	int n = arr.length;
-// 	int totl = n * (n + 1) / 2;
-// 	for(int num: arr){
-// 	    sum = sum + num;
-// 	}
-// 	int ans = totl - sum;
-// 	System.out.println(ans);
-// 	}
-// }
-// }
-
 
 
 

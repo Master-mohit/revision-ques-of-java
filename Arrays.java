@@ -892,46 +892,45 @@ public class Arrays {
 
 
    //...................... sum of upper and lower triangles...........
-         int mat[][] = {{1, 2, 3},
-                    {4, 5, 6},
-                    {7, 8, 9}};
+        //  int mat[][] = {{1, 2, 3},
+        //             {4, 5, 6},
+        //             {7, 8, 9}};
 
-         int upper = 0;
-         int lower = 0;
+        //  int upper = 0;
+        //  int lower = 0;
                     
-         for(int i=0; i<mat.length; i++){
-             for(int j =0; j<mat.length; j++){
-                 if(i <= j){
-                   upper = upper + mat[i][j];
-                 }
-                  if(i >= j){
-                     lower = lower + mat[i][j];
-                 }
-             }
-         }    
-         System.out.println("Upper " + upper);
-         System.out.println("Lower " + lower);
+        //  for(int i=0; i<mat.length; i++){
+        //      for(int j =0; j<mat.length; j++){
+        //          if(i <= j){
+        //            upper = upper + mat[i][j];
+        //          }
+        //           if(i >= j){
+        //              lower = lower + mat[i][j];
+        //          }
+        //      }
+        //  }    
+        //  System.out.println("Upper " + upper);
+        //  System.out.println("Lower " + lower);
 
   //...................... find transpose matrinx.................
-    // int n =4;
-// int mat[][] = {{1, 1, 1, 1},
-//              {2, 2, 2, 2},
-//              {3, 3, 3, 3},
-//                {4, 4, 4, 4}};
-            
-//    for(int i=0; i<4; i++){
-//        for(int j =0; j<=i; j++){
-//            int temp = mat[i][j];
-//            mat[i][j] = mat[j][i];
-//            mat[j][i] = temp;
-//        }
-//    }         
-//   for(int i=0; i<n; i++){
-//       for(int j=0; j<n; j++){
-//           System.out.print(mat[i][j] + " ");
-//       }
-//       System.out.println();
-//   } 
+       int mat[][] = {{1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}};
+        
+        for(int i=0; i<mat.length; i++){
+            for(int j =i + 1; j<mat.length; j++){
+                int temp = mat[i][j];
+                mat[i][j] = mat[j][i];
+                mat[j][i] = temp;
+            }
+        }
+        
+        for(int i=0; i<mat.length; i++){
+            for(int j =0; j<mat.length; j++){
+                System.out.print(mat[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
  //.....................90 degree rotation clockwise...............

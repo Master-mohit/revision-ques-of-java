@@ -934,106 +934,84 @@ public class Arrays {
 
 
  //.....................90 degree rotation clockwise...............
-     int mat[][] = {{1, 2, 3},
-                    {4, 5, 6},
-                    {7, 8, 9}};
+    //  int mat[][] = {{1, 2, 3},
+    //                 {4, 5, 6},
+    //                 {7, 8, 9}};
         
 
-        //   .. ...........transpose..................
-        for(int i=0; i<mat.length; i++){
-            for(int j =i + 1; j<mat.length; j++){
-                int temp = mat[i][j];
-                mat[i][j] = mat[j][i];
-                mat[j][i] = temp;
-            }
-        }
+    //     //   .. ...........transpose..................
+    //     for(int i=0; i<mat.length; i++){
+    //         for(int j =i + 1; j<mat.length; j++){
+    //             int temp = mat[i][j];
+    //             mat[i][j] = mat[j][i];
+    //             mat[j][i] = temp;
+    //         }
+    //     }
         
-        //   .. ...........reverse each row..................
-      for(int i=0; i<mat.length; i++){
-          int left = 0;
-          int right = mat.length-1;
-           while(left < right){
-               int temp = mat[i][left];
-               mat[i][left] = mat[i][right];
-               mat[i][right] = temp;
-               left++;
-               right--;
-           }
-      }
-
+    //     //   .. ...........reverse each row..................
+    //   for(int i=0; i<mat.length; i++){
+    //       int left = 0;
+    //       int right = mat.length-1;
+    //        while(left < right){
+    //            int temp = mat[i][left];
+    //            mat[i][left] = mat[i][right];
+    //            mat[i][right] = temp;
+    //            left++;
+    //            right--;
+    //        }
+    //   }
       //   .. ...........print..................
-      for(int i=0; i<mat.length; i++){
-          for(int j = 0; j<mat.length; j++){
+      // for(int i=0; i<mat.length; i++){
+      //     for(int j = 0; j<mat.length; j++){
+      //         System.out.print(mat[i][j] + " ");
+      //     }
+      //     System.out.println();
+      // }
+
+//.....................set of metrix zeros.........................
+
+  int mat[][] = {{1, 1, 1},
+                    {1, 0, 1},
+                    {1, 1, 1}};
+        
+      int row = mat.length;
+      int coloums = mat[0].length;
+      
+      boolean [] rowzero = new boolean[row];
+      boolean [] colzero = new boolean[coloums];
+    //   ....Traversing element where is Zero..
+      for(int i=0; i<row; i++){
+          for(int j=0; j<coloums; j++){
+              if(mat[i][j] == 0){
+                  rowzero[i] = true;
+                  colzero[j] = true;
+              }
+          }
+      }
+    //   ...set zero to entire row...
+             for(int i=0; i<row; i++){
+                 if(rowzero[i]){
+                     for(int j =0; j<coloums; j++){
+                         mat[i][j] = 0;
+                     }
+                 }
+             }
+    // ......set zero to entire coloums... 
+             for(int j=0; j<coloums; j++){
+                 if(colzero[j]){
+                     for(int i=0; i<row; i++){
+                         mat[i][j] = 0;
+                     }
+                 }
+             }
+      
+    //  ......print element....
+      for(int i=0; i<row; i++){
+          for(int j =0; j<coloums; j++){
               System.out.print(mat[i][j] + " ");
           }
           System.out.println();
       }
-
-//.....................set of metrix zeros.........................
-
-// int n = mat.length;  // row ka size
-// int m = mat[0].length; // coloum ka size..
-// boolean firstrow = false;
-// boolean firstcolo = false;
-
-// for(int i=0; i<n; i++){
-// if(mat[i][0] == 0){
-//    firstcolo = true;
-//    break;
-// }
-// }
-
-// for(int j=0; j<m; j++){
-// if(mat[0][j] == 0){
-//    firstrow = true;
-//   break;
-// }
-// }
-
-// for(int i=1; i<n; i++){
-// for(int j=1; j<m; j++){
-//  if(mat[i][j] == 0){
-//      mat[i][0] = 0;
-//      mat[0][j] = 0;
-//  }
-// }
-// }
-
-// for(int i=1; i<n; i++){
-// if(mat[i][0] == 0){
-//    for(int j=1; j<m; j++){
-//        mat[i][j] = 0;
-//    }
-// }
-// }
-
-// for(int j=1; j<m; j++){
-// if(mat[0][j] == 0){
-//    for(int i=1; i<n; i++){
-//        mat[i][j] = 0;
-//    }
-// }
-// }
-
-// if(firstrow){
-// for(int j=0; j<m; j++){
-//    mat[0][j] = 0;
-// }
-// }
-
-// if(firstcolo){
-// for(int i=0; i<n; i++){
-//    mat[i][0] = 0;
-// }
-// }
-// for(int i=0; i<n; i++){
-// for(int j=0; j<m; j++){
-//   System.out.print(mat[i][j]+ " ");
-// }
-// System.out.println();
-// }
-
-
 //........................multiply matrix....................... 
     
 // int[][] mat1 = {{1, 2, 3},

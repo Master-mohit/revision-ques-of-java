@@ -228,11 +228,16 @@
 // }
 
 //........................ left rotation by k ............................
+//  String s1 = "abcdef";
+// //  ...k =2 position ke liye..
+// String mama = s1.substring(2) + s1.substring(0,2);    
+// System.out.println(mama);
+
+// .......................Right rotation by k............................ 
  String s1 = "abcdef";
 //  ...k =2 position ke liye..
-String mama = s1.substring(2) + s1.substring(0,2);    
-System.out.println(mama);
-
+    String mama = s1.substring(s1.length() - 2) + s1.substring(0, s1.length() - 2); 
+     System.out.println(mama);
 
 //.......................Logest commom prefix ..........................
     

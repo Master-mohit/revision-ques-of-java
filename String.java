@@ -133,48 +133,44 @@
 
 
     //........................ First Non-Repeating Character..................
-      // HashMap<Character, Integer> hs = new HashMap<>();
-      // int vowel = 0;
-      // int consonent = 0;
-      // String s = "swiss";
-      // for(char ch : s.toCharArray()){
-      //     hs.put(ch, hs.getOrDefault(ch, 0) + 1);
-      // }
-      // boolean isfound = false;
-      // for(char key: hs.keySet()){
-      //     if(hs.get(key) == 1){
-      //         System.out.println(key);
-      //         isfound = true;
-      //         break;
-      //     }
-      // }
-      // if(!isfound){
-      //     System.out.println("no one ");
-      // }
+      //    HashMap<Character, Integer> hs = new HashMap<>();
+	    // String str = "MoXmhhYtot";
+	    // str = str.toLowerCase();
+	    
+	    // for(char ch : str.toCharArray()){
+	    //     hs.put(ch, hs.getOrDefault(ch, 0) + 1);
+	    // }
+	    
+	    // for(char ans : hs.keySet()){
+	    //    if(hs.get(ans) == 1){
+	    //        System.out.println(ans);
+	    //        return;
+	    //    }
+	        
+	    // }
+	    // System.out.println("no one");
     
       // ................Second Non-Repeating Character..................
-        HashMap<Character, Integer> hs = new HashMap<>();
-	    String str = "MoXmhhYtot";
-	    int count = 0;
-	    str = str.toLowerCase();
+      //   HashMap<Character, Integer> hs = new HashMap<>();
+	    // String str = "MoXmhhYtot";
+	    // int count = 0;
+	    // str = str.toLowerCase();
 	    
-	    for(char ch : str.toCharArray()){
-	        hs.put(ch, hs.getOrDefault(ch, 0) + 1);
-	    }
+	    // for(char ch : str.toCharArray()){
+	    //     hs.put(ch, hs.getOrDefault(ch, 0) + 1);
+	    // }
 	    
-	    for(char ans : hs.keySet()){
-	       if(hs.get(ans) == 1){
-	           count++;
-	           if(count == 2){
-	                System.out.println(ans);
-	           return;
-	           }
-	          
-	       }
-	        
-	    }
-	    System.out.println("no one");
-      
+	    // for(char ans : hs.keySet()){
+	    //    if(hs.get(ans) == 1){
+	    //        count++;
+	    //        if(count == 2){
+	    //             System.out.println(ans);
+	    //        return;
+	    //        }
+	    //   }   
+	    // }
+	    // System.out.println("no one");
+
     // ...........Check if a String Contains Only Digits.........
 //     List<String> list = new ArrayList<>();
 //     String s = "12345";
@@ -231,11 +227,11 @@
 //     }
 // }
 
-//........................ rotations of a String............................
-// HashMap<Character, Integer> hs = new HashMap<>();
-// String s1 = "abcd";
-// String mama = s1.substring(2) + s1.substring(0,2);    
-// System.out.println(mama);
+//........................ left rotation by k ............................
+ String s1 = "abcdef";
+//  ...k =2 position ke liye..
+String mama = s1.substring(2) + s1.substring(0,2);    
+System.out.println(mama);
 
 
 //.......................Logest commom prefix ..........................

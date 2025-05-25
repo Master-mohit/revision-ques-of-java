@@ -234,10 +234,10 @@
 // System.out.println(mama);
 
 // .......................Right rotation by k............................ 
- String s1 = "abcdef";
-//  ...k =2 position ke liye..
-    String mama = s1.substring(s1.length() - 2) + s1.substring(0, s1.length() - 2); 
-     System.out.println(mama);
+//       String s1 = "abcdef";
+// //  ...k =2 position ke liye..
+//     String mama = s1.substring(s1.length() - 2) + s1.substring(0, s1.length() - 2); 
+//      System.out.println(mama);
 
 //.......................Logest commom prefix ..........................
     
@@ -507,7 +507,16 @@
             //   }
             //   System.out.println(totl);
 
-
+// .........................Remove all the vowel.................
+	 String str = "mohoitgupta";
+	    String vowels = "aeiouAEIOU";
+StringBuilder sb = new StringBuilder();
+for(char ch : str.toCharArray()){
+    if(vowels.indexOf(ch) == -1){
+        sb.append(ch);
+    }
+}
+System.out.println(sb);
 
       // .......................Reverse Words in a String......................
         //     String input = "Hello world this is a test";

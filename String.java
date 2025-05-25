@@ -508,15 +508,26 @@
             //   System.out.println(totl);
 
 // .........................Remove all the vowel.................
-	 String str = "mohoitgupta";
-	    String vowels = "aeiouAEIOU";
-StringBuilder sb = new StringBuilder();
-for(char ch : str.toCharArray()){
-    if(vowels.indexOf(ch) == -1){
-        sb.append(ch);
-    }
-}
-System.out.println(sb);
+// 	 String str = "mohoitgupta";
+// 	    String vowels = "aeiouAEIOU";
+// StringBuilder sb = new StringBuilder();
+// for(char ch : str.toCharArray()){
+//     if(vowels.indexOf(ch) == -1){
+//         sb.append(ch);
+//     }
+// }
+// System.out.println(sb);
+
+// ....................remove all the consonent................
+  String str = "mohitgupta";
+       String vowel = "AEIOUaeiou";
+       StringBuilder sb = new StringBuilder();
+       for(char ch : str.toCharArray()){
+            if(vowel.indexOf(ch) != -1){
+                sb.append(ch);
+            }
+       }
+       System.out.println(sb);
 
       // .......................Reverse Words in a String......................
         //     String input = "Hello world this is a test";

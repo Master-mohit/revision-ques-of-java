@@ -36,6 +36,12 @@
 	  // }
 	  // System.out.println(reverse);
 
+  // ................3rd apporch to REVERSE STRING......................
+   String name = "mohit";
+		StringBuilder sb = new StringBuilder(name);
+		sb.reverse();
+		System.out.println(sb);
+
 
     //  ....................PALLINDROME STRING......................
     //     String str = "lol";

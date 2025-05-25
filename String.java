@@ -37,24 +37,21 @@
 	  // System.out.println(reverse);
 
   // ................3rd apporch to REVERSE STRING......................
-  	String name = "mohit";
-	    char[] arr = name.toCharArray();
+  	// String name = "mohit";
+	  //   char[] arr = name.toCharArray();
 	     
-	    int start  =0;
-	    int end = arr.length - 1;
+	  //   int start  =0;
+	  //   int end = arr.length - 1;
 	    
-	    while(start < end){
-	        char temp = arr[start];
-	        arr[start] = arr[end];
-	        arr[end] = temp;
-	        start++;
-	        end--;
-	    }
-	    String reverse = new String(arr);
-	    System.out.println(arr);
-
-
-
+	  //   while(start < end){
+	  //       char temp = arr[start];
+	  //       arr[start] = arr[end];
+	  //       arr[end] = temp;
+	  //       start++;
+	  //       end--;
+	  //   }
+	  //   String reverse = new String(arr);
+	  //   System.out.println(arr);
 
 
     //  ....................PALLINDROME STRING......................
@@ -125,6 +122,7 @@
 
     //................................count each char..........................
     // String str = "apple";
+    // str = str.toLowerCase();
     // HashMap<Character, Integer> hs = new HashMap<>();
     // for(char chacha: str.toCharArray()){
     //     hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
@@ -135,25 +133,48 @@
 
 
     //........................ First Non-Repeating Character..................
-    // HashMap<Character, Integer> hs = new HashMap<>();
-    // int vowel = 0;
-    // int consonent = 0;
-    // String s = "swiss";
-    // for(char ch : s.toCharArray()){
-    //     hs.put(ch, hs.getOrDefault(ch, 0) + 1);
-    // }
-    // boolean isfound = false;
-    // for(char key: hs.keySet()){
-    //     if(hs.get(key) == 1){
-    //         System.out.println(key);
-    //         isfound = true;
-    //         break;
-    //     }
-    // }
-    // if(!isfound){
-    //     System.out.println("no one ");
-    // }
+      // HashMap<Character, Integer> hs = new HashMap<>();
+      // int vowel = 0;
+      // int consonent = 0;
+      // String s = "swiss";
+      // for(char ch : s.toCharArray()){
+      //     hs.put(ch, hs.getOrDefault(ch, 0) + 1);
+      // }
+      // boolean isfound = false;
+      // for(char key: hs.keySet()){
+      //     if(hs.get(key) == 1){
+      //         System.out.println(key);
+      //         isfound = true;
+      //         break;
+      //     }
+      // }
+      // if(!isfound){
+      //     System.out.println("no one ");
+      // }
     
+      // ................Second Non-Repeating Character..................
+        HashMap<Character, Integer> hs = new HashMap<>();
+	    String str = "MoXmhhYtot";
+	    int count = 0;
+	    str = str.toLowerCase();
+	    
+	    for(char ch : str.toCharArray()){
+	        hs.put(ch, hs.getOrDefault(ch, 0) + 1);
+	    }
+	    
+	    for(char ans : hs.keySet()){
+	       if(hs.get(ans) == 1){
+	           count++;
+	           if(count == 2){
+	                System.out.println(ans);
+	           return;
+	           }
+	          
+	       }
+	        
+	    }
+	    System.out.println("no one");
+      
     // ...........Check if a String Contains Only Digits.........
 //     List<String> list = new ArrayList<>();
 //     String s = "12345";

@@ -37,10 +37,24 @@
 	  // System.out.println(reverse);
 
   // ................3rd apporch to REVERSE STRING......................
-   String name = "mohit";
-		StringBuilder sb = new StringBuilder(name);
-		sb.reverse();
-		System.out.println(sb);
+  	String name = "mohit";
+	    char[] arr = name.toCharArray();
+	     
+	    int start  =0;
+	    int end = arr.length - 1;
+	    
+	    while(start < end){
+	        char temp = arr[start];
+	        arr[start] = arr[end];
+	        arr[end] = temp;
+	        start++;
+	        end--;
+	    }
+	    String reverse = new String(arr);
+	    System.out.println(arr);
+
+
+
 
 
     //  ....................PALLINDROME STRING......................

@@ -28,6 +28,13 @@
 	    // StringBuilder sb = new StringBuilder(str);
 		// System.out.println(sb.reverse().toString().toUpperCase());
 
+    // ..............2nd apporch to REVERSE STRING......................
+    // 	String name = "mohit";
+	  // String reverse = "";
+	  // for(int i=name.length()-1; i>=0; i--){
+	  //     reverse += name.charAt(i);
+	  // }
+	  // System.out.println(reverse);
 
 
     //  ....................PALLINDROME STRING......................

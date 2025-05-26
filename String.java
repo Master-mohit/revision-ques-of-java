@@ -307,9 +307,9 @@
 //      if(count > 0){
 //         sb.append(chacha);
 //      }
-   
 //  }
 // }
+// System.out.println(sb);
 
  // .........................Largest Odd Number in String.....................
 //  String str = "35427";
@@ -330,33 +330,32 @@
 
 
 //    // .......................isomorphic String....................
-//    String s1 = "egg";
-//    String s2 = "add";
+  //  String s1 = "egg";
+  //  String s2 = "add";
    
-//    int [] map1 = new int[256];
-//    int [] map2 = new int[256];
+  //  int [] map1 = new int[256];
+  //  int [] map2 = new int[256];
    
-//    if(s1.length() != s2.length()){
-//           System.out.println("ni h bhai");
-//           return;
-//    }
-//    boolean isisomorphic = true;
+  //  if(s1.length() != s2.length()){
+  //         System.out.println("ni h bhai");
+  //         return;
+  //  }
+  //  boolean isisomorphic = true;
    
-//    for(int i=0; i<s1.length(); i++){
-//        char ch1 = s1.charAt(i);
-//        char ch2 = s2.charAt(i);
+  //  for(int i=0; i<s1.length(); i++){
+  //      char ch1 = s1.charAt(i);
+  //      char ch2 = s2.charAt(i);
        
-//        if(map1[ch1] == 0 && map2[ch2] == 0){
-//            map1[ch1] = ch2;
-//            map2[ch2] = ch1;
+  //      if(map1[ch1] == 0 && map2[ch2] == 0){
+  //          map1[ch1] = ch2;
+  //          map2[ch2] = ch1;
          
-//        }
-//        else if(map1[ch1] != ch2 || map2[ch2] != ch1){
-//         isisomorphic = false;
-//          break;
-//        }
-       
-       
+  //      }
+  //      else if(map1[ch1] != ch2 || map2[ch2] != ch1){
+  //       isisomorphic = false;
+  //        break;
+  //      }
+ 
 //    }
 //    if(isisomorphic){
 //        System.out.println("hai bhai");
@@ -369,22 +368,15 @@
 
 
  // ......................Rotate String......................
-//  String s1 = "abcde";
-//  String s2 = "cdeab";
- 
-//  if(s1.length() != s2.length()){
-//       System.out.println("ni h");
-//       return;
-//  }
-// String ans = s1 + s2;
-
-// if(ans.contains(s2)){
-//     System.out.println("hai");
-// }
-// else {
-//    System.out.println("ni   hh");
-// }
-
+       String s1 = "abcde";
+       String s2 = "deabc";
+       
+       if(s1.length() == s2.length() && (s1 + s1).contains(s2)){
+           System.out.println("rotation hai ");
+       }
+       else {
+           System.out.println("ni h");
+       }
 
 
  // ....................Sort Characters By Frequency..............
@@ -519,15 +511,15 @@
 // System.out.println(sb);
 
 // ....................remove all the consonent................
-  String str = "mohitgupta";
-       String vowel = "AEIOUaeiou";
-       StringBuilder sb = new StringBuilder();
-       for(char ch : str.toCharArray()){
-            if(vowel.indexOf(ch) != -1){
-                sb.append(ch);
-            }
-       }
-       System.out.println(sb);
+      //  String str = "mohitgupta";
+      //  String vowel = "AEIOUaeiou";
+      //  StringBuilder sb = new StringBuilder();
+      //  for(char ch : str.toCharArray()){
+      //       if(vowel.indexOf(ch) != -1){
+      //           sb.append(ch);
+      //       }
+      //  }
+      //    System.out.println(sb);
 
       // .......................Reverse Words in a String......................
         //     String input = "Hello world this is a test";

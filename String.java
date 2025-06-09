@@ -72,6 +72,11 @@
   // String consonent =  sb.toString().replaceAll("[aeiouAEIOU]", "");
   //  System.out.println(consonent);
   
+   // ....................remove all consonent in string......................
+     String str = "mohiot";
+      StringBuilder sb = new StringBuilder(str);
+      String kaam = str.replaceAll("[^AEIOUaeiou]", "");
+      System.out.println(kaam.toString());
 
 //     ....................ANAGRAM STRING......................
 //     String s1 = "silent";
@@ -267,25 +272,28 @@
 // Output: Vowels: 3, Consonants: 7
 //....................Count Vowels and Consonants ......................
 // HashMap<Character, Integer> hs = new HashMap<>();
-// String str = "hello world";
-
-// for(char chacha: str.toCharArray()){
-//     if(chacha == ' '){
-//         continue;
-//     }
-//     hs.put(chacha, hs.getOrDefault(chacha, 0)+1);
-// }
-// int vowel = 0;
-// int consonent = 0;
-// for(char key: hs.keySet()){
-//    if("AEIOUaeiou".indexOf(key) != -1){
-//        vowel = vowel + hs.get(key);
-//    }
-//    else{
-//       consonent = consonent + hs.get(key);
-//    }
-// }
-// System.out.println("vowel" + " " + vowel+ " " + "and consonent" + " " + consonent);
+    // String str = "mohit gupta";
+    //     int vowel = 0;
+    //     int consonent = 0;
+    //   HashMap<Character, Integer> map = new HashMap<>();
+    //    for(char ch : str.toCharArray()){
+    //        map.put(ch, map.getOrDefault(ch, 0) + 1);
+    //    }
+       
+    //    for(char c : map.keySet()){
+    //      if(Character.isLetter(c)){  // agr alphabet me baam ho to
+             
+    //        if("AEIOUaeiou".indexOf(c) != -1){
+    //            vowel += map.get(c);
+    //        }
+    //        else {
+    //            consonent += map.get(c);
+    //        }
+    //        }
+    //    }
+       
+    //    System.out.println(vowel);
+    //    System.out.println(consonent);
 
 
 
@@ -368,15 +376,15 @@
 
 
  // ......................Rotate String......................
-       String s1 = "abcde";
-       String s2 = "deabc";
+      //  String s1 = "abcde";
+      //  String s2 = "deabc";
        
-       if(s1.length() == s2.length() && (s1 + s1).contains(s2)){
-           System.out.println("rotation hai ");
-       }
-       else {
-           System.out.println("ni h");
-       }
+      //  if(s1.length() == s2.length() && (s1 + s1).contains(s2)){
+      //      System.out.println("rotation hai ");
+      //  }
+      //  else {
+      //      System.out.println("ni h");
+      //  }
 
 
  // ....................Sort Characters By Frequency..............
@@ -471,33 +479,33 @@
 //  System.out.println(ans);
 
  //  ......................Sum of Beauty of All Substrings.............
-            //   String str = "aabcbaa";
-            //   int totl =0;
+              // String str = "aabcbaa";
+              // int totl =0;
            
-            //   for(int i=0; i<str.length(); i++){
-            //       for(int j=i+1; j<=str.length(); j++){
-            //        String temp = str.substring(i, j);
+              // for(int i=0; i<str.length(); i++){
+              //     for(int j=i+1; j<=str.length(); j++){
+              //      String temp = str.substring(i, j);
                    
-            //         HashMap<Character, Integer> hs = new HashMap<>();
+              //       HashMap<Character, Integer> hs = new HashMap<>();
                     
-            //        for(char chacha: temp.toCharArray()){
-            //            hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
-            //        }
-            //           int maxfreq = Integer.MIN_VALUE;
-            //           int minfreq = Integer.MAX_VALUE;
+              //      for(char chacha: temp.toCharArray()){
+              //          hs.put(chacha, hs.getOrDefault(chacha, 0) + 1);
+              //      }
+              //         int maxfreq = Integer.MIN_VALUE;
+              //         int minfreq = Integer.MAX_VALUE;
                       
-            //            for(int val: hs.values()){
-            //              maxfreq = Math.max(maxfreq, val);
-            //              minfreq = Math.min(minfreq, val);
-            //          }
+              //          for(int val: hs.values()){
+              //            maxfreq = Math.max(maxfreq, val);
+              //            minfreq = Math.min(minfreq, val);
+              //        }
                    
-            //          totl += (maxfreq - minfreq);
+              //        totl += (maxfreq - minfreq);
                       
                       
                    
-            //       }
-            //   }
-            //   System.out.println(totl);
+              //     }
+              // }
+              // System.out.println(totl);
 
 // .........................Remove all the vowel.................
 // 	 String str = "mohoitgupta";
@@ -555,51 +563,45 @@
 
 
         //  ........................Count and say....................................
-    //     int n = 3;
-    //     String result = "1";
-    //     for(int j=0; j<n; j++){
-    //            int count = 1;
-    //     StringBuilder sb = new StringBuilder();
-    //     for(int i=1; i<result.length(); i++){
-    //         if(result.charAt(i) == result.charAt(i-1)){
-    //             count++;
-    //         }
-    //         else {
-    //             sb.append(count).append(result.charAt(i-1));
-    //             count = 1;
-    //         }
-    //     }
-    //     sb.append(count).append(result.charAt(result.length()-1));
-    //        result = sb.toString();
-    //     }
-    //     System.out.println(result);
+        // int n = 3;
+        // String result = "1";
+        // for(int j=0; j<n; j++){
+        //        int count = 1;
+        // StringBuilder sb = new StringBuilder();
+        // for(int i=1; i<result.length(); i++){
+        //     if(result.charAt(i) == result.charAt(i-1)){
+        //         count++;
+        //     }
+        //     else {
+        //         sb.append(count).append(result.charAt(i-1));
+        //         count = 1;
+        //     }
+        // }
+        // sb.append(count).append(result.charAt(result.length()-1));
+        //    result = sb.toString();
+        // }
+        // System.out.println(result);
 
 
-    //// .....................Repeated String Match..................
-    //     String s1 = "abc";
+    //// .....................Repeated String Match..................       
+
+    // StringBuilder sb = new StringBuilder();
+    //  String s1 = "abc";
     //     String s2 = "cabca";
         
-    //     int count = 0;
-    //   StringBuilder sb = new StringBuilder();
-    //   while(sb.length() < s2.length()){
-    //       sb.append(s1);
-    //       count++;
-    //   }
-    //   if(sb.toString().contains(s2)){
-    //      System.out.println(count);
-    //      return;
-    //   }
-    //   sb.append(s1);
-    //   count++;
-      
-    //   if(sb.toString().contains(s2)){
-    //      System.out.println(count);
-    //      return;
-    //   }
-    //   else {
-    //       System.out.println(-1);
-    //   }
-
+    //    int count = 0;
+       
+    //    while(sb.length() < s2.length()){
+    //        sb.append(s1);
+    //        count++;
+    //    }
+    //    if(sb.toString().contains(s2)){
+    //        System.out.println(count);
+    //        return;
+    //    }
+    //     sb.append(s1);
+    //     count++;
+    //     System.out.println(count);
 
     // ........Longest Substring Without Repeating Characters.
 
@@ -619,7 +621,6 @@
 	//      hs.add(akhshar);
 	//     maxLength = Math.max(maxLength, right - left +1);
 	//  }
-	 
 	//   System.out.println(maxLength);
       
   

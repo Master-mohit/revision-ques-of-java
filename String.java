@@ -73,10 +73,10 @@
   //  System.out.println(consonent);
   
    // ....................remove all consonent in string......................
-     String str = "mohiot";
-      StringBuilder sb = new StringBuilder(str);
-      String kaam = str.replaceAll("[^AEIOUaeiou]", "");
-      System.out.println(kaam.toString());
+    //  String str = "mohiot";
+    //   StringBuilder sb = new StringBuilder(str);
+    //   String kaam = str.replaceAll("[^AEIOUaeiou]", "");
+    //   System.out.println(kaam.toString());
 
 //     ....................ANAGRAM STRING......................
 //     String s1 = "silent";
@@ -445,7 +445,7 @@
 //         } else if (ch == 'X' && (nextChar == 'L' || nextChar == 'C')) {
 //             count -= 20;
 //         } else if (ch == 'C' && (nextChar == 'D' || nextChar == 'M')) {
-//             count -= 200; 
+//             count -= 200;  
 //         }
 //     }
 // }
@@ -635,7 +635,7 @@
   //     if(!map.containsKey(newstring)){
   //         map.put(newstring, new ArrayList<>());
   //     }
-  //     map.get(newstring).add(word);
+  //     map.get(newstring.add(word);
   // }
   // System.out.println(map.values());
        

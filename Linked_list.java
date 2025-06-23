@@ -157,93 +157,89 @@ public class Main
 //  ......................bich me insert krna element ko..............
 
 class Node{
-    int data;
+    int data ;
     Node next;
     
-    Node(int data){
-        this.data = data;
-        this.next = null;
-    }
+  Node(int data){
+      this.data = data;
+      this.next = null;
+  }
 }
 public class Main
 {
 	public static void main(String[] args) {
-       Node head = new Node(1);
-       head.next = new Node(2);
-       head.next.next = new Node(3);
-      
-       int position = 2;
-       int Newdata = 100;
-      Node newNode = new Node(Newdata);
-      
-      if(position == 0){
-          newNode.next = head;
-          head = newNode;
-      }
-      else {
-          Node temp = head;
-          for(int i=0; i<position-1; i++){
-              temp = temp.next;
-          }
-           newNode.next = temp.next; 
-            temp.next = newNode;
-      }
-      
-      Node temp = head;
-      while(temp != null){
-          System.out.print(temp.data + " -> ");
-          temp = temp.next;
-          
-      }
-     System.out.println("null");
+		Node head = new Node(10);
+		head.next = new Node(20);
+		head.next.next = new Node(30);
+		head.next.next.next = new Node(40);
+		
+		Node newNOde = new Node(100);
+		
+		  int pos = 1;
+		if(pos == 0){
+		    head = newNOde;
+		}
+		else {
+		      Node temp = head;
+		    for(int i =0; i<pos-1; i++){
+		        temp = temp.next;
+		       
+		    }
+		     newNOde.next = temp.next;
+		        temp.next = newNOde;
+		}
+		
+		
+		Node temp = head;
+		while(temp != null){
+		    System.out.print(temp.data + "->");
+		    temp = temp.next;
+		}
+		System.out.println("null");
 	}
-}
-
-
-// .........................replace ka element..........................
-class Node{
-    int data;
+}class Node{
+    int data ;
     Node next;
     
-    Node(int data){
-        this.data = data;
-        this.next = null;
-    }
+  Node(int data){
+      this.data = data;
+      this.next = null;
+  }
 }
 public class Main
 {
 	public static void main(String[] args) {
-       Node head = new Node(1);
-       head.next = new Node(2);
-       head.next.next = new Node(3);
-      
-       int position = 2;
-       int Newdata = 100;
-      Node newNode = new Node(Newdata);
-      
-      if(position == 0){
-          newNode.next = head;
-          head = newNode;
-      }
-      else {
-          Node temp = head;
-          for(int i=0; i<position-1; i++){
-              temp = temp.next;
-          }
-           newNode.next = temp.next; 
-            temp.next = newNode; 
-            newNode.next = newNode.next.next;
-      }
-      
-      Node temp = head;
-      while(temp != null){
-          System.out.print(temp.data + " -> ");
-          temp = temp.next;
-          
-      }
-     System.out.println("null");
+		Node head = new Node(10);
+		head.next = new Node(20);
+		head.next.next = new Node(30);
+		head.next.next.next = new Node(40);
+		
+		Node newNOde = new Node(100);
+		
+		  int pos = 1;
+		if(pos == 0){
+		    head = newNOde;
+		}
+		else {
+		      Node temp = head;
+		    for(int i =0; i<pos-1; i++){
+		        temp = temp.next;
+		       
+		    }
+		     newNOde.next = temp.next;
+		        temp.next = newNOde;
+		}
+		
+		
+		Node temp = head;
+		while(temp != null){
+		    System.out.print(temp.data + "->");
+		    temp = temp.next;
+		}
+		System.out.println("null");
 	}
 }
+
 
 // ........................all process of insert.....................
 
@@ -413,7 +409,7 @@ public class Main
      }
      else {
          head = head.next;
-         head.next = head.next;
+         
      }
  
      

@@ -1193,51 +1193,53 @@ public class Main
 
     // .......................INSERTION ELEMENT ANYWHERE IN LIST...............
 
-    class Node{
-        int data;
-        Node next, prev;
-       
-       Node(int data){
-           this.data = data;
-           this.next = null;
-           this.prev = null;
-       }
+ class Node{
+    int data;
+    Node next, prev;
+    
+    Node(int data){
+        this.data = data;
+        this.next = null;
+        this.prev = null;
     }
-    public class Main
-    {
-        public static void main(String[] args) {
-           Node head = new Node(10);
-           head.next = new Node(20);
-           head.next.next = new Node(30);
-           head.next.next.next = new Node(40);
-           head.next.next.next.next = new Node(50);
-           
-           Node newNode = new Node(45);
-           int position = 4;
-           
-           if(head == null){
-               head = newNode;
-           }
-           else {
-              Node temp = head;
-               for(int i =0; i<position-1; i++){
-                   temp = temp.next;
-                   
-               }
-               newNode.next = temp.next;
-               temp.next = newNode;
-               newNode.prev = temp;
-              
-           }
-           
-           Node temp = head;
-           while(temp != null){
-               System.out.print(temp.data + " -> ");
-               temp = temp.next;
-           }
-           System.out.println("null");
-        }
-    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Node head = new Node(1);
+		head.next = new Node(2);
+		head.next.next = new Node(3);
+		head.next.next.next = new Node(4);
+		Node newNOde = new Node(100);
+	
+	   int pos = 2;
+	   
+	   if(head == null){
+	       System.out.println("List is Empty");
+	       return;
+	   }
+	   else {
+	          Node temp = head;
+	       for(int i =0; i<pos-1; i++){
+	         temp = temp.next;
+	       }
+	         newNOde.next = temp.next;
+	         temp.next = newNOde;
+	         newNOde.prev = temp;
+	         if(newNOde.next != null){
+	             newNOde.next.prev = newNOde;
+	         }
+	         
+	   }
+	   
+		  Node temp = head;
+		while(temp != null){
+		    System.out.print(temp.data + "->");
+		    temp = temp.next;
+		}
+	   System.out.println("null");
+	}
+}
 
 //     All process of insertion in doubly linked list.................
 

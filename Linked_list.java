@@ -460,29 +460,48 @@ public class Main
      
     //  delete element at end.................
    
-   if(head == null){
-       System.out.println("null");
-       return;
-   }
-   else {
-        Node temp = head;
-   while(temp.next.next != null){
-       temp = temp.next;
-   }
-       temp.next = temp.next.next;
-   }
-  
- 
-     
-    //    print element...
-     Node temp = head;
-     while(temp != null){
-         System.out.print(temp.data + " -> ");
-         temp = temp.next;
-     }
-     System.out.println("null");
-	}
+   class Node{
+    int data ;
+    Node next;
+    
+  Node(int data){
+      this.data = data;
+      this.next = null;
+  }
 }
+public class Main
+{
+	public static void main(String[] args) {
+		Node head = new Node(10);
+		head.next = new Node(20);
+		head.next.next = new Node(30);
+		head.next.next.next = new Node(40);
+		
+		Node newNOde = new Node(100);
+		
+	  if(head == null){
+	     System.out.println("List is empty");
+	  }
+	  else if(head.next == null){
+	      head = null;
+	  }
+	  else {
+	       Node temp = head;
+	       while(temp.next.next != null){
+	           temp = temp.next;
+	       }
+	       temp.next = null;
+	  }
+		
+		
+		Node temp = head;
+		while(temp != null){
+		    System.out.print(temp.data + "->");
+		    temp = temp.next;
+		}
+		System.out.println("null");
+	}
+}   
 
 
 //  ...................middle se kahi se bhi delete node.................
@@ -600,14 +619,14 @@ public static void main(String[] args) {
 //         Node prev = null;
        
         
-//        while(current != null){
-//         Node temp = current.next;
-//         current.next = prev;
-//         prev = current;
-//         current = temp;
+       while(current != null){
+        Node temp = current.next;
+        current.next = prev;
+        prev = current;
+        current = temp;
 		
-//        }
-// 	     head = prev;
+       }
+	     head = prev;
 		
 		
 // // 		print element..........
@@ -669,21 +688,52 @@ public class Main
 }
 
 //.......................finding middle element on odd number..........
-Node head = new Node(10);
-head.next = new Node(20);
-head.next.next = new Node(30);
-head.next.next.next = new Node(40);
-head.next.next.next.next = new Node(50);
+// Node head = new Node(10);
+// head.next = new Node(20);
+// head.next.next = new Node(30);
+// head.next.next.next = new Node(40);
+// head.next.next.next.next = new Node(50);
 
-Node slow = head;
-Node fast = head;
-while(fast != null && fast.next != null){
-    slow = slow.next;
-    fast = fast.next.next;
-}
-     System.out.println(slow.data);
+// Node slow = head;
+// Node fast = head;
+// while(fast != null && fast.next != null){
+//     slow = slow.next;
+//     fast = fast.next.next;
+// }
+//      System.out.println(slow.data);
 
 
+// ..........................finding middle element on even number..............
+
+
+//      class Node{
+//     int data ;
+//     Node next;
+    
+//   Node(int data){
+//       this.data = data;
+//       this.next = null;
+//   }
+// }
+// public class Main
+// {
+// 	public static void main(String[] args) {
+// 		Node head = new Node(10);
+// 		head.next = new Node(20);
+// 		head.next.next = new Node(30);
+// 		head.next.next.next = new Node(40);
+// 		head.next.next.next.next = new Node(50);
+// 		head.next.next.next.next.next = new Node(60);
+		
+// 		Node newNOde = new Node(100);
+	   
+// 	    Node slow = head;
+// 	    Node fast = head;
+// 	    while(fast != null){
+// 	        slow = slow.next;
+// 	        fast = fast.next.next;
+// 	    }
+// 		System.out.println(slow.data);
 
 //  ........................Merge sorted linkedlist...........................
 class Node{
@@ -764,7 +814,7 @@ public class Main
             head.next.next.next.next.next.next = new Node(7);
             
            if(head == null){
-               System.out.println("kahlii");
+               System.out.println("khalii");
                return;
            }
            else {

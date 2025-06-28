@@ -558,28 +558,626 @@ public class Arrays {
     //         arr3[i] = arr2[i-arr1.length];
     //     }
     // }
+
+    // Find the maximum product of two distinct elements in an array...................
+
+    	  //  int[] arr = {1, 20, 3, 4, 5};
+        //    int max = Integer.MIN_VALUE;
+        //    int smax = Integer.MIN_VALUE;
+           
+        //    for(int i =0; i<arr.length; i++){
+        //        if(arr[i] > max){
+        //            smax = max;
+        //            max = arr[i];
+        //        }
+        //        else if(arr[i] > smax && arr[i] != max){
+        //            smax = arr[i];
+        //        }
+        //    }
+        //    System.out.println(max * smax);
     
     // for(int num : arr3){
     //     System.out.print(num + " ");
     // }
 
        // Merge two arrays into one array...................
-   int arr1[] = {1, 2, 3};
-       int arr2[] = {4, 5, 6};
-       int arr3[] = new int[arr1.length + arr2.length];
-       for(int i=0; i<arr3.length; i++){
-           if(i < arr1.length){
-               arr3[i] = arr1[i];
-           }
-           else {
-               arr3[i] = arr2[i-arr1.length];
-           }
-           }
+  //  int arr1[] = {1, 2, 3};
+  //      int arr2[] = {4, 5, 6};
+  //      int arr3[] = new int[arr1.length + arr2.length];
+  //      for(int i=0; i<arr3.length; i++){
+  //          if(i < arr1.length){
+  //              arr3[i] = arr1[i];
+  //          }
+  //          else {
+  //              arr3[i] = arr2[i-arr1.length];
+  //          }
+  //          }
            
-           for(int num : arr3){
-               System.out.print(num + " ");
-           }
+  //          for(int num : arr3){
+  //              System.out.print(num + " ");
+  //          }
 
+    // ..............Find the duplicate element of an integer in the array...................	
+    // HashMap<Integer, Integer> hs = new HashMap<>();
+    // int arr[] = {2, 2, 1,1, 2, 2,3,5,3};
+       
+    //     for(int num : arr){
+    //         hs.put(num, hs.getOrDefault(num, 0) + 1);
+    //     }
+    //     boolean findDupplicate = false;
+    //     for(int key: hs.keySet()){
+    //         if( hs.get(key) > 1){
+    //             System.out.println(key);
+    //             findDupplicate = true;
+    //         }
+    //     }
+    //     if(!findDupplicate){
+    //         System.out.println("koi ni h duplicate");
+    //     }
+
+// .......................program to put all negative..................
+// .......................numbers before positive numbers..........
+    // ArrayList<Integer> list = new ArrayList<>();
+    //  int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+    //  int j = 0;
+       
+    //    for(int i=0; i<arr.length; i++){
+    //        if(arr[i] < 0){
+    //            int temp = arr[i];
+    //            arr[i] = arr[j];
+    //            arr[j] = temp;
+    //            j++;
+    //        }
+    //    }
+    //   for(int i=0; i<arr.length; i++){
+    //       list.add(arr[i]);
+    //   }  
+    //   System.out.println(list);
+
+// ..............................ALL SUBARRAYS QUESTIONS..................
+    // ............find All the subarrays of an array............
+      //    int[] arr = {2, 3, 2, 4}; 
+       
+      //  for(int i=0; i<arr.length; i++){
+      //     for(int j =i; j<arr.length; j++){
+      //     for(int k =i; k<= j; k++){
+      //         System.out.print(arr[k] + " ");
+      //     }
+      //     System.out.println();
+      //     }
+      //  }
+
+      // ....................Subarray with given sum = 0...................
+    //    	int[] arr = {4, 2, -3, 1, 6};
+    //         boolean found = false;
+            
+		// for(int i=0; i<arr.length; i++) {
+		// 	int sum = 0;
+		// 	for(int j =i; j<arr.length; j++) {
+		// 		sum += arr[j];
+    //        if(sum == 0) {
+    //            found = true;
+		// 	break;
+		// }
+		// 	}
+		// }
+	  // 	if(found){
+		// 		    System.out.println("yes");
+		// 		}
+		// 		else {
+		// 		    System.out.println("No");
+		// 		}
+
+//..................Subarray with given Maximum Sum...................
+//    .................Brute Force Approach...................
+	// int arr[] = {1, 2, -1, 3};
+	//     int maxSum = Integer.MIN_VALUE;
+	    
+	//     for(int i =0; i<arr.length; i++){
+	//       int sum =0;
+	//         for(int j = i; j<arr.length; j++){
+	            
+	//             sum = sum + arr[j];
+	            
+	//           maxSum =  Math.max(maxSum, sum);
+	//         }
+	        
+	//     }
+	//     System.out.println(maxSum);
+
+//..................Subarray with given Maximum Sum...................
+	// int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+	// 	int maxSum = arr[0];
+	// 	int current = arr[0];
+		
+	// 	for(int i = 1; i < arr.length; i++){
+	// 	   current =  Math.max(arr[i] , current + arr[i]);
+	// 	   maxSum = Math.max(maxSum , current);
+	// 	}
+	// 	System.out.println(maxSum);
+
+  //  ........................Find the Length of the Longest Subarray with Sum = K
+  // int arr[] = {1, 2, 3, 1, 1, 1, 1};
+	// 	int k = 3;
+	// 	int maxLen = 0;
+		
+	// 	for(int i=0; i<arr.length; i++){
+	// 	    int sum = 0;
+		    
+	// 	    for(int j =i; j<arr.length; j++){
+	// 	        sum = sum + arr[i];
+		        
+	// 	        if(sum == k){
+	// 	       maxLen = Math.max(maxLen, j-i + 1);
+	// 	    }
+	// 	    }
+	// 	}
+  //        System.out.println(maxLen);
+
+// .................Count subarrays with given sum K...................
+  	// 	int arr[] = {1, 1, 1};
+		// int k = 2;
+		// int count = 0;
+		
+		// for(int i=0; i<arr.length; i++){
+		//     int sum = 0;
+		    
+		//   for(int j = i; j<arr.length; j++){
+		//       sum += arr[j];
+		//        if(sum == k){
+		//           count++;
+		//   }
+		//   }
+		 
+		// }
+	   
+	  //  System.out.println(count);
+
+// ...........Find the length of the Longest Subarray with sum = 0
+    	// int arr[] = {1, -1, 3, 2, -2, -3, 3};
+	    //  int k = 0;
+	    //  int maxLen = 0;
+	     
+	    //  for(int i=0; i<arr.length; i++){
+	    //        int sum = 0;
+	    //    for(int j = i; j<arr.length; j++){
+	    //        sum += arr[j];
+	           
+	    //        if(sum == k){
+	    //        maxLen = Math.max(maxLen, j - i + 1);
+	    //    }
+	    //    }
+	        
+	    //  }
+	      
+	    //    System.out.println(maxLen);
+
+// ................Count subarrays with sum divisible by K...................
+    //   	int arr[] = {2, 4, 1, 3, 5};
+		// int count = 0;
+		// int k = 3;
+		// for(int i=0; i<arr.length; i++){
+		//     int sum = 0;
+		//     for(int j =i; j<arr.length; j++){
+		//         sum += arr[j];
+		//           if(sum % k == 0){
+		//             count++;
+		//         }
+		//     }
+		  
+		// }
+	  //   System.out.println(count);
+
+// .................Find the length of the smallest subarray with sum >= K..........
+    // int[] arr = {2, 3, 1, 2, 4, 3};
+        //  int k = 7;
+        //  int minLen = Integer.MAX_VALUE;
+       
+        //  for(int i=0; i<arr.length; i++){
+        //      int sum = 0;
+        //      for(int j= i; j<arr.length; j++){
+        //          sum += arr[j];
+                 
+        //          if(sum >= k){
+        //              minLen = Math.min(minLen, j - i + 1);
+        //             break;
+        //          }
+        //      }
+        //  }
+        //  if(minLen == Integer.MAX_VALUE){
+        //      System.out.println(0);
+        //  }
+        //  else {
+        //       System.out.println(minLen);
+        //  }
+
+
+// .............. Find the maximum product of a subarray...........
+      //    int[] arr = {2, 3, -2, 4}; 
+      //      int maxProduct = Integer.MIN_VALUE;
+           
+      //  for(int i =0; i<arr.length; i++){
+      //      int product = 1;
+           
+      //      for(int j = i; j<arr.length; j++){
+      //          product = product * arr[j];
+      //        maxProduct =  Math.max(maxProduct, product);
+      //      }
+      //  }
+      //  System.out.println(maxProduct);
+
+
+//.......Find the number that appears once, and other numbers twice.
+// int arr[] = {4,2,1,2,1};
+//     //   Output: 2
+//    int result = 0;
+//    for(int i=0; i<arr.length; i++){
+//        result = result^arr[i];
+//    }
+//    System.out.println(result);
+
+
+// ..........Count the number of subarrays with equal number of 0's and 1's........
+
+// int[] arr = {0, 1, 0, 1, 1, 1, 0};
+//           int count = 0;
+//           for(int i=0; i<arr.length; i++){
+//               int onces = 0;
+//               int zeros = 0;
+              
+//               for(int j =i; j<arr.length; j++){
+//                   if(arr[j] == 0){
+//                       zeros++;
+//                   }
+//                   else {
+//                       onces++;
+//                   }
+//                    if(onces == zeros){
+//               count++;
+//           }
+//               }  
+//           }
+//           System.out.println(count);
+
+        // ...............MEDIUM QUESTION?.....................
+// 		................................ 2 sum ...........................
+//  int arr[] = {2, 7, 11, 15};
+//  int target = 9;
+//  for(int i=0; i<arr.length; i++){
+//      for(int j=i+1; j<arr.length; j++){
+//          if(arr[i] + arr[j] == target){
+//                System.out.println(+ i + " " + j + " ");
+//          }
+//      }
+//  }
+
+ //...............Maximum Consecutive Ones.................
+//  int arr[] = {1, 1, 0,1, 1, 1, 1};
+//  //   Output: 3
+// int count = 0;
+// int maxcount = 0;
+
+// for(int i=0; i<arr.length; i++){
+//     if(arr[i] == 1){
+//         count++;
+//     }
+//     else {
+//         maxcount = Math.max(maxcount, count);
+//         count = 0;
+//     }
+//      maxcount = Math.max(maxcount, count);
+// }
+// System.out.println(maxcount);
+
+//..................... Sort an array of 0's 1's and 2'....................
+// int[] arr = {2, 0, 2, 1, 1, 0}; 
+// int count0 = 0;
+// int count1 = 0;
+// int count2 = 0;
+// for(int i=0; i<arr.length; i++){
+//     if(arr[i] == 0){
+//         count0++; //    2
+//     }
+//     else if(arr[i] == 1){
+//         count1++;   //  2
+//     }
+//     else {
+//         count2++;   //  2
+//     }
+// }
+//   int index = 0;
+// while(count0 > 0){
+//     arr[index] = 0;
+//     index++;
+//     count0--;
+// }
+// while(count1 > 0){
+//     arr[index] = 1;
+//     index++;
+//     count1--;
+// }
+// while(count2 > 0){
+//     arr[index] = 2;
+//     index++;
+//     count2--;
+// }
+// System.out.println(Arrays.toString(arr));
+
+
+
+//.....................Count subarrays with given sum....................
+    // int arr[] = {1,2,3};
+    // int target = 3;
+    // int count = 0;
+    
+    // for(int i=0; i<arr.length; i++){
+    //     	int sum = 0;
+    //     for(int j =i; j<arr.length; j++){
+    //         sum = sum + arr[j];
+    //         if(sum == target){
+    //             count++;
+    //         }
+    //     }
+    // }
+    // System.out.println(count);
+
+
+//..................Leaders in an Array problem...................
+    // int arr[] = {16, 17, 4, 3, 5, 2}; 
+    // int n = arr.length;
+    // int leader = arr[n-1];
+    
+    //         System.out.println(leader);
+          
+    // for(int i = n-2; i >= 0; i--){
+    //     if(arr[i] > leader){
+    //         System.out.println(arr[i]);
+    //         leader = arr[i];
+    //     }
+    // }
+
+
+
+//   .....................Stock Buy And Sells..................
+// int arr[] = {7, 1, 5, 3, 6, 4}; 
+// int maxprofit = 0;
+// int minfar = arr[0]; // 5
+
+// for(int i=0; i<arr.length; i++){
+
+//     minfar = Math.min(minfar, arr[i]);
+//       int profit = arr[i] - minfar;
+//       maxprofit = Math.max(maxprofit, profit);
+// }
+
+// System.out.println(maxprofit);
+
+
+   //...................... sum of upper and lower triangles...........
+        //  int mat[][] = {{1, 2, 3},
+        //             {4, 5, 6},
+        //             {7, 8, 9}};
+
+        //  int upper = 0;
+        //  int lower = 0;
+                    
+        //  for(int i=0; i<mat.length; i++){
+        //      for(int j =0; j<mat.length; j++){
+        //          if(i <= j){
+        //            upper = upper + mat[i][j];
+        //          }
+        //           if(i >= j){
+        //              lower = lower + mat[i][j];
+        //          }
+        //      }
+        //  }    
+        //  System.out.println("Upper " + upper);
+        //  System.out.println("Lower " + lower);
+
+  //...................... find transpose matrinx.................
+      //  int mat[][] = {{1, 2, 3},
+      //               {4, 5, 6},
+      //               {7, 8, 9}};
+        
+      //   for(int i=0; i<mat.length; i++){
+      //       for(int j =i + 1; j<mat.length; j++){
+      //           int temp = mat[i][j];
+      //           mat[i][j] = mat[j][i];
+      //           mat[j][i] = temp;
+      //       }
+      //   }
+        
+      //   for(int i=0; i<mat.length; i++){
+      //       for(int j =0; j<mat.length; j++){
+      //           System.out.print(mat[i][j] + " ");
+      //       }
+      //       System.out.println();
+      //   }
+
+
+ //.....................90 degree rotation clockwise...............
+    //  int mat[][] = {{1, 2, 3},
+    //                 {4, 5, 6},
+    //                 {7, 8, 9}};
+        
+
+    //     //   .. ...........transpose..................
+    //     for(int i=0; i<mat.length; i++){
+    //         for(int j =i + 1; j<mat.length; j++){
+    //             int temp = mat[i][j];
+    //             mat[i][j] = mat[j][i];
+    //             mat[j][i] = temp;
+    //         }
+    //     }
+        
+    //     //   .. ...........reverse each row..................
+    //   for(int i=0; i<mat.length; i++){
+    //       int left = 0;
+    //       int right = mat.length-1;
+    //        while(left < right){
+    //            int temp = mat[i][left];
+    //            mat[i][left] = mat[i][right];
+    //            mat[i][right] = temp;
+    //            left++;
+    //            right--;
+    //        }
+    //   }
+      //   .. ...........print..................
+      // for(int i=0; i<mat.length; i++){
+      //     for(int j = 0; j<mat.length; j++){
+      //         System.out.print(mat[i][j] + " ");
+      //     }
+      //     System.out.println();
+      // }
+
+//.....................set of metrix zeros.........................
+
+  // int mat[][] = {{1, 1, 1},
+  //                   {1, 0, 1},
+  //                   {1, 1, 1}};
+        
+  //     int row = mat.length;
+  //     int coloums = mat[0].length;
+      
+  //     boolean [] rowzero = new boolean[row];
+  //     boolean [] colzero = new boolean[coloums];
+  //   //   ....Traversing element where is Zero..
+  //     for(int i=0; i<row; i++){
+  //         for(int j=0; j<coloums; j++){
+  //             if(mat[i][j] == 0){
+  //                 rowzero[i] = true;
+  //                 colzero[j] = true;
+  //             }
+  //         }
+  //     }
+  //   //   ...set zero to entire row...
+  //            for(int i=0; i<row; i++){
+  //                if(rowzero[i]){
+  //                    for(int j =0; j<coloums; j++){
+  //                        mat[i][j] = 0;
+  //                    }
+  //                }
+  //            }
+  //   // ......set zero to entire coloums... 
+  //            for(int j=0; j<coloums; j++){
+  //                if(colzero[j]){
+  //                    for(int i=0; i<row; i++){
+  //                        mat[i][j] = 0;
+  //                    }
+  //                }
+  //            }
+ 
+  //   //  ......print element....
+  //     for(int i=0; i<row; i++){
+  //         for(int j =0; j<coloums; j++){
+  //             System.out.print(mat[i][j] + " ");
+  //         }
+  //         System.out.println();
+  //     }
+//........................multiply matrix....................... 
+    
+// int[][] mat1 = {{1, 2, 3},
+// {4, 5, 6}};
+
+// int[][] mat2 = {{7, 8},
+// {9, 10},
+// {11, 12}};
+
+// int row1 = mat1.length;
+// int col1 = mat1[0].length;
+// int col2 = mat2[0].length;
+
+// int [][] result = new int[row1][col2]; 
+
+// for(int i=0; i<row1; i++){
+// for(int j=0; j<col2; j++){
+// int sum = 0;
+// for(int k=0; k<col1; k++){
+// sum = sum + mat1[i][k] * mat2[k][j];
+// }
+// result[i][j] = sum;
+// }
+// }
+           
+// for(int i=0; i<row1; i++){
+// for(int j=0; j<col2; j++){
+// System.out.print(result[i][j]+ " ");
+// }
+// System.out.println();
+// }
+
+
+//........................... Spiral Matrix.......................... 
+//  int[][] mat = {
+//   {1, 2, 3, 4},
+//   {5, 6, 7, 8},
+//   {9, 10, 11, 12},
+//   {13, 14, 15, 16}};
+// List<Integer> result = new ArrayList<>();
+
+// int top  =  0;       
+// int left = 0;
+// int right = mat[0].length-1;
+// int bottom = mat.length-1;
+
+// while(top <= bottom && left <= right){
+// for(int i=left; i<=right; i++){
+// result.add(mat[top][i]);
+// }
+// top++;
+
+// for(int i=top; i<=bottom; i++){
+// result.add(mat[i][right]);
+// }
+// right--;
+// if(top <= bottom){
+// for(int i=right; i>=left; i--){
+// result.add(mat[bottom][i]);
+// }
+// }
+// bottom--;
+
+// if(left <= right){
+// for(int i=bottom; i>=top; i--){
+// result.add(mat[i][left]);
+// }
+// }
+// left++;
+// }
+
+
+// System.out.println(result);
+
+
+// import java.util.ArrayList;
+// import java.util.List;
+// public class Main
+// {
+//....................  pascel trinanglee....................
+// 	public static void main(String[] args) {
+//        List<List<Integer>> result = new ArrayList<>();
+//        int n =5;
+//        for(int i=0; i<n; i++){
+       
+//        List<Integer> row = new ArrayList<>();
+   
+//        for(int j=0; j<=i; j++){
+//            if(j == 0 || j == i){
+//                row.add(1);
+//            }
+//            else {
+//                row.add(result.get(i-1).get(j-1) + result.get(i-1).get(j));
+//            }
+//        }
+//        result.add(row);
+//        }
+   
+//       for (List<Integer> row : result) {
+//             System.out.println(row); 
+//         }
+// 	}
+
+// }
     // ..............Find the duplicate element of an integer in the array...................	
     // HashMap<Integer, Integer> hs = new HashMap<>();
     // int arr[] = {2, 2, 1,1, 2, 2,3,5,3};

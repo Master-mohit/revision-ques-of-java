@@ -93,7 +93,7 @@ public class Arrays {
 
 
           // .. SECOND MAXIMUM ELEMENT OF ARRAY.....
-      // decending order means chote se bda..
+      // desending order means bde se chota ..
     //   int arr[] = {43,65,34,87,44,84};
     //   for (int i = 0; i < arr.length; i++) {
     //        for (int j = i + 1; j < arr.length; j++) {
@@ -327,6 +327,22 @@ public class Arrays {
 //   System.out.println(temp[i]);
 // }
 
+// ............ DUPLICATE ELEMENT FROM SORTED ARRAYS...........
+// 	public static void main(String[] args) {
+// 	    HashSet<Integer> hs = new HashSet<>();
+// 	     HashSet<Integer> dupli = new HashSet<>();
+// 	    int sum = 0;
+// 		int arr[] =  {1,2,2,3,6,7,4,4,5,6,7,7,7,18,8,18};
+// 		for(int num: arr){
+// 		    if(!hs.add(num)){
+// 		       dupli.add(num);
+// 		    }
+// 		}
+		
+// 	   System.out.println(dupli); 
+// 	}
+// }
+
 // ..........Program to copy all elements of one array into another array............
 // int arr1 [] = {4,2,6};
 // int arr2 [] = Arrays.copyOf(arr1, arr1.length);
@@ -391,24 +407,6 @@ public class Arrays {
 //   index++;
 // }
 // System.out.println(Arrays.toString(arr));
-
-//.............................Write a Java program to separate zeros from non-zeros sorted...............
-// int arr[] = {1,0,4,8,0,4,0,0,5,2}; 
-// int index = 0;
-// for(int i=0; i<arr.length; i++){
-//     if(arr[i] != 0){
-//         arr[index] = arr[i];
-//         index++;
-//     }
-// }
-//  Arrays.sort(arr, 0, index);
- 
-// while(index < arr.length){
-//     arr[index] = 0;
-//     index++;
-// }
-// System.out.println(Arrays.toString(arr));
-
  // Write a Java program to separate zeros from non-zeros 
 // in an integer array?
 // [12, 7, 8, 3, 0, 0, 0]
@@ -533,8 +531,55 @@ public class Arrays {
     //          }
     //      }
     //      System.out.println("no majority element");
-         
-	
+     
+  //   missing number find................................
+	//  HashSet<Integer>hs = new HashSet<>();
+	//     int arr[] = {1,2,4};
+	//     int n = arr.length;
+	//     for(int num: arr){
+	//         hs.add(num);
+	//     }
+	    
+	//     for(int i=1; i<n+1; i++){
+	//         if(!hs.contains(i)){
+	//             System.out.println(i);
+	//         }
+	//     }
+
+  ....................// Merge two arrays into one array...................
+    // int arr1[] = {1, 2, 3};
+    // int arr2[] = {4, 5, 6};
+    // int arr3[] = new int[arr1.length + arr2.length];
+    // for(int i=0; i<arr3.length; i++){
+    //     if(i < arr1.length){
+    //         arr3[i] = arr1[i];
+    //     }
+    //     else {
+    //         arr3[i] = arr2[i-arr1.length];
+    //     }
+    // }
+    
+    // for(int num : arr3){
+    //     System.out.print(num + " ");
+    // }
+
+       // Merge two arrays into one array...................
+   int arr1[] = {1, 2, 3};
+       int arr2[] = {4, 5, 6};
+       int arr3[] = new int[arr1.length + arr2.length];
+       for(int i=0; i<arr3.length; i++){
+           if(i < arr1.length){
+               arr3[i] = arr1[i];
+           }
+           else {
+               arr3[i] = arr2[i-arr1.length];
+           }
+           }
+           
+           for(int num : arr3){
+               System.out.print(num + " ");
+           }
+
     // ..............Find the duplicate element of an integer in the array...................	
     // HashMap<Integer, Integer> hs = new HashMap<>();
     // int arr[] = {2, 2, 1,1, 2, 2,3,5,3};

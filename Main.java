@@ -31,7 +31,7 @@ import java.util.Scanner;
                 // Swaping variable with third varibale...args
                 // int a = 5; 
                 // int b = 10;
-                // int temp = a;
+                // int temp = a;        
                 //  a = b;
                 //  b = temp;
                 // System.out.println(a);
@@ -373,7 +373,6 @@ import java.util.Scanner;
 //    System.out.println(a + "^" + b + " = " + sum);
  
 // 34- Seprate each digit of a number and print it on the new line ex - 123 
-// 	OP
 // 		3
 // 		2
 // 		1
@@ -476,3 +475,18 @@ import java.util.Scanner;
 //  b = c;
 //  }
 
+// ........................Armstrong....................
+//  int n = sc.nextInt();
+// 	    int nn = n;
+// 	    int sum = 0;
+// 	    while(n > 0){
+// 	        int num = n % 10;
+// 	       sum += num * num * num;
+// 	       n = n / 10;
+// 	    }
+// 	    if(nn == sum){
+// 	        System.out.println("its armstrong");
+// 	    }
+// 	    else {
+// 	        System.out.println("its not");
+// 	    }

@@ -615,6 +615,42 @@ public class Arrays {
     //         System.out.println("koi ni h duplicate");
     //     }
 
+    // ......................Program to put all negative numbers before positive numbers..........
+       //  int arr[] = {1, -3, 4, -2} ;
+       //  int pos[] = new int[arr.length];
+       //  int neg[] = new int[arr.length];
+       //  int j = 0;
+       //  for(int i=0; i<arr.length; i++){
+       //      if(arr[i] < 0){
+       //          neg[j] = arr[i];
+       //          j++;
+       //      }
+       //      else {
+       //          pos[i-j] = arr[i];
+       //      }
+       //  }
+       //  System.out.println(Arrays.toString(neg));
+       //  System.out.println(Arrays.toString(pos));
+
+    //    ...........seperate postive and negative element in arraus
+    //  ArrayList<Integer>Neglist = new ArrayList<>();
+	  //    ArrayList<Integer>poslist = new ArrayList<>();
+    //        int arr[] = {1, -3, 4, -2} ;
+    //        int pos[] = new int[arr.length];
+    //        int neg[] = new int[arr.length];
+    //        for(int i=0; i<arr.length; i++){
+    //            if(arr[i] < 0){
+    //                Neglist.add(arr[i]);
+                   
+    //            }
+    //            else {
+    //               poslist.add(arr[i]);
+                  
+    //            }
+    //        }
+    //        System.out.println(Neglist);
+    //        System.out.println(poslist);
+
 // .......................program to put all negative..................
 // .......................numbers before positive numbers..........
     // ArrayList<Integer> list = new ArrayList<>();
@@ -633,6 +669,27 @@ public class Arrays {
     //       list.add(arr[i]);
     //   }  
     //   System.out.println(list);
+
+    // or
+
+    // ArrayList<Integer>poslist = new ArrayList<>();
+	  //    ArrayList<Integer>finallist = new ArrayList<>();
+    //        int arr[] = {1, -3, 4, -2} ;
+    //         int index = 0;
+    //     //   int neg[] = new int[arr.length];
+    //        for(int i=0; i<arr.length; i++){
+    //            if(arr[i] < 0){
+    //                finallist.add(arr[i]);
+                   
+    //            }
+    //          else if (arr[i] > 0){
+    //              poslist.add(arr[i]);
+    //          }
+                  
+                  
+    //        }
+    //   finallist.addAll(poslist);
+    //   System.out.println(finallist);
 
 // ..............................ALL SUBARRAYS QUESTIONS..................
     // ............find All the subarrays of an array............
@@ -732,6 +789,28 @@ public class Arrays {
 		// }
 	   
 	  //  System.out.println(count);
+
+
+    ...........// Check if there is a subarray with sum = 0
+    //  int[] arr = {1, 2, 2, -1, 1, 1, 1};
+	  // int max =0;
+	  // boolean Existz = false;
+	  // for(int i=0; i<=arr.length; i++){
+	  //     int sum =0;
+	  //     for(int j =i; j<arr.length; j++){
+	  //         sum+= arr[j];
+	  //        if(sum == 0){
+	  //           Existz = true;
+	             
+	  //        }
+	  //     }
+	  // }
+	  // if(Existz){
+	  //     System.out.println("exist");
+	  // }
+	  // else {
+	  //     System.out.println("not exist");
+	  // }
 
 // ...........Find the length of the Longest Subarray with sum = 0
     	// int arr[] = {1, -1, 3, 2, -2, -3, 3};
@@ -852,7 +931,7 @@ public class Arrays {
 //  }
 
  //...............Maximum Consecutive Ones.................
-//  int arr[] = {1, 1, 0,1, 1, 1, 1};
+//  0
 //  //   Output: 3
 // int count = 0;
 // int maxcount = 0;

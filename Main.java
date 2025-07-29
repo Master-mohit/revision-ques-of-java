@@ -58,6 +58,10 @@ import java.util.Scanner;
     //  System.out.println(a);
     // System.out.println(b);
 
+    // greatest among 3 number.....................
+	  int a = 93, b=134, c=76;
+	  System.out.println(a>b?a>c?a:c:b>c?b:c);
+
     // 7- the length and width of a rectangle. Calculate & print the area and perimiter. 
     //   Scanner sc = new Scanner(System.in);
     //    int l = sc.nextInt();

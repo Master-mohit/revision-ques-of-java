@@ -42,7 +42,6 @@
 	     
 	  //   int start  =0;
 	  //   int end = arr.length - 1;
-	    
 	  //   while(start < end){
 	  //       char temp = arr[start];
 	  //       arr[start] = arr[end];
@@ -52,6 +51,11 @@
 	  //   }
 	  //   String reverse = new String(arr);
 	  //   System.out.println(arr);
+
+    // ....................REPLACE ALL VOWEL into * IN STRING......................
+    //  String str= "mohit";
+	  //    String ch =  str.replaceAll("[AEIOUaeiou]", "*");
+	  //     System.out.println(ch);
 
 
     //  ....................PALLINDROME STRING......................
@@ -79,8 +83,9 @@
     //   System.out.println(kaam.toString());
 
 //     ....................ANAGRAM STRING......................
-//     String s1 = "silent";
-// 	String s2 = "listen";
+//     
+
+
 // 	char[] arr1 = s1.toCharArray();
 // 	char[] arr2 = s2.toCharArray();
 	
@@ -188,6 +193,29 @@
 //     }
 //  System.out.println(result);
 
+
+// ...........Remove Special Characters from a String...........
+//  StringBuilder result = new StringBuilder();
+// 	     String str = "He@ll#o! 123 Wo^rl*d";
+// 	     for(char ch: str.toCharArray()){
+// 	         if(Character.isLetter(ch)){
+// 	             result.append(ch);
+// 	         }
+// 	     }
+//         System.out.println(result);
+
+// ............. find duplicate characters in a String...........
+  // HashSet<Character> hs = new HashSet<>();
+	//     StringBuilder sb = new StringBuilder();
+	//    String str = "mohittit";
+	//    for(char ch : str.toCharArray()){
+	//       if(!hs.add(ch)){
+	//           sb.append(ch);
+	//       }
+	//    }
+	   
+	//    System.out.println(sb);
+
 //................................Compress a String.........................
 // HashMap<Character, Integer> hs = new HashMap<>();
 // String str = "aaabbccdee";
@@ -231,6 +259,26 @@
 //         System.out.println(str.substring(i, j));
 //     }
 // }
+
+
+// .......................Count Uppercase and Lowercase Letters................
+  // HashMap<Character, Integer> map = new HashMap<>();
+	//    String str = "hMoqTB";
+	//    int uppercase =0;
+	//    int lowercase = 0;
+	//    for(char ch : str.toCharArray()){
+	//     map.put(ch, map.getOrDefault(ch, 0) + 1);
+	//    }
+	//    for(char c: map.keySet()){
+	//        if(Character.isUpperCase(c)){
+	//            uppercase++;
+	//        }
+	//        else {
+	//            lowercase++;
+	//        }
+	//    }
+	//    System.out.println(uppercase);
+	//    System.out.println(lowercase);
 
 //........................ left rotation by k ............................
 //  String s1 = "abcdef";
@@ -294,6 +342,29 @@
        
     //    System.out.println(vowel);
     //    System.out.println(consonent);
+
+
+// .........................Reverse String Word by Word....................
+    // StringBuilder result = new StringBuilder();
+	  //    String str = "I am learning Java programming";
+	   
+	  //    String[] splited = str.split(" ");
+	  //    for(String ch: splited){
+	  //        StringBuilder sb = new StringBuilder(ch);
+	  //        result.append(sb.reverse().append(" "));
+	  //    }
+	  //    System.out.println(result.toString());
+
+    // .........................reverse sentance word by word....................
+    //  StringBuilder result = new StringBuilder();
+	  //    String str = "I am learning Java programming";
+	   
+	  //    String[] splited = str.split(" ");
+	  //    for(int i = splited.length - 1; i>=0; i--){
+	  //        result.append(splited[i]).append(" ");
+	        
+	  //    }
+	  //  System.out.println(result.toString());
 
 
 
@@ -373,6 +444,17 @@
 //       System.out.println("ni hhhhhh");
 //   }
 
+// ......................Check if one string is a rotation of another......................
+// 	   String s1 = "abcd"; //abcdabcd
+// String s2 = "cdab";
+
+// String s3 = s1 + s1;
+//     if(s3.contains(s2)){
+//         System.out.println("ha h");
+//     }
+//     else {
+//         System.out.println("ni h");
+//     }
 
 
  // ......................Rotate String......................
@@ -635,7 +717,7 @@
   //     if(!map.containsKey(newstring)){
   //         map.put(newstring, new ArrayList<>());
   //     }
-  //     map.get(newstring.add(word);
+  //     map.get(newstring).add(word);
   // }
   // System.out.println(map.values());
        

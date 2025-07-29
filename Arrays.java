@@ -931,7 +931,7 @@ public class Arrays {
 //  }
 
  //...............Maximum Consecutive Ones.................
-//  0
+//   // int[] arr = {1, 1, 0, 1, 1, 1};
 //  //   Output: 3
 // int count = 0;
 // int maxcount = 0;
@@ -1031,6 +1031,19 @@ public class Arrays {
 
 // System.out.println(maxprofit);
 
+// .................print 2D array...................
+// int arr[][] = {
+// 	                  {1,2,3},
+// 	                  {4,5,6},
+// 	                  {7,8,9}
+// 	  };
+	  
+// 	  for(int i=0; i<arr.length; i++){
+// 	      for(int j =0; j<arr[i].length; j++){
+// 	          System.out.print(arr[i][j] + " ");
+// 	      }
+// 	      System.out.println();
+// 	  }
 
    //...................... sum of upper and lower triangles...........
         //  int mat[][] = {{1, 2, 3},
@@ -1054,25 +1067,65 @@ public class Arrays {
         //  System.out.println("Lower " + lower);
 
   //...................... find transpose matrinx.................
-      //  int mat[][] = {{1, 2, 3},
-      //               {4, 5, 6},
-      //               {7, 8, 9}};
-        
-      //   for(int i=0; i<mat.length; i++){
-      //       for(int j =i + 1; j<mat.length; j++){
-      //           int temp = mat[i][j];
-      //           mat[i][j] = mat[j][i];
-      //           mat[j][i] = temp;
-      //       }
-      //   }
-        
-      //   for(int i=0; i<mat.length; i++){
-      //       for(int j =0; j<mat.length; j++){
-      //           System.out.print(mat[i][j] + " ");
-      //       }
-      //       System.out.println();
-      //   }
+    //    int arr[][] = {
+	  //                 {1,2,3},
+	  //                 {4,5,6} // [1, 4]
+	  //                      //    [2, 5]
+	  //                      //    [3, 6]
+	  // };
+	  
+	  // int row = arr.length;
+	  // int col = arr[0].length;
+	  
+    //   for(int i=0; i<col; i++){
+    //       for(int j=0; j<row; j++){
+    //           System.out.print(arr[j][i] + " ");
+    //       }
+    //       System.out.println();
+    //   }
 
+
+    //...................... sum of 2D array.................
+  //   int arr[][] = {
+	//                   {1,2,3},
+	//                   {4,5,6} 
+	//   };
+	//     int sum = 0;
+	//  for(int i=0; i<arr.length; i++){
+	//      for(int j=0; j<arr[i].length; j++){
+	//         sum+= arr[i][j]; 
+	//      }
+	//  }
+  //   	 System.out.println(sum);
+
+  // .......search the element in 2D array................
+//     	 int[][] arr = {
+//     {1, 2, 3},
+//     {4, 5, 6},
+//     {7, 8, 9}
+// };
+//   int key = 8;
+//   boolean isFound = false;
+//   for(int i=0; i<arr.length; i++){
+//       for(int j=0; j<arr[i].length; j++){
+//           if(arr[i][j] == key){
+//               isFound = true;
+//               System.out.println(i + ", " + j + " ");
+//           }
+//       }
+//   }
+
+// ........diagonal elements of 2D array................ 
+
+// 	 int[][] arr = {
+//     {1, 2, 3},
+//     {4, 5, 6},
+//     {7, 8, 9}
+// };
+  
+//   for(int i=0; i<arr.length; i++){
+//       System.out.println(arr[i][i] + " ");
+//   }
 
  //.....................90 degree rotation clockwise...............
     //  int mat[][] = {{1, 2, 3},
